@@ -1,0 +1,47 @@
+[class*="__site-container"] {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+}
+
+html {
+    font-size: 8px;
+    box-sizing: border-box;
+
+    -webkit-text-size-adjust: 100%;
+
+    @include breakpointMF(small-mobile) {
+        font-size: 10px;
+    }
+
+    @include breakpointMF(desktop) {
+        font-size: 10px;
+        font-size: clamp(6px, 0.523vw, 25px);
+    }
+
+    @include noHighlight();
+}
+
+body {
+    background-color: var(--Send-color, #DAD5C1);
+    @include base20;
+}
+
+.page-content {
+    min-height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

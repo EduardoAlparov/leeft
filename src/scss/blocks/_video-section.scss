@@ -1,0 +1,23 @@
+.video-section {
+    --plyr-color-main: var(--Send-color, #DAD5C1);
+    --plyr-badge-background: var(--Sage-color, #B9D2B4);
+
+    width: 100%;
+    aspect-ratio: 1.825 / 1;
+    // overflow: hidden;
+
+    background-color: var(--Asphalt-color, #252525);
+
+    &__wrapper {
+
+        width: 100%;
+        height: 100%;
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+        }
+    }
+}

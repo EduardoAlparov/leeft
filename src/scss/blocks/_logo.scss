@@ -1,0 +1,10 @@
+.logo {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    .icon {
+        width: 15.8rem;
+        height: 4rem;
+    }
+}

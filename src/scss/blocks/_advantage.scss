@@ -1,0 +1,23 @@
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-4;
+
+    &__counter {
+        display: grid;
+        place-items: center;
+        padding: $size-4 $size-8;
+
+        color: var(--Send-color, #DAD5C1);
+        background-color: var(--Asphalt-color, #252525);
+        @include adds14;
+        white-space: nowrap;
+    }
+
+    &__text {
+        max-width: 25ch;
+        @include base20;
+        text-align: left;
+    }
+}

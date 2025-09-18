@@ -1,0 +1,41 @@
+.checkbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    cursor: pointer;
+
+    .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+    }
+
+    .icon-border {
+        stroke-width: 1px;
+        stroke: var(--Darksend-color, #807D73);
+    }
+
+    .icon-thick {
+        fill: var(--Darksend-color, #807D73);
+        opacity: 0;
+    }
+
+    input {
+        &:checked {
+            &~.icon-border {
+                stroke: var(--Limon-color, #FCFF7A);
+            }
+
+            &~.icon-thick {
+                opacity: 1;
+                fill: var(--Limon-color, #FCFF7A);
+            }
+        }
+    }
+}

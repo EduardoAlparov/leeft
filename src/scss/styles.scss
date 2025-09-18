@@ -1,0 +1,38 @@
+// @import 'vendor';
+@import './settings/font';
+
+@import './utils/mixins';
+@import './utils/commons';
+
+@import './settings/vars';
+
+
+@import './settings/global';
+@import './settings/layout';
+
+@import './layout/page-header';
+@import './layout/page-footer';
+
+@import './vendors/swiper';
+@import './vendors/plur';
+
+@import './ui/checkbox';
+@import './ui/cursor';
+@import './ui/input-box';
+@import './ui/nameplate';
+@import './ui/button';
+
+@import './blocks/logo';
+@import './blocks/menu';
+@import './blocks/footer-menu';
+
+@import './blocks/home';
+
+@import './blocks/simple-section';
+
+@import './blocks/video-section';
+
+@import './blocks/feedback-section';
+
+@import './blocks/advantages-section';
+@import './blocks/advantage';

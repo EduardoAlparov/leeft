@@ -1,0 +1,17 @@
+.advantages-section {
+    color: var(--Asphalt-color, #252525);
+    background-color: var(--Send-color, #DAD5C1);
+
+    @include breakpointMF(tablet) {
+        padding-block: $size-52 0;
+    }
+
+    @include breakpointMF(desktop) {
+        padding-block: $size-68 0;
+    }
+
+    &__body {
+        padding-block: $size-80;
+        margin-bottom: -24.4rem;
+    }
+}

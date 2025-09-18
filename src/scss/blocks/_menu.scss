@@ -1,0 +1,51 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: $size-24;
+
+    @include breakpointMF(desktop) {
+        gap: $size-64;
+    }
+
+    &__link {
+        @include adds14;
+        position: relative;
+        color: var(--Send-color, #DAD5C1);
+
+        &::before {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 50%;
+
+            width: 0;
+            height: 2px;
+            transform: translateX(-50%);
+
+            background-color: var(--Send-color, #DAD5C1);
+            transition: width 0.3s ease-out;
+            content: "";
+        }
+
+        @include breakpointMF(desktop) {
+            @include base20;
+        }
+
+        &.menu__link--bold {
+            font-weight: 700;
+        }
+
+        &.menu__link--active {
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &:not(.menu__link--active) {
+            @include hoverActive() {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

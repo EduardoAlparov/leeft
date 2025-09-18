@@ -1,0 +1,146 @@
+.feedback-section {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    &__site-container {
+        padding-block: $size-64 16.4rem;
+
+        @include breakpointMF(tablet) {
+            padding-block: 11.6rem;
+        }
+
+        @include breakpointMF(desktop) {
+            padding-block: 16.4rem $size-72;
+        }
+    }
+
+    &__title {
+        @include S48;
+
+        @include breakpointMF(tablet) {
+            @include S48;
+        }
+
+        @include breakpointMF(desktop) {
+            @include H72;
+            user-select: none;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-40;
+        margin-top: $size-48;
+
+        @include breakpointMF(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 50%;
+            grid-auto-flow: dense;
+            gap: $size-40 11.8rem;
+
+            grid-template-rows: auto;
+            margin-top: $size-88;
+        }
+    }
+
+    &__row {
+        flex: 1 1 100%;
+        height: 7.4rem;
+
+        @include breakpointMF(desktop) {}
+
+        &:is(.feedback-section__controls) {
+            height: unset;
+        }
+
+        &:has(.feedback-section__types) {
+            height: unset;
+        }
+
+        &.feedback-section__row--left {
+
+            @include breakpointMF(desktop) {
+                grid-column: 1 / 2;
+            }
+        }
+
+        &.feedback-section__row--right {
+
+            @include breakpointMF(desktop) {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+
+    &__input-box {
+        height: 100%;
+    }
+
+    &__types {
+        display: flex;
+        flex-direction: column;
+        gap: $size-24;
+
+        padding-block: $size-24 $size-24;
+        border-bottom: 2px solid var(--Send-color, #DAD5C1);
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: $size-8;
+        }
+    }
+
+    &__types-title {
+        display: block;
+        @include base20;
+
+        @include breakpointMF(tablet) {
+            margin-top: $size-8;
+        }
+    }
+
+    &__types-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-16 $size-8 ;
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: $size-40;
+    }
+
+    &__submit {
+        &.button {
+            width: 100%;
+        }
+    }
+
+    &__agreement {
+        display: flex;
+        align-items: center;
+        gap: $size-16;
+    }
+
+    &__agreement-text {
+        @include adds14;
+
+        &>a {
+            color: inherit;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: 1px;
+            text-underline-position: from-font;
+
+            @include hoverActive() {
+                color: var(--Limon-color, #FCFF7A);
+            }
+        }
+    }
+}

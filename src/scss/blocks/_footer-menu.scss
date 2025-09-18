@@ -1,0 +1,47 @@
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-8;
+
+    &>li {
+
+        &:first-child {
+            &>a {
+                @include S32;
+
+                @include breakpointMF(desktop) {
+                    @include S48;
+                }
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        color: var(--Asphalt-color, #252525);
+        white-space: nowrap;
+        @include adds14;
+
+        &::before {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 50%;
+
+            width: 0;
+            height: 2px;
+            transform: translateX(-50%);
+
+            background-color: var(--Asphalt-color, #252525);
+            transition: width 0.3s ease-out;
+            content: "";
+        }
+
+        @include hoverActive() {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}

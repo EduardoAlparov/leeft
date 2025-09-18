@@ -1,0 +1,8 @@
+@use '../../node_modules/swiper/swiper-bundle';
+
+.swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}

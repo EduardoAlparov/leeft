@@ -1,0 +1,175 @@
+.home {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    &__inner-wrapper {
+        @extend ._intro-padding-top;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    &__site-container {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    &__title {
+        @include S32;
+        text-align: center;
+
+        @include breakpointMF(tablet) {
+            @include S48;
+            user-select: none;
+        }
+
+        @include breakpointMF(desktop) {
+            @include H96;
+            user-select: none;
+        }
+
+        &.home__title--smaller {
+            @include S32;
+            text-align: center;
+
+            @include breakpointMF(tablet) {
+                @include H64;
+                user-select: none;
+                text-align: left;
+            }
+
+            @include breakpointMF(desktop) {
+                @include H96;
+                user-select: none;
+            }
+        }
+    }
+
+    &__mobile-word {
+        @include breakpointMF(desktop) {
+            display: none;
+        }
+    }
+
+    &__desktop-word {
+        display: none;
+
+        @include breakpointMF(desktop) {
+            display: inline;
+        }
+    }
+
+    &__words-list {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $size-4;
+
+        width: max-content;
+        margin-top: $size-24;
+        margin-inline: $size-24;
+        padding-inline: $size-4;
+
+        @include breakpointMF(desktop) {
+            margin-top: $size-16;
+            margin-inline: unset;
+            padding-inline: unset;
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            top: 0;
+
+            color: var(--Send-color, #DAD5C1);
+
+            @include H64;
+
+            @include breakpointMF(desktop) {
+                @include H96;
+            }
+        }
+
+        &::before {
+            right: calc(100%);
+            content: "(";
+
+            @include breakpointMF(desktop) {
+                content: none;
+            }
+        }
+
+        &::after {
+            left: calc(100%);
+            content: ")";
+
+            @include breakpointMF(desktop) {
+                content: none;
+            }
+        }
+
+    }
+
+    &__words-slogan {
+        &>li {
+            width: max-content;
+            padding: $size-4 $size-8;
+
+            color: var(--Asphalt-color, #252525);
+            text-align: center;
+            white-space: nowrap;
+
+            background-color: var(--Send-color, #DAD5C1);
+
+            @include adds14;
+            user-select: none;
+        }
+    }
+
+    &__desktop-word-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__advantages {
+        gap: $size-24;
+        margin-top: unset;
+        margin-inline: unset;
+        padding-inline: unset;
+        padding: $size-40 $size-24;
+        background-color: var(--Send-color, #DAD5C1);
+
+        @include breakpointMF(tablet) {
+            margin-top: calc(#{$size-40} * -2 + 0.4rem);
+        }
+
+        @include breakpointMF(desktop) {
+            margin-top: calc(#{$size-40} * -2.2);
+        }
+    }
+
+    &__title-desktop-transfer {
+        display: none;
+
+        @include breakpointMF(desktop) {
+            display: inline;
+        }
+    }
+
+    &__margin-desktop-word {
+        @include breakpointMF(desktop) {
+            padding-left: 43%;
+        }
+    }
+}
