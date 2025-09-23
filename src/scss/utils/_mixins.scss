@@ -346,3 +346,11 @@
     -webkit-line-clamp: $size;
     -webkit-box-orient: vertical;
 }
+
+@mixin hover-weight-grow($offset: 0.2px, $time: 0.3s) {
+    text-shadow:
+        -$offset -$offset 0,
+        $offset -$offset 0,
+        -$offset $offset 0,
+        $offset $offset 0;
+}

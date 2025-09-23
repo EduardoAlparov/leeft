@@ -1,0 +1,22 @@
+.expand-btn {
+    display: grid;
+    grid-auto-flow: column;
+
+    &::after {
+        content: attr(data-backward);
+    }
+}
+
+._element-collapsed {
+    .expand-btn {
+
+        &::before {
+            content: " ... ";
+        }
+
+        &::after {
+            content: attr(data-forward);
+        }
+    }
+
+}

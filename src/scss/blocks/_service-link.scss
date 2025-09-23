@@ -1,0 +1,187 @@
+.service-link {
+    --transition-time: 0.5s;
+    --transition-func: ease-out;
+
+    display: block;
+    color: inherit;
+    padding-bottom: $size-40;
+    cursor: default;
+
+    @include breakpointMF(desktop) {
+        padding-block: $size-64;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 200;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-20;
+
+        @include breakpointMF(desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: $size-80;
+        }
+    }
+
+    &__name {
+        @include S32;
+
+        @include breakpointMF(desktop) {
+            max-width: 32ch;
+            transition: text-shadow var(--transition-time, 0.5s) var(--transition-func, ease-out);
+        }
+    }
+
+    &__desc {
+        @include breakpointMF(desktop) {
+            width: 44rem;
+            margin-left: auto;
+        }
+    }
+
+    &__text {
+        @include adds12;
+
+        @include breakpointMF(tablet) {
+            @include adds14;
+        }
+
+        @include breakpointMF(desktop) {
+            display: inline;
+            @include base16;
+            line-height: 1.54;
+
+            transition-property: background, color, line-height, padding;
+            transition-duration: var(--transition-time, 0.5s);
+            transition-timing-function: var(--transition-func, ease-out);
+            will-change: background, color, line-height, padding;
+        }
+    }
+
+    &__arrow {
+        display: none;
+        width: 7.4rem;
+        height: 7.4rem;
+
+        stroke: var(--Send-color, #DAD5C1);
+        stroke-width: 4.75px;
+
+        transition-property: opacity, transform;
+        transition-duration: var(--transition-time, 0.5s);
+        transition-timing-function: var(--transition-func, ease-out);
+
+        img {
+            display: block;
+            width: 100%;
+
+            object-fit: contain;
+            object-position: center;
+        }
+
+        @include breakpointMF(desktop) {
+            display: block;
+            opacity: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: flex-start;
+        gap: $size-12;
+
+        @include adds12;
+        line-height: 137%;
+
+        @include breakpointMF(desktop) {
+            display: none;
+        }
+    }
+
+    &__icon {
+        width: $size-16;
+        height: $size-16;
+        stroke: var(--Send-color, #DAD5C1);
+        stroke-width: 2px;
+    }
+
+    &__image-dot {
+        position: absolute;
+        z-index: 100;
+
+        display: none;
+        place-items: center;
+        place-content: center;
+
+        width: 1px;
+        height: 1px;
+        pointer-events: none;
+    }
+
+    &__image {
+        width: 21.6rem;
+        aspect-ratio: 0.7 / 1;
+        transform: translate(-25%, -25%);
+
+        img {
+            display: block;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center
+        }
+    }
+
+    @include hoverActive() {
+        .service-link__name {
+            @include hover-weight-grow(0.2px, 0.4s);
+        }
+
+        .service-link__arrow {
+            transform: translateX(2.2rem);
+            opacity: 1;
+        }
+
+        .service-link__text {
+            @include breakpointMF(desktop) {
+                padding: $size-4 $size-8;
+
+                color: var(--Asphalt-color, #252525);
+                background-color: var(--Send-color, #DAD5C1);
+            }
+        }
+    }
+
+    &.service-link--hover {
+        @include hoverActive() {
+            .service-link__image-dot {
+                @include breakpointMF(desktop) {
+                    display: grid;
+                }
+            }
+
+            .service-link__image {
+                @include breakpointMF(desktop) {
+                    animation-name: fadeOut;
+                    animation-duration: var(--transition-time, 0.5s);
+                    animation-timing-function: var(--transition-func, ease-out);
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

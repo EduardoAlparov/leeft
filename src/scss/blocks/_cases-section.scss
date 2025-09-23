@@ -1,0 +1,117 @@
+.cases-section {
+    padding-block: $size-80;
+
+    @include breakpointMF(tablet) {
+        padding-block: 12.4rem 16.4rem;
+    }
+
+    @include breakpointMF(desktop) {}
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: $size-40;
+
+        @include breakpointMF(tablet) {
+            gap: $size-48;
+        }
+
+        @include breakpointMF(desktop) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: $size-64 9.6rem;
+        }
+    }
+
+    &__title {
+        flex-shrink: 0;
+
+        @include S48;
+
+        @include breakpointMF(tablet) {
+            @include H72;
+        }
+
+        @include breakpointMF(desktop) {
+            margin-bottom: -1.2rem;
+            @include H112;
+        }
+    }
+
+    &__navbars {
+        display: flex;
+        align-items: center;
+        gap: $size-16;
+
+        max-width: 100%;
+        overflow: auto;
+    }
+
+    &__navbar {
+
+        &.nameplate {
+            position: relative;
+            display: inline-flex;
+
+            @include base20;
+        }
+
+        &::after {
+            content: "\00A0(" attr(data-nav-counter) ")";
+        }
+    }
+
+    &__body {
+        margin-top: $size-48;
+
+        @include breakpointMF(desktop) {
+            margin-top: 9.6rem;
+        }
+    }
+
+    &__item {
+        max-width: 43.2rem;
+    }
+
+    &__add-items {
+        margin-top: $size-32;
+
+        @include breakpointMF(tablet) {
+            margin-top: 10.8rem;
+        }
+
+        @include breakpointMF(desktop) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: $size-40;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: repeat(2, calc(100% / 2 - #{$size-4}));
+            gap: $size-32 $size-8;
+        }
+
+        @include breakpointMF(desktop) {
+            grid-template-columns: repeat(3, calc(100% / 3 - (#{$size-8} * 2 / 3)));
+            gap: $size-16 $size-8;
+        }
+
+        &.cases-section__list--sortable {
+            @include breakpointMF(desktop) {
+                grid-template-columns: repeat(6, calc(100% / 6 - (#{$size-8} * 5 / 6)));
+                gap: $size-24 $size-8;
+            }
+        }
+
+        &:not(.cases-section__list--sortable) {
+            .cases-section__item {
+                max-width: 50rem;
+            }
+        }
+    }
+}

@@ -11,6 +11,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease;
     cursor: pointer;
+    white-space: nowrap;
 
     @include base16;
 
@@ -36,6 +37,18 @@
         color: var(--Asphalt-color, #252525);
         background-color: var(--Limon-color, #FCFF7A);
         border-color: var(--Asphalt-color, #252525);
+
+        @include hoverActive() {
+            color: var(--Limon-color, #FCFF7A);
+            background-color: transparent;
+        }
+    }
+
+    &.nameplate--active {
+        color: var(--Asphalt-color, #252525);
+        background-color: var(--Limon-color, #FCFF7A);
+        border-color: var(--Asphalt-color, #252525);
+        pointer-events: none;
 
         @include hoverActive() {
             color: var(--Limon-color, #FCFF7A);

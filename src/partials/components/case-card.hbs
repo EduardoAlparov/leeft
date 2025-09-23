@@ -1,0 +1,67 @@
+{{#if mainPage}}
+<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card">
+    <div class="case-card__desc">
+        <div class="case-card__counter">{{this.counter}}</div>
+        <p class="case-card__type">
+            {{this.type}}
+        </p>
+    </div>
+
+    <div class="case-card__picture">
+        <div class="case-card__arrow">
+            <picture>
+                <source type="image/webp" srcset="./img/formats/diagonal-arrow-black.webp" />
+                <img class="lazy case-card__arrow-icon" src="./img/formats/diagonal-arrow-black.png" alt="image">
+            </picture>
+        </div>
+
+        <picture>
+            <source type="image/webp" srcset={{this.imageW}} />
+            <img class="lazy" src={{this.imageJ}} alt="image">
+        </picture>
+    </div>
+
+    <div class="case-card__info">
+        <p class="case-card__name">
+            {{this.name}}
+        </p>
+
+        <p class="case-card__text">
+            {{this.text}}
+        </p>
+    </div>
+</a>
+{{else}}
+<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card case-card--simple">
+    <div class="case-card__desc">
+        <div class="case-card__counter">{{this.counter}}</div>
+        <p class="case-card__type">
+            {{this.type}}
+        </p>
+    </div>
+
+    <div class="case-card__picture">
+        <div class="case-card__arrow">
+            <picture>
+                <source type="image/webp" srcset="./img/formats/diagonal-arrow-black.webp" />
+                <img class="lazy case-card__arrow-icon" src="./img/formats/diagonal-arrow-black.png" alt="image">
+            </picture>
+        </div>
+
+        <picture>
+            <source type="image/webp" srcset={{this.imageW}} />
+            <img class="lazy" src={{this.imageJ}} alt="image">
+        </picture>
+    </div>
+
+    <div class="case-card__info">
+        <p class="case-card__name">
+            {{this.name}}
+        </p>
+
+        <p class="case-card__text">
+            {{this.text}}
+        </p>
+    </div>
+</a>
+{{/if}}

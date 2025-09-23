@@ -21,6 +21,7 @@ export const cursorControl = () => {
 		onRepeat: () => {
 			posX += (mouseX - posX) / 6
 			posY += (mouseY - posY) / 6
+
 			gsap.set(cursor, {
 				css: {
 					left: posX,

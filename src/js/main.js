@@ -12,6 +12,8 @@ import menu from './menu';
 import {cursorControl} from './cursor';
 import setHeaderPadding from './setHeaderPadding';
 import video from './video';
+import serviceLinkImage from './serviceLinkImage';
+import reviewsSectionSwipers from './reviewsSectionSwipers';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cursorControl();
     setHeaderPadding();
+    serviceLinkImage();
+    reviewsSectionSwipers();
 });
 
 document.addEventListener('lazyloaded', () => {

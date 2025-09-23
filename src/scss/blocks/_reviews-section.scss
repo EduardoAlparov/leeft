@@ -1,0 +1,248 @@
+.reviews-section {
+    background-color: var(--Asphalt-color, #252525);
+
+    @include breakpointMF(desktop) {
+        background-color: var(--Send-color, #DAD5C1);
+    }
+
+    @include breakpointMF(desktop) {
+        padding-block: 13.2rem 16.4rem;
+    }
+
+    &__container {
+        @include breakpointMF(desktop) {
+            width: 100%;
+            max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+            margin: 0 auto;
+            padding: 0 var(--content-padding);
+
+            @supports (width: max(20vw, 100px)) {
+                padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+                padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+            }
+        }
+    }
+
+    &__body {
+        @include breakpointMF(desktop) {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 11.8rem;
+
+            padding-top: $size-24;
+        }
+    }
+
+    &__right {
+        @include breakpointMF(desktop) {
+            position: relative;
+
+            flex: 0 0 43.2rem;
+            width: 43.2rem;
+        }
+    }
+
+    &__next-btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 500;
+
+        display: none;
+        place-items: center;
+
+        width: 32.2rem;
+        height: 7.7rem;
+
+        border: 0.5px solid var(--Asphalt-color, #252525);
+        cursor: pointer;
+
+        @include breakpointMF(desktop) {
+            display: grid;
+        }
+
+        img {
+            width: 3.3rem;
+            height: 3.2rem;
+        }
+    }
+
+    &__left {
+        @include breakpointMF(desktop) {
+            overflow: hidden;
+
+            display: flex;
+            justify-content: flex-end;
+            flex: 1 1 100%;
+
+            margin-left: -100%;
+            padding-left: 100%;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: none;
+        padding-left: $size-80;
+
+        @include H72;
+
+        @include breakpointMF(desktop) {
+            display: block;
+        }
+    }
+
+    &__pagination {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: none;
+        padding-top: $size-36;
+
+        @include base20;
+
+        @include breakpointMF(desktop) {
+            display: block;
+        }
+
+        .swiper-pagination-current {
+            margin-right: -0.5ch;
+        }
+
+        .swiper-pagination-total {
+            margin-left: -0.5ch;
+        }
+    }
+
+    &__carousel {
+        width: 100%;
+        aspect-ratio: 1;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.65 / 1;
+        }
+
+        @include breakpointMF(desktop) {
+            position: relative;
+
+            width: 32.2rem;
+            height: 60rem;
+        }
+    }
+
+    &__images-swiper {
+        &.swiper {
+            z-index: 200;
+            height: 100%;
+
+            @include breakpointMF(desktop) {
+                background-color: var(--Send-color, #DAD5C1);
+            }
+        }
+    }
+
+    &__swiper-wrapper {
+        height: 100%;
+    }
+
+    &__swiper-slide {
+        &.image-slide {
+
+
+
+            img {
+                @include breakpointMF(desktop) {
+                    transition: 0.5s ease;
+                }
+            }
+
+            &.swiper-slide-next {
+                img {
+                    @include breakpointMF(desktop) {
+                        transform: scale(0.25) translate(-50%, -50%);
+                    }
+                }
+            }
+
+
+            &:not(.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev) {
+
+                @include breakpointMF(desktop) {
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &__thumbs-slide {
+        &.swiper-slide {
+            width: 10.2rem;
+            height: 14.8rem;
+        }
+    }
+
+    &__thumbs-swiper {
+        &.swiper {
+            position: absolute;
+            bottom: 0;
+            right: calc(100% - 10.2rem);
+            z-index: 100;
+
+            width: 10.2rem;
+            overflow: visible;
+            display: none;
+
+            @include breakpointMF(desktop) {
+                display: block;
+            }
+        }
+    }
+
+    &__thumbs-slide {
+        position: relative;
+
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+
+            display: block;
+            width: 100%;
+            transform: translate(-50%, 0%);
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &.swiper-slide {
+
+            &.swiper-slide-prev,
+            &.swiper-slide-active {
+                transition: 0.5s ease 0.3s;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            &.swiper-slide-active {
+
+                img {
+                    transform-origin: left bottom;
+                    transition: 0.5s ease;
+
+                    transform: scale(1.25) translate(-50%, 0%);
+
+                }
+            }
+        }
+    }
+}

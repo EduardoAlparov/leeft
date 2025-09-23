@@ -14,4 +14,8 @@
         padding-block: $size-80;
         margin-bottom: -24.4rem;
     }
+
+    &+.section {
+        padding-top: 24.4rem;
+    }
 }

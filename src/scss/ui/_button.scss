@@ -15,4 +15,10 @@
         color: var(--Send-color, #DAD5C1);
         border-color: var(--Send-color, #DAD5C1);
     }
+
+    &.button--black {
+        color: var(--Send-color, #DAD5C1);
+        background-color: var(--Asphalt-color, #252525);
+        border-width: 0;
+    }
 }

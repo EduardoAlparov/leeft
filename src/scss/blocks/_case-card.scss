@@ -1,0 +1,120 @@
+.case-card {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: $size-16;
+
+    color: inherit;
+
+    width: 100%;
+
+    &__picture {
+        position: relative;
+
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1.135 / 1;
+
+        background-color: var(--Limon-color, #FCFF7A);
+        border: 0.5px solid transparent;
+
+        &>picture {
+            img {
+                display: block;
+                width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                transition-property: opacity;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+        }
+    }
+
+    &__arrow {
+        @include centeredAbsolute();
+        z-index: 100;
+
+        opacity: 0;
+
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-4;
+    }
+
+    &__desc {
+        display: flex;
+        align-items: flex-end;
+        gap: $size-8;
+    }
+
+    &__counter,
+    &__name {
+        @include base20bold;
+    }
+
+    &__type,
+    &__text {
+        @include adds14;
+    }
+
+    &__desc {
+        display: none;
+    }
+
+    &__text {
+        @include maxSizeText(2);
+    }
+
+    &:not(.case-card--simple) {
+        @include breakpointMF(desktop) {
+            gap: $size-4;
+        }
+
+        .case-card__desc {
+            @include breakpointMF(desktop) {
+                display: flex;
+            }
+        }
+
+        .case-card__name {
+            @include breakpointMF(desktop) {
+                @include base16;
+            }
+        }
+
+        .case-card__text {
+            @include breakpointMF(desktop) {
+                display: none;
+            }
+        }
+
+        .case-card__picture {
+            @include breakpointMF(desktop) {
+                aspect-ratio: 0.67 / 1;
+            }
+        }
+    }
+
+    @include hoverActive() {
+        .case-card__picture {
+            &>picture {
+                img {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .case-card__arrow {
+            opacity: 1;
+        }
+    }
+}
