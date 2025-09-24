@@ -31,3 +31,19 @@
 ._intro-padding-top {
     padding-top: var(--header-height);
 }
+
+.midnightHeader.default {
+    background: none;
+    color: var(--Asphalt-color, #252525);
+}
+
+.midnightHeader.light {
+    background-color: var(--Send-color, #DAD5C1);
+    color: var(--Asphalt-color, #252525);
+
+    .page-header__burger {
+        .icon {
+            stroke: var(--Asphalt-color, #252525);
+        }
+    }
+}

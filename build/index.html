@@ -18,50 +18,96 @@
 
     <div class="page-content">
         <header class="page-header" id="page-header">
-            <div class="page-header__site-container">
-                <a href="/" class="page-header__logo logo hide-on-mobile">
-                    <svg aria-hidden="true" class="icon">
-                        <use xlink:href="#logo"></use>
-                    </svg>
-                </a>
+            <div class="page-header__inner">
+                <div class="page-header__site-container">
+                    <a href="/" class="page-header__logo logo hide-on-mobile">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                    </a>
         
-                <ul class="page-header__menu menu hide-on-mobile">
-                    <li class="menu__item">
-                        <a href="./bitrix.html" class="menu__link">
-                            Битрикс24
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="./services.html" class="menu__link">
-                            Услуги
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="./cases.html" class="menu__link">
-                            Кейсы
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="./contacts.html" class="menu__link">
-                            Контакты
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="tel:+79300369420" class="menu__link menu__link--bold">
-                            +7 930 036 94 20
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="page-header__menu menu hide-on-mobile">
+                        <li class="menu__item">
+                            <a href="./bitrix.html" class="menu__link">
+                                Битрикс24
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./services.html" class="menu__link">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./cases.html" class="menu__link">
+                                Кейсы
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="./contacts.html" class="menu__link">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="tel:+79300369420" class="menu__link menu__link--bold">
+                                +7 930 036 94 20
+                            </a>
+                        </li>
+                    </ul>
         
-                <button type="button" class="page-header__burger js-burger-menu show-on-mobile">
-                    <svg aria-hidden="true" class="icon icon-burger">
-                        <use xlink:href="#burger"></use>
-                    </svg>
-                    <svg aria-hidden="true" class="icon icon-close">
-                        <use xlink:href="#close-burger"></use>
-                    </svg>
-                </button>
+                    <button type="button" class="page-header__burger js-burger-btn show-on-mobile">
+                        <svg aria-hidden="true" class="icon icon-burger">
+                            <use xlink:href="#burger"></use>
+                        </svg>
+                        <svg aria-hidden="true" class="icon icon-close">
+                            <use xlink:href="#close-burger"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
+        
+            <div class="page-header__mobile-menu mobile-menu">
+                <div class="mobile-menu__body">
+                    <ul class="mobile-menu__menu">
+                        <li>
+                            <a href="#" class="mobile-menu__link">
+                                Разработка
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">
+                                Услуги
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">
+                                Кейсы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="mobile-menu__link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__contacts">
+                        <li>
+                            <a href="tel:+79300369420" class="mobile-menu__phone">
+                                +7 930 036 94 20
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="" class="mobile-menu__social">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#tg"></use>
+                                </svg>
+                                Telegram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
         </header>
         <main class="page-main">
 
@@ -100,7 +146,7 @@
     </div>
 </section>
 
-<section class="simple-section section" data-section="yellow">
+<section class="simple-section section" data-section="yellow" data-midnight="light">
     <div class="simple-section__site-container">
         <div class="simple-section__body">
             <h2 class="simple-section__title">
@@ -131,7 +177,7 @@
     </div>
 </section>
 
-<section class="advantages-section section">
+<section class="advantages-section section" data-midnight="light">
     <div class="advantages-section__site-container">
         <div class="advantages-section__body">
             <div class="advantages-section__heading home__heading">
@@ -357,7 +403,7 @@
     </div>
 </section>
 
-<section class="cases-section section">
+<section class="cases-section section" data-midnight="light">
     <div class="cases-section__site-container">
         <div class="cases-section__heading">
             <h2 class="cases-section__title">
@@ -481,8 +527,8 @@
                                 </div>
                         
                                 <picture>
-                                    <source type="image/webp" srcset=false />
-                                    <img class="lazy" src=false alt="image">
+                                    <source type="image/webp" srcset= />
+                                    <img class="lazy" src= alt="image">
                                 </picture>
                             </div>
                         
@@ -1314,7 +1360,7 @@
 </section>
 
         </main>
-        <footer class="page-footer" data-section="yellow">
+        <footer class="page-footer" data-section="yellow" data-midnight="light">
             <div class="page-footer__site-container">
                 <div class="page-footer__grid">
                     <div class="page-footer__cell page-footer__nav">

@@ -1,5 +1,5 @@
 .page-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -7,6 +7,14 @@
 
     width: 100%;
     background-color: var(--Asphalt-color, #252525);
+
+    &__inner {
+        z-index: 2000;
+    }
+
+    @include breakpointMF(tablet) {
+        position: absolute;
+    }
 
     &__site-container {
         display: flex;
@@ -47,6 +55,7 @@
             grid-column: 1 / 2;
 
             transition: opacity 0.2s ease-out;
+            pointer-events: none;
         }
 
         .icon-burger {
@@ -65,5 +74,50 @@
             stroke-width: 0.3rem;
             opacity: 0;
         }
+    }
+
+    &__mobile-menu {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+
+        display: none;
+        padding-top: var(--header-height);
+    }
+}
+
+
+.mobile-menu-open {
+
+    .page-header__burger {
+        .icon-burger {
+            opacity: 0;
+        }
+
+        .icon-close {
+            opacity: 1;
+        }
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .mobile-menu__body {
+        animation: slideFromLeft 0.3s ease-out 0s 1 forwards;
+    }
+
+    .midnightInner {
+        overflow: hidden !important;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }

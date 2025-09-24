@@ -1,12 +1,12 @@
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 export default function menu() {
-    const burger = document.querySelector('.page-header__burger');
-    const menu = document.querySelector('.page-header__burger-menu');
+    const burgers = document.querySelectorAll('.page-header__burger');
+    const menu = document.querySelector('.page-header__mobile-menu');
 
     window.menuOpen = false;
 
-    if (!burger || !menu) return;
+    if (!menu) return;
 
     const openMenu = () => {
         if (window.menuOpen) return;
@@ -16,6 +16,7 @@ export default function menu() {
         });
         window.menuOpen = true;
     };
+
     const closeMenu = () => {
         if (!window.menuOpen) return;
         document.body.classList.remove('mobile-menu-open');
@@ -26,12 +27,19 @@ export default function menu() {
     window.openMenu = openMenu;
     window.closeMenu = closeMenu;
 
-    burger.addEventListener('click', event => {
-        event.preventDefault();
-        if (!window.menuOpen) {
-            openMenu();
-        } else {
-            closeMenu();
-        }
-    });
+    burgers.forEach((burger, index) => {
+
+        burger.addEventListener('click', event => {
+            event.preventDefault();
+
+            menu.classList.toggle("mobile-menu--light", index);
+
+            if (!window.menuOpen) {
+                console.log(index);
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+    })
 }

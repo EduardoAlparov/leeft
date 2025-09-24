@@ -1,0 +1,101 @@
+.mobile-menu {
+    width: 100dvw;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+
+    &.mobile-menu--light {
+
+        color: var(--Asphalt-color, #252525);
+        background-color: var(--Send-color, #DAD5C1);
+
+        .mobile-menu__link {
+            &::before {
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22.4533%2021.6434L42.6059%2021.6434M42.6059%2021.6434L42.6059%2041.7959M42.6059%2021.6434L21.3927%2042.8566%22%20stroke%3D%22%23252525%22%20stroke-width%3D%223%22%2F%3E%0A%3C%2Fsvg%3E');
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-80;
+
+        flex-grow: 1;
+        padding: $size-8 $size-24 $size-56;
+
+    }
+
+    &__contacts,
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-32;
+
+        flex-grow: 1;
+
+        a {
+            color: inherit;
+            @include S32;
+        }
+    }
+
+    &__contacts {
+        flex-grow: unset;
+    }
+
+    &__link {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        gap: $size-8;
+
+        padding-left: $size-56;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -0.8rem;
+            transform: translateY(-50%);
+
+            display: block;
+            width: 64px;
+            height: 64px;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22.4533%2021.6434L42.6059%2021.6434M42.6059%2021.6434L42.6059%2041.7959M42.6059%2021.6434L21.3927%2042.8566%22%20stroke%3D%22%23DAD5C1%22%20stroke-width%3D%223%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: $size-8;
+
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+        text-underline-position: from-font;
+
+        .icon {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+}

@@ -37,6 +37,7 @@ $sizes: (
     44: 4.4rem,
     48: 4.8rem,
     52: 5.2rem,
+    56: 5.6rem,
     64: 6.4rem,
     68: 6.8rem,
     72: 7.2rem,
@@ -58,6 +59,7 @@ $size-40: map-get($sizes, 40);
 $size-44: map-get($sizes, 44);
 $size-48: map-get($sizes, 48);
 $size-52: map-get($sizes, 52);
+$size-56: map-get($sizes, 56);
 $size-64: map-get($sizes, 64);
 $size-68: map-get($sizes, 68);
 $size-72: map-get($sizes, 72);
