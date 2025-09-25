@@ -53,6 +53,7 @@ gulp.task('handlebars', function() {
         )
         .pipe(
             hb()
+                .partials('./src/partials/sections/**/*.hbs')
                 .partials('./src/partials/components/**/*.hbs')
                 .partials('./src/partials/layouts/**/*.hbs')
                 .helpers(require('handlebars-layouts'))

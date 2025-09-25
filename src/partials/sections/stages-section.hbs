@@ -1,0 +1,19 @@
+{{#if stages}}
+<section class="section stages-section">
+    <div class="stages-section__site-container">
+        <h2 class="stages-section__title">
+            Варианты и этапы разработки
+        </h2>
+
+        <div class="stages-section__body">
+
+            <div class="stages-section__list">
+                {{#each stages.list}}
+                    {{>stage-item stageClass="stages-section__item"}}
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+</section>
+{{/if}}

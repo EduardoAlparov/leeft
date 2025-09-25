@@ -1,0 +1,50 @@
+<div class="{{#if tarriffClass}}{{tarriffClass}}{{/if}} tarriff-item {{this.class}}">
+    <div class="tarriff-item__body">
+        <div class="tarriff-item__top">
+            <div class="tarriff-item__heading-block">
+                <div class="tarriff-item__icon">
+                    <svg aria-hidden="true" class="service-link__icon">
+                        <use xlink:href="#{{this.icon}}"></use>
+                    </svg>
+                </div>
+                <div class="tarriff-item__col">
+                    <span class="tarriff-item__name">
+                        {{this.name}}
+                    </span>
+                    <p class="tarriff-item__desc">
+                        {{this.desc}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarriff-item__center">
+                <div class="tarriff-item__price-block">
+                    <div class="tarriff-item__price">
+                        {{this.price}}
+                    </div>
+                    <p class="tarriff-item__target">
+                        {{this.target}}
+                    </p>
+                </div>
+
+                <ul class="tarriff-item__list">
+                    {{#each this.list}}
+                        <li class="tarriff-item__item">
+                            {{this}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="tarriff-item__bottom">
+            <p class="tarriff-item__text">
+                {{this.text}}
+            </p>
+
+            <a href="#callback" class="tarriff-item__button button button--outlined">
+                Заказать внедрение
+            </a>
+        </div>
+    </div>
+</div>

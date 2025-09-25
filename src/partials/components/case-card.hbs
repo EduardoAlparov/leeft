@@ -15,10 +15,12 @@
             </picture>
         </div>
 
-        <picture>
-            <source type="image/webp" srcset={{this.imageW}} />
-            <img class="lazy" src={{this.imageJ}} alt="image">
-        </picture>
+        {{#if this.imageJ}}
+            <picture>
+                <source type="image/webp" srcset={{this.imageW}} />
+                <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
+            </picture>
+        {{/if}}
     </div>
 
     <div class="case-card__info">
@@ -48,10 +50,12 @@
             </picture>
         </div>
 
-        <picture>
-            <source type="image/webp" srcset={{this.imageW}} />
-            <img class="lazy" src={{this.imageJ}} alt="image">
-        </picture>
+        {{#if this.imageJ}}
+            <picture>
+                <source type="image/webp" srcset={{this.imageW}} />
+                <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
+            </picture>
+        {{/if}}
     </div>
 
     <div class="case-card__info">

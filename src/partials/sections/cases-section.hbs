@@ -1,0 +1,106 @@
+
+{{#if caseMainSection }}
+<section class="cases-section section" data-midnight="light">
+    <div class="cases-section__site-container">
+        <div class="cases-section__heading">
+            <h2 class="cases-section__title">
+                Кейсы
+            </h2>
+
+            <ul class="cases-section__navbars">
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate nameplate--active" data-nav-counter="32">
+                        все
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="6">
+                        разработка
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="8">
+                        поддержка
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="12">
+                        SEO
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="7">
+                        Битрикс24
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="cases-section__body">
+            <ul class="cases-section__list cases-section__list--sortable">
+                {{#each cases}}
+                    <li class="cases-section__item">
+                        {{>case-card caseClass="cases-section__case-card" mainPage=true}}
+                    </li>
+                {{/each}}
+            </ul>
+
+            <a href="" class="cases-section__link cases-section__add-items button button--black">
+                Еще кейсы
+            </a>
+        </div>
+    </div>
+</section>
+{{else}}
+<section class="cases-section section" data-midnight="light">
+    <div class="cases-section__site-container">
+        <div class="cases-section__heading">
+            <h2 class="cases-section__title">
+                Кейсы
+            </h2>
+
+            <ul class="cases-section__navbars">
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate nameplate--active" data-nav-counter="32">
+                        все
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="6">
+                        разработка
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="8">
+                        поддержка
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="12">
+                        SEO
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="7">
+                        Битрикс24
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="cases-section__body">
+            <ul class="cases-section__list cases-section__list--collapsed">
+                {{#each cases}}
+                    <li class="cases-section__item">
+                        {{>case-card caseClass="cases-section__case-card"}}
+                    </li>
+                {{/each}}
+            </ul>
+
+            <a href="" class="cases-section__link cases-section__add-items button button--black">
+                Еще кейсы
+            </a>
+        </div>
+    </div>
+</section>
+{{/if}}

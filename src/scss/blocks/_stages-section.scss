@@ -1,0 +1,45 @@
+.stages-section {
+    padding-block: 0 $size-36;
+
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    @include breakpointMF(tablet) {
+        padding-block: 9.6rem $size-64;
+    }
+
+    @include breakpointMF(desktop) {
+        padding-block: $size-68 8.4rem;
+    }
+
+    &__site-container {
+        padding-block: $size-80;
+    }
+
+    &__title {
+        @include S48;
+
+        @include breakpointMF(tablet) {
+            @include H72;
+        }
+    }
+
+    &__body {
+        margin-top: $size-64;
+
+        @include breakpointMF(tablet) {
+            margin-top: $size-80;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: $size-40;
+
+        @include breakpointMF(desktop) {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: $size-8;
+        }
+    }
+}

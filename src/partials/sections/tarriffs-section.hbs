@@ -1,0 +1,19 @@
+<section class="tarriffs-section stages-section section">
+
+    <div class="stages-section__site-container">
+        <h2 class="stages-section__title">
+            Стоимость внедрения
+        </h2>
+
+        {{#if tarriffs}}
+            <div class="stages-section__body">
+                <div class="stages-section__list">
+                    {{#each tarriffs}}
+                        {{>tarriff-item tarriffClass="stages-section__item"}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
+    </div>
+
+</section>

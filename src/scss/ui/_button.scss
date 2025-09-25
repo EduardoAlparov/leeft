@@ -14,6 +14,12 @@
     &.button--white {
         color: var(--Send-color, #DAD5C1);
         border-color: var(--Send-color, #DAD5C1);
+
+        &.button--outlined {
+            color: var(--Asphalt-color, #252525);
+            background-color: transparent;
+            border-color: var(--Asphalt-color, #252525);
+        }
     }
 
     &.button--black {

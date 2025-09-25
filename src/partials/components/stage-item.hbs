@@ -1,0 +1,46 @@
+<div class="{{#if stageClass}}{{stageClass}}{{/if}} stage-item {{this.class}}">
+    <div class="stage-item__body">
+        <div class="stage-item__header">
+            <div class="stage-item__step">
+                {{#if this.number}}
+                    <span class="stage-item__number">
+                        {{this.number}}
+                    </span>
+                {{/if}}
+                <p class="stage-item__name">
+                    {{this.name}}
+                </p>
+            </div>
+            <h5 class="stage-item__title">
+                {{this.slogan}}
+            </h5>
+        </div>
+
+        {{#if this.steps}}
+            <ul class="stage-item__list">
+                {{#each this.steps}}
+                    <li class="stage-item__item">
+                        {{#if this.subtext}}
+                            <p class="stage-item__text">
+                                {{this.text}}
+                            </p>
+                            <p class="stage-item__subtext">
+                                {{this.subtext}}
+                            </p>
+                        {{else}}
+                            <p class="stage-item__text">
+                                {{this.text}}
+                            </p>
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+        {{#if this.button}}
+            <a href="#" class="stage-item__button button button--white button--outlined">
+                Оставить заявку
+            </a>
+        {{/if}}
+    </div>
+</div>

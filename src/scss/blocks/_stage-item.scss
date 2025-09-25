@@ -1,0 +1,80 @@
+.stage-item {
+    &.stage-item--sage-color {
+        color: var(--Asphalt-color, #252525);
+        background-color: var(--Sage-color, #B9D2B4);
+    }
+
+    &.stage-item--black-color {
+        background-color: var(--Asphalt-color, #252525);
+        border: 1px solid rgba(128, 125, 115, 0.30);
+    }
+
+    &.stage-item--white-color {
+        color: var(--Asphalt-color, #252525);
+        background-color: var(--Send-color, #DAD5C1);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $size-72;
+
+        width: 100%;
+        height: 100%;
+        padding: $size-20;
+
+        @include breakpointMF(desktop) {
+            gap: 9.6rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-8;
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+        gap: $size-8;
+    }
+
+    &__name,
+    &__number {
+        @include adds14;
+    }
+
+    &__number {
+        font-weight: 700;
+    }
+
+    &__title {
+        @include base20bold;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-16;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            padding-top: $size-16;
+            border-top: 1px solid var(--Darksend-color, #807D73);
+        }
+    }
+
+    &__text {
+        @include base16;
+    }
+
+    &__subtext {
+        @include adds14;
+        font-weight: 700;
+    }
+}

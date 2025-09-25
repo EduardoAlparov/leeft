@@ -1,0 +1,57 @@
+.faq-section {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    @include breakpointMF(tablet) {
+        padding-block: $size-36 $size-28;
+    }
+
+    &__site-container {
+        padding-block: $size-80;
+    }
+
+    &__title {
+        margin-bottom: $size-48;
+
+        @include S48;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: $size-56;
+
+            @include H72;
+        }
+
+        @include breakpointMF(desktop) {
+            margin-bottom: $size-80;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: $size-16;
+
+        @include breakpointMF(desktop) {
+            display: grid;
+            grid-auto-flow: dense;
+            grid-template-columns: repeat(2, 0.5fr);
+            gap: $size-8;
+        }
+    }
+
+    &__item {
+        flex: 1 1 100%;
+
+        &:nth-child(n + 5) {
+            @include breakpointMF(desktop) {
+                grid-column: 2 / 3;
+            }
+        }
+
+        @include breakpointMF(desktop) {
+            grid-column: 1 / 2;
+            align-self: flex-start;
+        }
+    }
+}

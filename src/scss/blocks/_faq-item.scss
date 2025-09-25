@@ -1,0 +1,136 @@
+.faq-item {
+    position: relative;
+
+    background-color: var(--Black-color, #1F1F1F);
+
+    &__input {
+        @include visuallyHidden();
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: $size-24;
+
+        padding: $size-16 $size-8 $size-16 $size-24;
+    }
+
+    &__question {
+        flex: 1 1 100%;
+
+        @include maxSizeText(3);
+        @include base16;
+
+        @include breakpointMF(tablet) {
+            @include base20;
+        }
+    }
+
+    &__icon {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        flex-shrink: 0;
+        width: 4.8rem;
+        height: 4.8rem;
+
+        .icon {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            width: 20px;
+            height: 20px;
+
+            stroke: var(--Send-color, #DAD5C1);
+            stroke-width: 2px;
+
+            transition-property: opacity, transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            @include breakpointMF(desktop) {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &.icon-close {
+                transform: rotateX(90deg);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__dropdown {
+        display: none;
+    }
+
+    &__inner {
+        padding: $size-16 $size-24;
+    }
+
+    &__text {
+        color: var(--Darksend-color, #807D73);
+
+        @include adds14;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: $size-16;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        inset: 0;
+
+        display: block;
+        cursor: pointer;
+    }
+
+    &__input {
+        &:checked {
+            &+.faq-item__body {
+                .faq-item__button {
+                    .icon {
+                        &.icon-close {
+                            opacity: 1;
+                            transform: rotateX(0deg);
+                        }
+
+                        &.icon-arrow {
+                            opacity: 0;
+                            transform: rotateX(90deg);
+                        }
+                    }
+                }
+
+                .faq-item__question {
+                    @include hover-weight-grow(0.1px, 0.3s)
+                }
+
+                .faq-item__dropdown {
+                    display: block;
+                }
+
+                .faq-item__inner {
+                    animation: slideFromTop 0.3s ease-out 0s 1 forwards;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

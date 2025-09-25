@@ -22,8 +22,8 @@
             "type": "SEO",
             "name": "Сеть семейных кафе Андерсон",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": "",
-            "imageW": ""
+            "imageJ": false,
+            "imageW": false
         },
         {
             "counter": "03",
@@ -52,10 +52,10 @@
         {
             "counter": "02",
             "type": "SEO",
-            "name": "Сеть семейных кафе Андерсон",
+            "name": "Сеть семейных кафе",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": "",
-            "imageW": ""
+            "imageJ": false,
+            "imageW": false
         },
         {
             "counter": "03",
@@ -64,6 +64,191 @@
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case-2.jpg",
             "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        }
+    ],
+    "caseMainSection": false,
+    "stages": {
+        "title": "Варианты и этапы разработки",
+        "list": [
+            {
+                "class": "stage-item--sage-color",
+                "number": "01",
+                "name": "Шаблонные сайты",
+                "slogan": "Готовое решение",
+                "steps": [
+                    {
+                        "type": "normal",
+                        "text": "Подбираем шаблон под нишу"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Настраиваем дизайн под бренд-бук"
+                    },
+                    {
+                        "type": "column",
+                        "text": "Подключаем базовые модули",
+                        "subtext": "(каталог, корзина, формы)"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Запуск за 2–4 недели"
+                    }
+                ]
+            },
+            {
+                "class": "stage-item--black-color",
+                "number": "02",
+                "name": "",
+                "slogan": "Индивидуальная разработка",
+                "steps": [
+                    {
+                        "type": "normal",
+                        "text": "Discovery-сессия и ТЗ"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "UX/UI-прототип, дизайн система"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Backend, фронтенд, интеграции"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Тестирование, SEO-оптимизация"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Запуск и поддержка"
+                    }
+                ]
+            },
+            {
+                "class": "stage-item--white-color",
+                "number": false,
+                "name": "Полный контроль над функционалом",
+                "slogan": "Сроки — от 6 недель",
+                "button": true
+            }
+        ]
+    },
+    "table": {
+        "class": "table-section--dark",
+        "title": "Основные направления",
+        "header": [
+            "(Этап)",
+            "(Что делаем)",
+            "(Что получаете)"
+        ],
+        "list": [
+            {
+                "one": "Бизнес-аналитика и ТЗ",
+                "two": "Изучаем продажи, поддержку, маркетинг. Формируем техническое задание!",
+                "three": "Чёткая карта «как есть» и «как должно быть»"
+            },
+            {
+                "one": "Внедрение и настройка Битрикс24",
+                "two": "Настраиваем воронки, права, модули, источники лидов",
+                "three": "Ничто не теряется, CRM работает с первого дня»"
+            },
+            {
+                "one": "Интеграции",
+                "two": "Телефония, мессенджеры, 1С (УТ/УНФ/БУХ), Avito, SMS, API",
+                "three": "Все каналы в одном окне"
+            },
+            {
+                "one": "Автоматизация процессов",
+                "two": "Роботы, триггеры, авто-документы, RPA",
+                "three": "Лиды обрабатываются без ручной рутины"
+            },
+            {
+                "one": "Обучение и регламенты",
+                "two": "Мастер-классы, видео-инструкции, регламенты",
+                "three": "Сотрудники готовы работать сразу"
+            },
+            {
+                "one": "Аудит и оптимизация порталов",
+                "two": "Health-check, обновления, ускорение, отчёты",
+                "three": "Портал развивается без сбоев"
+            },
+            {
+                "one": "Техническая поддержка",
+                "two": "SLA-поддержка, helpdesk, срочные доработки",
+                "three": "Критические задачи решаем за 15 мин"
+            }
+        ]
+    },
+    "tarriffs": [
+        {
+            "class": "tarriff-item--sendy",
+            "icon": "tarriff-one",
+            "name": "Старт",
+            "desc": "запуск CRM за 7 дней",
+            "price": "49 900",
+            "target": "Выбирают компании, которые впервые внедряют CRM и имеют простые процессы продаж",
+            "list": [
+                "Настраиваем единую воронку и права доступа",
+                "Подключаем каналы связи: телефония, e-mail, мессенджеры",
+                "Вводим базовую автоматизацию (напоминания, задачи)",
+                "Создаём 1 отчёт с ключевыми метриками"
+            ],
+            "text": "Менеджеры ведут сделки в одном окне, вы видите статус каждой продажи :)"
+        },
+        {
+            "class": "tarriff-item--limon",
+            "icon": "tarriff-two",
+            "name": "Стандарт",
+            "desc": "расширенная автоматизация за 15 дней",
+            "price": "99 900",
+            "target": "Выбирают компании с несколькими отделами продаж или небольшим производством",
+            "list": [
+                "Всё из пакета «Старт»",
+                "Автоматизируем счета, акты, напоминания",
+                "Настраиваем до 2 воронок + сквозную аналитику",
+                "Внедряем смарт-процессы для закупок/производства",
+                "Проводим онлайн-тренинг (2 ч) и даём видео-инструкции"
+            ],
+            "text": "Продажи и закупки синхронизированы, учёт ведётся автоматически"
+        },
+        {
+            "class": "tarriff-item--black",
+            "icon": "tarriff-three",
+            "name": "Бизнес",
+            "desc": "комплексное внедрение за 30 дней",
+            "price": "159 900",
+            "target": "Выбирают компании, которым нужна глубокая автоматизация всех подразделений",
+            "list": [
+                "Всё из «Старт» и «Стандарт»",
+                "ПНастраиваем 3+ воронок и любые смарт-процессы",
+                "Интегрируем 1С, Avito, склад, телефонию, BI-дашборды",
+                "Запускаем расширенную аналитику, настраиваем права по отделам",
+                "Даем регламенты и индивидуальное обучение для каждого подразделения"
+            ],
+            "text": "Единая экосистема от лида до отгрузки, прозрачная аналитика по KPI"
         }
     ]
 }

@@ -293,57 +293,13 @@
     </div>
 </section>
 
-<section class="cases-section section" data-midnight="light">
-    <div class="cases-section__site-container">
-        <div class="cases-section__heading">
-            <h2 class="cases-section__title">
-                Кейсы
-            </h2>
+{{>stages-section}}
 
-            <ul class="cases-section__navbars">
-                <li class="">
-                    <a href="#" class="cases-section__navbar nameplate nameplate--active" data-nav-counter="32">
-                        все
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="6">
-                        разработка
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="8">
-                        поддержка
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="12">
-                        SEO
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#" class="cases-section__navbar nameplate" data-nav-counter="7">
-                        Битрикс24
-                    </a>
-                </li>
-            </ul>
+{{>tarriffs-section}}
 
-        </div>
-        <div class="cases-section__body">
-            <ul class="cases-section__list cases-section__list--sortable">
-                {{#each cases}}
-                    <li class="cases-section__item">
-                        {{>case-card caseClass="cases-section__case-card" mainPage=true}}
-                    </li>
-                {{/each}}
-            </ul>
+{{>cases-section}}
 
-            <a href="" class="cases-section__link cases-section__add-items button button--black">
-                Еще кейсы
-            </a>
-        </div>
-    </div>
-</section>
+{{>table-section}}
 
 <section class="reviews-section section js-reviews-section">
     <div class="reviews-section__container">
@@ -880,107 +836,9 @@
     </div>
 </section>
 
-<section class="feedback-section section">
-    <div class="feedback-section__site-container">
-        <form action="" class="feedback-section__form" data-need-validation>
-            <h2 class="feedback-section__title">
-                Давайте обсудим&nbsp;Ваш проект!
-            </h2>
+{{>feedback-section}}
 
-            <div class="feedback-section__column">
-                <div class="feedback-section__row feedback-section__row--left">
-                    <div class="feedback-section__input-box input-box input-box--for-dark">
-                        <input type="text" name="feedback-name" id="feedback-name-id" required placeholder="Ваше имя" data-parsley-required="">
-                        <label for="feedback-name-id" class="input-box__label">Ваше имя</label>
-                    </div>
-                </div>
-
-                <div class="feedback-section__row feedback-section__row--left">
-                    <div class="feedback-section__input-box input-box input-box--for-dark">
-                        <input type="tel" name="feedback-phone" id="feedback-phone-id" required placeholder="Номер телефона" data-parsley-phone="">
-                        <label for="feedback-phone-id" class="input-box__label">Номер телефона</label>
-                    </div>
-                </div>
-
-                <div class="feedback-section__row feedback-section__row--left">
-                    <div class="feedback-section__input-box input-box input-box--for-dark">
-                        <input type="text" name="feedback-company" id="feedback-company-id" required placeholder="Компания" data-parsley-required="">
-                        <label for="feedback-company-id" class="input-box__label">Компания</label>
-                    </div>
-                </div>
-
-                <div class="feedback-section__row feedback-section__row--right">
-                    <div class="feedback-section__input-box input-box input-box--for-dark">
-                        <textarea rows="1" name="feedback-comment" id="feedback-comment-id"  placeholder="Какие стоят задачи?"></textarea>
-                    </div>
-                </div>
-
-                <div class="feedback-section__row feedback-section__row--right">
-                    <div class="feedback-section__types">
-                        <span class="feedback-section__types-title">
-                            Тип работ:
-                        </span>
-                        <ul class="feedback-section__types-list">
-                            <li>
-                                <label class="feedback-section__type nameplate">
-                                    <input type="checkbox" name="nameplate-type" hidden id="nameplate-type-01" value="dev">
-                                    разработка
-                                </label>
-                            </li>
-                            <li>
-                                <label class="feedback-section__type nameplate">
-                                    <input type="checkbox" name="nameplate-type"hidden  id="nameplate-type-02" value="dev-2">
-                                    развитие
-                                </label>
-                            </li>
-                            <li>
-                                <label class="feedback-section__type nameplate">
-                                    <input type="checkbox" name="nameplate-type" hidden id="nameplate-type-03" value="support">
-                                    тех.поддержка
-                                </label>
-                            </li>
-                            <li>
-                                <label class="feedback-section__type nameplate">
-                                    <input type="checkbox" name="nameplate-type"hidden  id="nameplate-type-04" value="seo">
-                                    SEO
-                                </label>
-                            </li>
-                            <li>
-                                <label class="feedback-section__type nameplate">
-                                    <input type="checkbox" name="nameplate-type"hidden  id="nameplate-type-05" value="bitrix">
-                                    Битрикс24
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="feedback-section__row feedback-section__row--right feedback-section__controls">
-                    <button type="submit" class="feedback-section__submit button button--white">
-                        Оставить заявку
-                    </button>
-
-                    <div class="feedback-section__agreement">
-                        <label class="feedback-section__agreement-checkbox checkbox">
-                            <input type="checkbox" name="feedback-agreement" id="agreement-id" hidden required>
-                            <svg aria-hidden="true" class="icon icon-border">
-                                <use xlink:href="#border"></use>
-                            </svg>
-                            <svg aria-hidden="true" class="icon icon-thick">
-                                <use xlink:href="#thick"></use>
-                            </svg>
-                        </label>
-                        <p class="feedback-section__agreement-text">
-                            Даю свое согласие на&nbsp;
-                            <a href="#" target="_blank">обработку персональных данных</a>
-                        </p>
-                    </div>
-                    <!-- <div class="feedback-section__captcha"></div> -->
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
+{{>faq-section}}
 
 {{/content}}
 {{/extend}}
