@@ -22,3 +22,9 @@ npm run dev
 ```bash
 npm run build
 ```
+
+# Ссылки на верстку
+
+# - общие:
+## Страница - [Главная](https://eduardoalparov.github.io/leeft/)
+## Страница - [Кейс внутренняя страница](https://eduardoalparov.github.io/leeft/typical.html)

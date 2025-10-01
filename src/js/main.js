@@ -2,6 +2,7 @@ import './lazyload';
 import detectTouch from './detectTouch';
 import setScrollbarWidth from './setScrollbarWidth';
 import masks from './masks';
+import fancybox from './fancybox';
 import validation from './validation';
 import anchorLinks from './anchorLinks';
 import accordions from './accordions';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     masks();
+    fancybox();
     validation();
     anchorLinks();
     accordions();

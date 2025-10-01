@@ -22,7 +22,7 @@ html {
 
     @include breakpointMF(desktop) {
         font-size: 10px;
-        font-size: clamp(6px, 0.523vw, 25px);
+        font-size: clamp(6px, 0.7vw, 25px);
     }
 
     @include noHighlight();
@@ -30,6 +30,7 @@ html {
 
 body {
     background-color: var(--Send-color, #DAD5C1);
+
     @include base20;
 }
 

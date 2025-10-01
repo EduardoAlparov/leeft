@@ -12,6 +12,7 @@
     transition-timing-function: ease;
     cursor: pointer;
     white-space: nowrap;
+    text-transform: lowercase;
 
     @include base16;
 

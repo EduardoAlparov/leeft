@@ -58,7 +58,7 @@
 
     &__body {
         position: relative;
-        margin-block: $size-48 $size-64;
+
 
         @include breakpointMF(tablet) {
             margin-block: $size-48 $size-80;

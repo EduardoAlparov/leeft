@@ -1,0 +1,334 @@
+.typical {
+    color: var(--Asphalt-color, #252525);
+
+    &__inner-wrapper {
+        @extend ._intro-padding-top;
+    }
+
+    &__site-container {
+        padding-block: $size-32 $size-96;
+
+        @include breakpointMF(tablet) {
+            padding-block: $size-64 13.2rem;
+        }
+
+        @include breakpointMF(desktop) {
+            padding-block: $size-80 16.4rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: $size-24;
+    }
+
+    &__title {
+        @include H64;
+
+        @include breakpointMF(tablet) {
+            @include H72;
+        }
+    }
+
+    &__nameplates {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-4;
+
+        @include breakpointMF(tablet) {
+            gap: $size-8;
+        }
+    }
+
+    &__nameplate {
+        &.nameplate {
+            color: var(--Send-color, #DAD5C1);
+            background-color: var(--Asphalt-color, #252525);
+            pointer-events: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: $size-64;
+
+        @include breakpointMF(desktop) {
+            margin-top: $size-80;
+        }
+    }
+}
+
+.typical__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $size-96;
+
+    @include breakpointMF(tablet) {
+        gap: $size-80;
+    }
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-96;
+
+        @include breakpointMF(tablet) {
+            gap: $size-80;
+        }
+
+        figure {
+            position: relative;
+
+            display: block;
+            width: 100%;
+            aspect-ratio: 1.46 / 1;
+            overflow: hidden;
+            // background-color: #EEEADD;
+
+            @include breakpointMF(tablet) {
+                aspect-ratio: 1.43 / 1;
+            }
+
+            @include breakpointMF(desktop) {
+                aspect-ratio: 2.82 / 1;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                display: block;
+                width: 100%;
+                min-height: 100%;
+                transform: translate(-50%, -50%);
+
+                object-fit: cover;
+                object-position: center;
+            }
+
+            figcaption {
+                @include visuallyHidden;
+            }
+        }
+    }
+
+    ul {
+        &:has(a img) {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: $size-8;
+
+            @include breakpointMF(tablet) {
+                grid-template-columns: repeat(6, auto);
+            }
+
+            &>li {
+                aspect-ratio: 1.46 / 1;
+
+                @include breakpointMF(tablet) {
+                    aspect-ratio: 1.4 / 1;
+                }
+
+                &:nth-child(6),
+                &:nth-child(1) {
+                    grid-column: span 2;
+
+                    @include breakpointMF(tablet) {
+                        grid-column: span 3;
+                    }
+                }
+
+                &:nth-child(7),
+                &:nth-child(2) {
+                    grid-column: span 1;
+                    aspect-ratio: 0.8 / 1;
+
+                    @include breakpointMF(tablet) {
+                        grid-column: span 3;
+                        aspect-ratio: 1.4 / 1;
+                    }
+                }
+
+                &:nth-child(8),
+                &:nth-child(3) {
+                    grid-column: span 1;
+                    aspect-ratio: 0.8 / 1;
+
+                    @include breakpointMF(tablet) {
+                        grid-column: span 2;
+                        aspect-ratio: 0.93 / 1;
+                    }
+                }
+
+                &:nth-child(9),
+                &:nth-child(4) {
+                    grid-column: span 2;
+
+                    @include breakpointMF(tablet) {
+                        grid-column: span 2;
+                        aspect-ratio: 0.93 / 1;
+                    }
+                }
+
+                &:nth-child(10),
+                &:nth-child(5) {
+                    grid-column: span 2;
+                    aspect-ratio: 0.8 / 1;
+
+                    @include breakpointMF(tablet) {
+                        grid-column: span 2;
+                        aspect-ratio: 0.93 / 1;
+                    }
+                }
+
+                a {
+                    position: relative;
+
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        display: block;
+                        width: 100%;
+                        min-height: 100%;
+                        transform: translate(-50%, -50%);
+
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-24;
+
+        &>h3 {
+            @include S48;
+        }
+
+        p {
+            @include base16;
+
+            strong {
+                @include adds14;
+                font-weight: 700;
+            }
+        }
+
+        &>a {
+            position: relative;
+
+            display: inline-block;
+            max-width: min-content;
+            color: inherit;
+            text-wrap: balance;
+
+            @include S48;
+
+
+            &::before {
+                position: absolute;
+                top: calc(100% + 2px);
+                left: 50%;
+
+                width: 100%;
+                height: 2px;
+                transform: translateX(-50%);
+
+                background-color: var(--Asphalt-color, #252525);
+                transition: width 0.3s ease-out;
+                content: "";
+            }
+
+            @include hoverActive() {
+                &::before {
+                    width: 0%;
+                }
+            }
+
+            @include breakpointMF(tablet) {
+                width: max-content;
+                max-width: unset;
+                @include H64;
+            }
+        }
+    }
+
+    ul {
+        &:has(h4) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: $size-32 $size-8;
+
+            @include breakpointMF(tablet) {
+                gap: $size-40 $size-8;
+            }
+
+            &>li {
+                display: flex;
+                flex-direction: column;
+                gap: $size-8;
+
+                flex: 0 1 calc(50% - #{$size-4});
+
+                @include breakpointMF(tablet) {
+                    gap: $size-16;
+
+                    flex: 0 1 calc(100% / 3 - (#{$size-8} * 2 / 3));
+                }
+
+                h4 {
+                    @include S48;
+
+                    @include breakpointMF(tablet) {
+                        @include H64;
+                    }
+                }
+
+                p {
+                    text-wrap: balance;
+                    @include maxSizeText(3);
+
+                    @include adds14;
+
+
+                    @include breakpointMF(tablet) {
+                        @include base16;
+                    }
+
+                    @include breakpointMF(desktop) {
+                        @include maxSizeText(2);
+                    }
+                }
+            }
+        }
+    }
+
+    &>article,
+    &>ul {
+        @include breakpointMF(desktop) {
+            width: 100%;
+            max-width: 65.2rem;
+            margin-inline: auto;
+        }
+
+    }
+}

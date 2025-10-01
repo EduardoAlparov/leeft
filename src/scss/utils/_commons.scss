@@ -47,3 +47,13 @@
         }
     }
 }
+
+.fancybox__container {
+    .fancybox__toolbar {
+        top: 7.2rem;
+
+        @include breakpointMF(tablet) {
+            top: 0;
+        }
+    }
+}

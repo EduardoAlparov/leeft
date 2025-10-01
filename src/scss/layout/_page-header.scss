@@ -86,9 +86,7 @@
     }
 }
 
-
 .mobile-menu-open {
-
     .page-header__burger {
         .icon-burger {
             opacity: 0;
@@ -109,6 +107,28 @@
 
     .midnightInner {
         overflow: hidden !important;
+    }
+}
+
+.page-header {
+    &.page-header--light {
+        background-color: var(--Send-color, #DAD5C1);
+
+        .page-header__logo {
+            &.logo {
+                .icon {
+                    fill: var(--Asphalt-color, #252525);
+                }
+            }
+        }
+
+        .menu__link {
+            color: var(--Asphalt-color, #252525);
+
+            &::before {
+                background-color: var(--Asphalt-color, #252525);
+            }
+        }
     }
 }
 

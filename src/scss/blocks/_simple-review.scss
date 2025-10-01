@@ -1,0 +1,111 @@
+.simple-review {
+    overflow: hidden;
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    @include breakpointMF(desktop) {
+        position: relative;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+
+        @include breakpointMF(desktop) {
+            flex-direction: row;
+            gap: $size-52;
+
+            min-height: 80rem;
+        }
+    }
+
+    &__text-slide {
+        &.text-slide {
+            display: flex;
+            flex-direction: column;
+
+            align-items: stretch;
+            padding: 0;
+            padding-block: $size-48 $size-24;
+
+            color: var(--Send-color, #DAD5C1);
+            background-color: var(--Asphalt-color, #252525);
+
+            @include breakpointMF(tablet) {
+                padding-block: $size-64;
+            }
+
+            @include breakpointMF(desktop) {
+                padding-block: $size-64 $size-24;
+            }
+
+            .text-slide__name {
+                padding: 0;
+                @include S48;
+
+                @include breakpointMF(tablet) {
+                    @include H64;
+                }
+            }
+
+            .text-slide__role {
+                padding: $size-4 $size-8;
+                @include adds14;
+                color: var(--Asphalt-color, #252525);
+                background-color: var(--Send-color, #DAD5C1);
+            }
+
+            .text-slide__body {
+                max-width: unset;
+                margin-block: $size-44 $size-64;
+
+                @include breakpointMF(tablet) {
+                    margin-block: $size-48 $size-80;
+                }
+            }
+
+            .text-slide__text {
+                &:not(:last-child) {
+                    margin-bottom: $size-24;
+                }
+            }
+
+            .text-slide__basement {
+                display: flex;
+                margin-top: auto;
+            }
+
+            @include breakpointMF(desktop) {
+                flex: 0 0 66rem;
+            }
+        }
+    }
+
+    &__image {
+        aspect-ratio: 1;
+        overflow: hidden;
+
+        margin-inline: calc(-1 * var(--content-padding, 2.4rem));
+        // padding-inline: var(--content-padding, 2.4rem);
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.64 / 1;
+        }
+
+        @include breakpointMF(desktop) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: calc(50% + 14rem);
+            aspect-ratio: unset;
+
+            margin-inline: unset;
+        }
+    }
+
+    &__image-slide {
+        display: block;
+    }
+}
