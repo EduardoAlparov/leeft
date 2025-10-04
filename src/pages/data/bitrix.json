@@ -1,0 +1,259 @@
+{
+    "title": "Битрикс24 (внутренняя)",
+    "heroList": [
+        {
+            "icon": "hero-import",
+            "desc": "Бесшовный импорт данных",
+            "text": "Переносим клиентов и сделки из 1С/Excel без потерь"
+        },
+        {
+            "icon": "hero-portal",
+            "desc": "Готовый портал за 7 дней",
+            "text": "CRM-воронка, права, каналы связи уже работают"
+        },
+        {
+            "icon": "hero-study",
+            "desc": "Обучим команду за 2 часа",
+            "text": "Живой воркшоп + 5 видео — сотрудники сразу в деле"
+        }
+    ],
+    "cases": [
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        }
+    ],
+    "caseMainSection": false,
+    "benefits": [
+        {
+            "class": "nameplate--yellow",
+            "word": "Техподдержка 24/7"
+        },
+        {
+            "class": "nameplate--green",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Фиксированные сроки"
+        },
+        {
+            "class": "nameplate--purple",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--send",
+            "word": "SEO-готовность"
+        },
+        {
+            "class": "nameplate--coral",
+            "word": "Прозрачная смета"
+        },
+        {
+            "class": "nameplate--blue",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--dark",
+            "word": "Классная команда"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Гибкая модель"
+        }
+    ],
+    "table": {
+        "class": "table-section--dark",
+        "title": "Основные направления",
+        "header": [
+            "(Этап)",
+            "(Что делаем)",
+            "(Что получаете)"
+        ],
+        "list": [
+            {
+                "one": "Бизнес-аналитика и ТЗ",
+                "two": "Изучаем продажи, поддержку, маркетинг. Формируем техническое задание!",
+                "three": "Чёткая карта «как есть» и «как должно быть»"
+            },
+            {
+                "one": "Внедрение и настройка Битрикс24",
+                "two": "Настраиваем воронки, права, модули, источники лидов",
+                "three": "Ничто не теряется, CRM работает с первого дня»"
+            },
+            {
+                "one": "Интеграции",
+                "two": "Телефония, мессенджеры, 1С (УТ/УНФ/БУХ), Avito, SMS, API",
+                "three": "Все каналы в одном окне"
+            },
+            {
+                "one": "Автоматизация процессов",
+                "two": "Роботы, триггеры, авто-документы, RPA",
+                "three": "Лиды обрабатываются без ручной рутины"
+            },
+            {
+                "one": "Обучение и регламенты",
+                "two": "Мастер-классы, видео-инструкции, регламенты",
+                "three": "Сотрудники готовы работать сразу"
+            },
+            {
+                "one": "Аудит и оптимизация порталов",
+                "two": "Health-check, обновления, ускорение, отчёты",
+                "three": "Портал развивается без сбоев"
+            },
+            {
+                "one": "Техническая поддержка",
+                "two": "SLA-поддержка, helpdesk, срочные доработки",
+                "three": "Критические задачи решаем за 15 мин"
+            }
+        ]
+    },
+    "tarriffs": [
+        {
+            "class": "tarriff-item--sendy",
+            "icon": "tarriff-one",
+            "name": "Старт",
+            "desc": "запуск CRM за 7 дней",
+            "price": "49 900",
+            "target": "Выбирают компании, которые впервые внедряют CRM и имеют простые процессы продаж",
+            "list": [
+                "Настраиваем единую воронку и права доступа",
+                "Подключаем каналы связи: телефония, e-mail, мессенджеры",
+                "Вводим базовую автоматизацию (напоминания, задачи)",
+                "Создаём 1 отчёт с ключевыми метриками"
+            ],
+            "text": "Менеджеры ведут сделки в одном окне, вы видите статус каждой продажи :)"
+        },
+        {
+            "class": "tarriff-item--limon",
+            "icon": "tarriff-two",
+            "name": "Стандарт",
+            "desc": "расширенная автоматизация за 15 дней",
+            "price": "99 900",
+            "target": "Выбирают компании с несколькими отделами продаж или небольшим производством",
+            "list": [
+                "Всё из пакета «Старт»",
+                "Автоматизируем счета, акты, напоминания",
+                "Настраиваем до 2 воронок + сквозную аналитику",
+                "Внедряем смарт-процессы для закупок/производства",
+                "Проводим онлайн-тренинг (2 ч) и даём видео-инструкции"
+            ],
+            "text": "Продажи и закупки синхронизированы, учёт ведётся автоматически"
+        },
+        {
+            "class": "tarriff-item--black",
+            "icon": "tarriff-three",
+            "name": "Бизнес",
+            "desc": "комплексное внедрение за 30 дней",
+            "price": "159 900",
+            "target": "Выбирают компании, которым нужна глубокая автоматизация всех подразделений",
+            "list": [
+                "Всё из «Старт» и «Стандарт»",
+                "ПНастраиваем 3+ воронок и любые смарт-процессы",
+                "Интегрируем 1С, Avito, склад, телефонию, BI-дашборды",
+                "Запускаем расширенную аналитику, настраиваем права по отделам",
+                "Даем регламенты и индивидуальное обучение для каждого подразделения"
+            ],
+            "text": "Единая экосистема от лида до отгрузки, прозрачная аналитика по KPI"
+        }
+    ],
+    "competences": [
+        {
+            "id": "competence-crm-popup",
+            "class": "multi-link--coral",
+            "icon": "com-funnels",
+            "iconClass": "icon-stroke",
+            "title": "CRM-воронки",
+            "desc": "Все лиды в одной системе",
+            "popupTexts": [
+                "Полноценная CRM-система с визуальным канбаном: создавайте неограниченное число воронок под продажи, сервис или партнёрскую сеть. Лиды поступают из всех каналов (сайт-формы, почта, телефония, мессенджеры), автоматически распределяются по менеджерам и фиксируются в единой карточке.",
+                "Счета и договора формируются в один клик, статусы меняются drag-and-drop, а конверсию можно отследить на любом этапе."
+            ],
+            "modalClass": ""
+        }
+    ]
+}

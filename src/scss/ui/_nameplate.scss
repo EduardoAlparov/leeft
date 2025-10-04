@@ -1,7 +1,9 @@
 .nameplate {
     display: grid;
     place-items: center;
-    height: 3.5rem;
+    grid-auto-flow: column;
+    gap: $size-12;
+    height: 3.4rem;
     padding-inline: $size-12;
 
     background-color: transparent;
@@ -29,10 +31,13 @@
         border-color: var(--Send-color, #DAD5C1);
     }
 
-    @include hoverActive() {
-        color: var(--Limon-color, #FCFF7A);
-        border-color: var(--Limon-color, #FCFF7A);
+    &:not(.benefits-section__nameplate) {
+        @include hoverActive() {
+            color: var(--Limon-color, #FCFF7A);
+            border-color: var(--Limon-color, #FCFF7A);
+        }
     }
+
 
     &:has(input:checked) {
         color: var(--Asphalt-color, #252525);
@@ -55,5 +60,15 @@
             color: var(--Limon-color, #FCFF7A);
             background-color: transparent;
         }
+    }
+
+    &>i {
+        width: 1rem;
+        height: 1rem;
+        aspect-ratio: 1/1;
+        flex-shrink: 0;
+
+        background-color: var(--Asphalt-color, #252525);
+        border-radius: 100%;
     }
 }

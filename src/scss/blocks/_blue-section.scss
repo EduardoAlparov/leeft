@@ -1,0 +1,42 @@
+.blue-section {
+    padding-block: $size-20;
+    background-color: #005893;
+
+    @include breakpointMF(tablet) {
+        padding-block: calc(#{$size-4} * 25);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $size-32;
+        padding-block: $size-80;
+    }
+
+    &__title {
+        display: grid;
+        place-content: center;
+        place-items: center;
+
+        .icon {
+            width: 27.6rem;
+            height: 4rem;
+            display: block;
+        }
+    }
+
+    &__text {
+        max-width: 25ch;
+        @include base20;
+        color: #0BBBEF;
+
+        text-align: center;
+
+        @include breakpointMF(tablet) {
+            max-width: 35ch;
+            @include S32;
+        }
+    }
+}

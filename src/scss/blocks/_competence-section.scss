@@ -1,0 +1,200 @@
+.competence-section {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    @include breakpointMF(tablet) {
+        padding-block: $size-28;
+    }
+
+    &__site-container {
+        padding-block: $size-80;
+    }
+
+    &__title {
+        @include S48;
+        margin-bottom: $size-40;
+
+        @include breakpointMF(tablet) {
+            @include H72;
+            margin-bottom: $size-72;
+        }
+
+        @include breakpointMF(desktop) {
+            margin-bottom: $size-64;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        min-height: 10rem;
+        margin-inline: calc(-1 * var(--content-padding, 2.4rem));
+        padding-block: $size-80;
+
+        background-color: var(--Black-color, #1F1F1F);
+
+        @include breakpointMF(tablet) {
+            margin-inline: unset;
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        inset: 0;
+        z-index: 100;
+
+        display: grid;
+        grid-template-columns: repeat(6, calc((100% - #{$size-40}) / 6)) $size-40;
+
+        padding-left: $size-40;
+
+        counter-reset: competence-list-counter;
+
+        &>li {
+            counter-increment: competence-list-counter;
+
+            border-left: 0.5px solid rgba($color: #DAD5C1, $alpha: 0.2);
+
+            @include breakpointMF(tablet) {
+                position: relative;
+            }
+
+            &:first-child {
+                &::after {
+                    left: $size-40;
+
+                    @include breakpointMF(desktop) {
+                        left: 50%;
+                    }
+                }
+
+                &::before {
+                    @include breakpointMF(tablet) {
+                        right: $size-40;
+                        left: unset;
+                        transform: translateX(50%);
+                    }
+
+                    @include breakpointMF(desktop) {
+                        right: unset;
+                        left: 50%;
+                        transform: translateX(0%);
+                    }
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    right: $size-40;
+                    left: unset;
+
+                    @include breakpointMF(desktop) {
+                        right: unset;
+                        left: 50%;
+                    }
+                }
+
+                &::before {
+                    @include breakpointMF(tablet) {
+                        right: unset;
+                        left: 50%;
+                        transform: translateX(50%);
+                    }
+
+                    @include breakpointMF(desktop) {
+                        transform: translateX(0%);
+                    }
+
+                }
+            }
+
+            &::before {
+                @include adds12;
+
+                display: block;
+                padding: $size-24 $size-8;
+                color: var(--Darksend-color, #807D73);
+                content: counter(competence-list-counter);
+
+                @include breakpointMF(tablet) {
+                    position: absolute;
+                    top: 0;
+                    right: 50%;
+                    transform: translateX(100%);
+                }
+            }
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                z-index: 200;
+
+                width: 0.5px;
+
+                background-color: rgba($color: #DAD5C1, $alpha: 0.2);
+                content: none;
+
+                @include breakpointMF(tablet) {
+                    content: "";
+                }
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: calc(#{$size-40} + calc(((100% - (#{$size-40} * 2))) / 12)) repeat(5, calc((100% - (#{$size-40} * 2)) / 6)) calc(#{$size-40} + calc(((100% - (#{$size-40} * 2))) / 12));
+
+            padding-left: unset;
+        }
+
+        @include breakpointMF(desktop) {
+            grid-template-columns: repeat(7, calc(100% / 7));
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: $size-24;
+
+        padding-inline: $size-40;
+
+        @include breakpointMF(tablet) {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(12, calc((100% / 12)));
+            gap: 0;
+        }
+
+        @include breakpointMF(desktop) {
+            padding-inline: calc(100% / 7 / 2) calc(100% / 7 / 2);
+        }
+    }
+
+    &__item {
+        position: relative;
+        z-index: 300;
+
+        height: 6.4rem;
+
+        @include breakpointMF(tablet) {
+            height: 6.8rem;
+        }
+
+        @include breakpointMF(desktop) {
+            height: 6.4rem;
+        }
+    }
+
+    &__item {
+        &:nth-child(1) {
+            grid-column: span 4;
+
+            @include breakpointMF(desktop) {
+                grid-column: span 3;
+            }
+        }
+    }
+}

@@ -18,7 +18,7 @@ export default function modals() {
             event.preventDefault();
         }
 
-        console.log('Opening modal', modal);
+        // console.log('Opening modal', modal);
 
         const openHandler = () => {
             lockScroll(modal, {

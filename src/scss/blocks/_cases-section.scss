@@ -58,7 +58,7 @@
         }
 
         &::after {
-            content: "\00A0(" attr(data-nav-counter) ")";
+            content: "(" attr(data-nav-counter) ")";
         }
     }
 

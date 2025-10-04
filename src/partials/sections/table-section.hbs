@@ -1,5 +1,5 @@
 {{#if table}}
-<section class="table-section section {{table.class}}">
+<section class="table-section section {{table.class}}" data-midnight="light">
     <div class="table-section__site-container">
         <h2 class="table-section__title">
             {{table.title}}
@@ -26,29 +26,29 @@
 
             <ul class="table-section__list">
                 {{#each table.list}}
-                    <li class="table-section__item table-section__row">
-                        <div class="table-section__big">
-                            <div class="table-section__name">
-                                {{this.one}}
-                            </div>
+                <li class="table-section__item table-section__row">
+                    <div class="table-section__big">
+                        <div class="table-section__name">
+                            {{this.one}}
                         </div>
-                        <div class="table-section__small">
-                            <span class="table-section__label table-section__label--mobile">
-                                {{../table.header.[1]}}
-                            </span>
-                            <div class="table-section__value">
-                                {{this.two}}
-                            </div>
+                    </div>
+                    <div class="table-section__small">
+                        <span class="table-section__label table-section__label--mobile">
+                            {{../table.header.[1]}}
+                        </span>
+                        <div class="table-section__value">
+                            {{this.two}}
                         </div>
-                        <div class="table-section__small">
-                            <span class="table-section__label table-section__label--mobile">
-                                {{../table.header.[2]}}
-                            </span>
-                            <div class="table-section__value">
-                                {{this.three}}
-                            </div>
+                    </div>
+                    <div class="table-section__small">
+                        <span class="table-section__label table-section__label--mobile">
+                            {{../table.header.[2]}}
+                        </span>
+                        <div class="table-section__value">
+                            {{this.three}}
                         </div>
-                    </li>
+                    </div>
+                </li>
                 {{/each}}
             </ul>
         </div>

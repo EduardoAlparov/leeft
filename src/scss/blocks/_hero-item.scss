@@ -1,0 +1,36 @@
+.hero-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: $size-24;
+
+    @include breakpointMF(desktop) {
+        gap: $size-32;
+    }
+
+    &__icon {
+        .icon {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: $size-16;
+
+        &>h6 {
+            @include base20bold;
+            text-align: center;
+        }
+
+        &>p {
+            @include adds14;
+            text-align: center;
+        }
+    }
+}

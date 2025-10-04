@@ -1,0 +1,22 @@
+<section class="benefits-section js-benefits-box">
+    <div class="benefits-section__site-container">
+        <div class="benefits-section__body">
+            <a href="#" class="benefits-section__target">
+                Преимущества работы с нами
+            </a>
+
+            {{#if benefits}}
+            <div class="benefits-section__list">
+                {{#each benefits}}
+                <div class="benefits-section__item" data-benefit>
+                    <span class="benefits-section__nameplate nameplate {{this.class}}">
+                        <i></i>
+                        {{this.word}}
+                    </span>
+                </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</section>

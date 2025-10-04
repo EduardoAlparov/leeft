@@ -1,6 +1,5 @@
-
 {{#if caseMainSection }}
-<section class="cases-section section" data-midnight="light">
+<section class="cases-section section">
     <div class="cases-section__site-container">
         <div class="cases-section__heading">
             <h2 class="cases-section__title">
@@ -39,9 +38,9 @@
         <div class="cases-section__body">
             <ul class="cases-section__list cases-section__list--sortable">
                 {{#each cases}}
-                    <li class="cases-section__item">
-                        {{>case-card caseClass="cases-section__case-card" mainPage=true}}
-                    </li>
+                <li class="cases-section__item">
+                    {{>case-card caseClass="cases-section__case-card" mainPage=true}}
+                </li>
                 {{/each}}
             </ul>
 
@@ -91,9 +90,9 @@
         <div class="cases-section__body">
             <ul class="cases-section__list cases-section__list--collapsed">
                 {{#each cases}}
-                    <li class="cases-section__item">
-                        {{>case-card caseClass="cases-section__case-card"}}
-                    </li>
+                <li class="cases-section__item">
+                    {{>case-card caseClass="cases-section__case-card"}}
+                </li>
                 {{/each}}
             </ul>
 

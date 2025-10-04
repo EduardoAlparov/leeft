@@ -51,6 +51,59 @@
                 user-select: none;
             }
         }
+
+        &.home__title--row {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 1ch;
+
+            @include breakpointMF(tablet) {
+                display: inline;
+                justify-content: flex-start;
+
+                @include H72;
+            }
+
+            @include breakpointMF(desktop) {
+                display: flex;
+                justify-content: center;
+                gap: 0.5ch;
+
+                @include H96;
+            }
+
+
+            .home__mobile-word {
+                flex: 1 1 100%;
+
+                @include breakpointMF(tablet) {
+                    flex: unset;
+                }
+            }
+
+            .home__mobile-word {
+                @include breakpointMF(tablet) {
+                    display: contents;
+                }
+
+                @include breakpointMF(desktop) {
+                    display: none;
+                }
+            }
+
+            .home__desktop-word-wrapper {
+                @include breakpointMF(tablet) {
+                    flex: 1 1 50%;
+                    display: inline-block;
+                }
+
+                @include breakpointMF(desktop) {
+                    display: flex;
+                    flex: unset;
+                }
+            }
+        }
     }
 
     &__mobile-word {
@@ -121,6 +174,8 @@
     }
 
     &__words-slogan {
+        min-width: 17.5rem;
+
         &>li {
             width: max-content;
             padding: $size-4 $size-8;

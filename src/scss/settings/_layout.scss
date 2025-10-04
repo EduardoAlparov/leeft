@@ -25,6 +25,11 @@ html {
         font-size: clamp(6px, 0.7vw, 25px);
     }
 
+    @include breakpointMF(large-desktop) {
+        font-size: 10px;
+        font-size: clamp(6px, 0.6vw, 25px);
+    }
+
     @include noHighlight();
 }
 

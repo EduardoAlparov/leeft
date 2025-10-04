@@ -1,0 +1,64 @@
+.hero-section {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    &__inner-wrapper {
+        @extend ._intro-padding-top;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-48;
+
+        padding-block: $size-28 $size-96;
+
+        @include breakpointMF(tablet) {
+            gap: $size-80;
+
+            padding-block: $size-64 10.4rem;
+        }
+
+        @include breakpointMF(desktop) {
+            padding-block: $size-80 11.6rem;
+            gap: 11.6rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-64 $size-8;
+
+        @include breakpointMF(tablet) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &__item {
+        @include breakpointMF(tablet) {
+            flex: 0 1 calc(100% / 2 - (#{$size-8} / 2));
+        }
+
+        @include breakpointMF(desktop) {
+            flex: 0 1 calc(100% / 3 - (#{$size-8} * 2 / 3));
+        }
+    }
+
+    &__link {
+        margin-top: $size-48;
+
+        @include breakpointMF(tablet) {
+            margin-top: $size-24;
+        }
+
+        @include breakpointMF(desktop) {
+            margin-top: unset;
+        }
+    }
+}

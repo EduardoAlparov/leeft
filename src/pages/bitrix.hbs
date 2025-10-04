@@ -1,0 +1,94 @@
+{{#extend "primary"}}
+{{#content "main"}}
+
+<section class="section hero-section" data-midnight="light">
+    <div class="hero-section__inner-wrapper">
+        <div class="hero-section__site-container">
+            <h1 class="section__title visually-hidden">
+                Битрикс24 под ключ
+            </h1>
+
+            <div class="hero-section__body">
+                <div class="hero-section__heading">
+                    <div class="hero-section__title home__title home__title--row">
+                        Битрикс24
+                        <span class="home__mobile-word">под ключ</span>
+                        <div class="home__desktop-word-wrapper">
+
+                            <div class="home__desktop-word">(</div>
+                            <ul class="home__words-list home__words-slogan">
+                                <li>CRM,</li>
+                                <li>задачи, продажи</li>
+                                <li>в одной</li>
+                                <li>системе!</li>
+                            </ul>
+                            <div class="home__desktop-word">) под ключ</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{#if heroList}}
+                <ul class="hero-section__list">
+                    {{#each heroList}}
+                    <li class="hero-section__item hero-item">
+                        <div class="hero-item__icon">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#{{this.icon}}"></use>
+                            </svg>
+                        </div>
+
+                        <div class="hero-item__column">
+                            <h6>
+                                {{this.desc}}
+                            </h6>
+                            <p>
+                                {{this.text}}
+                            </p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+                <a href="#" class="hero-section__link button button--white">
+                    Получить демо
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section blue-section">
+    <div class="blue-section__site-container">
+        <div class="blue-section__body">
+            <div class="blue-section__title">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#bitrix"></use>
+                </svg>
+            </div>
+            <p class="blue-section__text">
+                Наша компания&nbsp;&mdash; официальный партнер Битрикс24&nbsp;с 2012&nbsp;года!
+            </p>
+        </div>
+    </div>
+</section>
+
+{{>table-section}}
+
+{{>competence-section}}
+
+{{>stages-section}}
+
+{{>tarriffs-section}}
+
+{{>cases-section}}
+
+{{>benefits-section}}
+
+{{>feedback-section}}
+
+{{>faq-section}}
+
+{{/content}}
+{{/extend}}

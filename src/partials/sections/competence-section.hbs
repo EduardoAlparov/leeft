@@ -1,0 +1,46 @@
+<section class="section competence-section">
+    <div class="competence-section__site-container">
+        <h2 class="competence-section__title">
+            Возможности Битрикс24
+        </h2>
+
+        <div class="competence-section__body">
+            <ul class="competence-section__inner">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            {{#if competences}}
+            <ul class="competence-section__list">
+                {{#each competences}}
+                <li class="competence-section__item">
+                    <a href="#{{this.id}}" class="competence-section__link multi-link {{this.class}}">
+                        <div class="multi-link__arrow"></div>
+                        <div class="multi-link__body">
+                            <div class="multi-link__icon">
+                                <svg aria-hidden="true" class="icon {{this.iconClass}}">
+                                    <use xlink:href="#{{this.icon}}"></use>
+                                </svg>
+                            </div>
+                            <div class="multi-link__column">
+                                <p class="multi-link__title">
+                                    {{this.title}}
+                                </p>
+                                <p class="multi-link__desc">
+                                    {{this.desc}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
+    </div>
+</section>
