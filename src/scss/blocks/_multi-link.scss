@@ -5,6 +5,9 @@
     width: 100%;
     height: 100%;
 
+    cursor: default;
+
+
     &__arrow {
         position: absolute;
         top: 50%;
@@ -41,7 +44,10 @@
 
         color: var(--Black-color, #1F1F1F);
         background-color: #fff;
-        transition: transform 0.3s ease-in-out;
+        border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+        transition-property: color, border, background, transform;
     }
 
     &__icon {
@@ -62,6 +68,8 @@
         .icon-stroke {
             stroke: var(--Black-color, #1F1F1F);
             stroke-width: 2px;
+
+            transition: stroke 0.3s ease-in-out;
         }
     }
 
@@ -98,6 +106,145 @@
         .multi-link__arrow,
         .multi-link__body {
             background-color: var(--Coral-color, #FFAB7A);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Coral-color, #FFAB7A);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Coral-color, #FFAB7A);
+            }
+
+            .icon-stroke {
+                stroke: var(--Coral-color, #FFAB7A);
+            }
+        }
+    }
+
+    &.multi-link--blue {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Blue-color, #7AC1FF);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Blue-color, #7AC1FF);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Blue-color, #7AC1FF);
+            }
+
+            .icon-stroke {
+                stroke: var(--Blue-color, #7AC1FF);
+            }
+        }
+    }
+
+    &.multi-link--green {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Green-color, #CCFF7A);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Green-color, #CCFF7A);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Green-color, #CCFF7A);
+            }
+
+            .icon-stroke {
+                stroke: var(--Green-color, #CCFF7A);
+            }
+        }
+    }
+
+    &.multi-link--purple {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Purple-color, #B5B4D2);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Purple-color, #B5B4D2);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Purple-color, #B5B4D2);
+            }
+
+            .icon-stroke {
+                stroke: var(--Purple-color, #B5B4D2);
+            }
+        }
+    }
+
+    &.multi-link--sage {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Sage-color, #B9D2B4);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Sage-color, #B9D2B4);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Sage-color, #B9D2B4);
+            }
+
+            .icon-fill {
+                fill: var(--Sage-color, #B9D2B4);
+            }
+        }
+    }
+
+    &.multi-link--yellow {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Limon-color, #FCFF7A);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Limon-color, #FCFF7A);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Limon-color, #FCFF7A);
+            }
+
+            .icon-fill {
+                fill: var(--Limon-color, #FCFF7A);
+            }
+        }
+    }
+
+    &.multi-link--grey {
+
+        .multi-link__arrow,
+        .multi-link__body {
+            background-color: var(--Send-color, #DAD5C1);
+        }
+
+        @include hoverActive {
+
+            .multi-link__body {
+                color: var(--Send-color, #DAD5C1);
+                background-color: var(--Asphalt-color, #252525);
+                border-color: var(--Send-color, #DAD5C1);
+            }
+
+            .icon-stroke {
+                stroke: var(--Send-color, #DAD5C1);
+            }
         }
     }
 }

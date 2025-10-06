@@ -11,6 +11,10 @@
     background-color: transparent;
     border: 0.5px solid var(--Asphalt-color, #252525);
 
+    transition-property: color, background;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+
     &.button--white {
         color: var(--Send-color, #DAD5C1);
         border-color: var(--Send-color, #DAD5C1);
@@ -26,5 +30,23 @@
         color: var(--Send-color, #DAD5C1);
         background-color: var(--Asphalt-color, #252525);
         border-width: 0;
+    }
+}
+
+.button {
+    &.button--white {
+        @include hoverActive {
+            color: var(--Asphalt-color, #252525);
+            border-color: var(--Send-color, #DAD5C1);
+            background-color: var(--Send-color, #DAD5C1);
+        }
+    }
+
+    &.button--outlined {
+        @include hoverActive {
+            color: var(--Asphalt-color, #252525);
+            border-color: var(--Send-color, #DAD5C1);
+            background-color: var(--Send-color, #DAD5C1);
+        }
     }
 }

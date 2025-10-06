@@ -1,0 +1,65 @@
+.clients-section {
+    overflow: hidden;
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    display: none;
+
+    @include breakpointMF(desktop) {
+        display: none;
+    }
+
+
+    &__site-container {
+        padding-block: $size-48;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $size-24;
+
+        margin-bottom: $size-48;
+    }
+
+    &__title {
+        @include H112;
+    }
+
+    &__counter {
+        @include S32;
+    }
+
+    &__swiper {
+        margin-inline: -100%;
+        padding-inline: 100%;
+
+        padding-block: $size-68;
+    }
+
+    &__swiper-wrapper {
+        &.swiper-wrapper {
+            transition-timing-function: linear;
+        }
+    }
+
+    &__swiper-slide {
+        position: relative;
+        aspect-ratio: 2.65 / 1;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 100%;
+            max-height: 100%;
+            transform: translate(-50%, -50%);
+
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

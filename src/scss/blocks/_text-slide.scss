@@ -23,6 +23,41 @@
         @include breakpointMF(desktop) {
             gap: $size-4;
         }
+
+        &.text-slide__heading--row {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            gap: $size-16;
+        }
+    }
+
+    &__author-image {
+        width: 6.5rem;
+        height: 6.5rem;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @include breakpointMF(tablet) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: $size-4;
     }
 
     &__name {
@@ -105,7 +140,7 @@
         }
 
         &:last-child {
-            @include breakpointMF(desktop) {}
+
 
             &::after {
                 @include breakpointMF(desktop) {

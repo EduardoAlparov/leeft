@@ -115,22 +115,34 @@
         }
 
         &.cases-section__list--collapsed {
-            .cases-section__item {
-                &:nth-child(n+10) {
-                    @include breakpointMF(desktop) {
-                        display: none;
-                    }
-                }
+            &+.cases-section__add-items {
+                display: none;
             }
 
-            &+.cases-section__add-items {
-                display: grid;
-
-                @include breakpointMF(desktop) {
-                    max-width: 43.5rem;
-                    margin-inline: auto;
+            &:has(.cases-section__item:nth-child(10)) {
+                &+.cases-section__add-items {
+                    display: grid;
                 }
             }
         }
+
+        // &.cases-section__list--collapsed {
+        //     .cases-section__item {
+        //         &:nth-child(n+10) {
+        //             @include breakpointMF(desktop) {
+        //                 display: none;
+        //             }
+        //         }
+        //     }
+
+        //     &+.cases-section__add-items {
+        //         display: grid;
+
+        //         @include breakpointMF(desktop) {
+        //             max-width: 43.5rem;
+        //             margin-inline: auto;
+        //         }
+        //     }
+        // }
     }
 }

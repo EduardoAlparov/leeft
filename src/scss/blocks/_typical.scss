@@ -322,13 +322,12 @@
         }
     }
 
-    &>article,
+    article,
     &>ul {
         @include breakpointMF(desktop) {
             width: 100%;
             max-width: 65.2rem;
             margin-inline: auto;
         }
-
     }
 }

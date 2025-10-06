@@ -65,46 +65,6 @@
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case-3.jpg",
             "imageW": "./img/formats/case-3.webp"
-        },
-        {
-            "counter": "02",
-            "type": "SEO",
-            "name": "Сеть семейных кафе",
-            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": false,
-            "imageW": false
-        },
-        {
-            "counter": "03",
-            "type": "разработка",
-            "name": "Черноголовка",
-            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": "./img/formats/case-2.jpg",
-            "imageW": "./img/formats/case-2.webp"
-        },
-        {
-            "counter": "02",
-            "type": "SEO",
-            "name": "Сеть семейных кафе Андерсон",
-            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": "./img/formats/case-3.jpg",
-            "imageW": "./img/formats/case-3.webp"
-        },
-        {
-            "counter": "02",
-            "type": "SEO",
-            "name": "Сеть семейных кафе",
-            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": false,
-            "imageW": false
-        },
-        {
-            "counter": "03",
-            "type": "разработка",
-            "name": "Черноголовка",
-            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
-            "imageJ": "./img/formats/case-2.jpg",
-            "imageW": "./img/formats/case-2.webp"
         }
     ],
     "caseMainSection": false,
@@ -253,7 +213,97 @@
                 "Полноценная CRM-система с визуальным канбаном: создавайте неограниченное число воронок под продажи, сервис или партнёрскую сеть. Лиды поступают из всех каналов (сайт-формы, почта, телефония, мессенджеры), автоматически распределяются по менеджерам и фиксируются в единой карточке.",
                 "Счета и договора формируются в один клик, статусы меняются drag-and-drop, а конверсию можно отследить на любом этапе."
             ],
-            "modalClass": ""
+            "popupId": "competence-crm-modal",
+            "modalClass": "competence-modal--coral",
+            "fancybox": "funnels"
+        },
+        {
+            "id": "competence-projects-popup",
+            "class": "multi-link--green",
+            "icon": "com-projects",
+            "iconClass": "icon-stroke",
+            "title": "Задачи и проекты",
+            "desc": "Kanban, Гант, отчёты по времени",
+            "popupTexts": [
+                "Управляйте проектами через Kanban, диаграмму Ганта или классический список. Настраивайте дедлайны, подзадачи, чек-листы, зависимые этапы и автоматические напоминания исполнителям. Система считает затраченное время, показывает эффективность сотрудников и формирует отчёт «План/Факт» по каждому проекту."
+            ],
+            "popupId": "competence-projects-modal",
+            "modalClass": "competence-modal--green",
+            "fancybox": "projects"
+        },
+        {
+            "id": "competence-autom-popup",
+            "class": "multi-link--purple",
+            "icon": "com-autom",
+            "iconClass": "icon-stroke",
+            "title": "Автоматизация / RPA",
+            "desc": "Роботы, триггеры, авто-документы",
+            "popupTexts": [
+                "Роботы и триггеры выполняют рутинные действия без участия менеджеров: меняют статусы, ставят задачи, шлют письма, счёт или смс, создают документы и отправляют их на подпись. Конструктор RPA позволяет описать любой бизнес-процесс (например, согласование счёта, оформление отпуска, выдача оборудования) в виде блок-схемы no-code и запустить его за несколько минут."
+            ],
+            "popupId": "competence-autom-modal",
+            "modalClass": "competence-modal--purple",
+            "fancybox": "autom"
+        },
+        {
+            "id": "competence-office-popup",
+            "class": "multi-link--grey",
+            "icon": "com-office",
+            "iconClass": "icon-stroke",
+            "title": "Онлайн-офис",
+            "desc": "Диск, календари, совместные docs",
+            "popupTexts": [
+                "Встроенный диск с контролем прав доступа, совместная работа с документами (DOCX, XLSX, PPTX) в реальном времени, рабочие календари и учёт рабочего времени. ",
+                "Вы можете назначать встречи, бронировать переговорки, хранить файлы проекта и согласовывать договора внутри одной экосистемы, не переходя на сторонние сервисы."
+            ],
+            "popupId": "competence-office-modal",
+            "modalClass": "competence-modal--grey",
+            "fancybox": "office"
+        },
+        {
+            "id": "competence-dash-popup",
+            "class": "multi-link--yellow",
+            "icon": "com-dash",
+            "iconClass": "icon-fill",
+            "title": "BI-дашборды",
+            "desc": "Данные из CRM в живых графиках",
+            "popupTexts": [
+                "Визуальный конструктор отчётов: подтягивайте данные из CRM, задач, магазина или внешних источников через OData-API и собирайте интерактивные графики без SQL. Гибкие фильтры, сохранённые представления по отделам и автоматическая отправка PDF-отчётов на почту руководству. ",
+                "Готовые шаблоны «Продажи», «Воронка», «Валовая прибыль» доступны в пару кликов."
+            ],
+            "popupId": "competence-dash-modal",
+            "modalClass": "competence-modal--yellow",
+            "fancybox": "dash"
+        },
+        {
+            "id": "competence-chats-popup",
+            "class": "multi-link--blue",
+            "icon": "com-chats",
+            "iconClass": "icon-stroke",
+            "title": "Чаты & телефония",
+            "desc": "Общение с клиентом в 1 клик",
+            "popupTexts": [
+                "Встроенный корпоративный мессенджер, групповые чаты, аудио- и видеозвонки. Подключите SIP-АТС или облачную телефонию — входящие звонки создают лиды, а исходящие фиксируются прямо в карточке клиента. Доступны сценарии IVR, запись разговоров, автоответчики и callback-виджет.",
+                "Общение из WhatsApp, Telegram, Instagram* и почты также попадает в контакт-центр Bitrix24. *Организация работы с Meta-платформами требует официального коннектора."
+            ],
+            "popupId": "competence-chats-modal",
+            "modalClass": "competence-modal--blue",
+            "fancybox": "chats"
+        },
+        {
+            "id": "competence-ai-popup",
+            "class": "multi-link--sage",
+            "icon": "com-ai",
+            "iconClass": "icon-fill",
+            "title": "Чаты & телефония",
+            "desc": "Общение с клиентом в 1 клик",
+            "popupTexts": [
+                "Встроенный корпоративный мессенджер, групповые чаты, аудио- и видеозвонки. Подключите SIP-АТС или облачную телефонию — входящие звонки создают лиды, а исходящие фиксируются прямо в карточке клиента. Доступны сценарии IVR, запись разговоров, автоответчики и callback-виджет.",
+                "Общение из WhatsApp, Telegram, Instagram* и почты также попадает в контакт-центр Bitrix24. *Организация работы с Meta-платформами требует официального коннектора."
+            ],
+            "popupId": "competence-ai-modal",
+            "modalClass": "competence-modal--sage",
+            "fancybox": "ai"
         }
     ]
 }

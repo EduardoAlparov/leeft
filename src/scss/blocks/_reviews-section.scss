@@ -34,6 +34,18 @@
         }
     }
 
+    &__row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: $size-40;
+        gap: $size-24;
+
+        @include breakpointMF(tablet) {
+            align-items: center;
+        }
+    }
+
     &__right {
         @include breakpointMF(desktop) {
             position: relative;
@@ -57,6 +69,10 @@
 
         border: 0.5px solid var(--Asphalt-color, #252525);
         cursor: pointer;
+
+        &.reviews-section__next-btn--prev {
+            transform: rotate(180deg);
+        }
 
         @include breakpointMF(desktop) {
             display: grid;
@@ -89,7 +105,11 @@
         display: none;
         padding-left: $size-80;
 
-        @include H72;
+        @include S48;
+
+        @include breakpointMF(tablet) {
+            @include H72;
+        }
 
         @include breakpointMF(desktop) {
             display: block;
@@ -152,9 +172,6 @@
 
     &__swiper-slide {
         &.image-slide {
-
-
-
             img {
                 @include breakpointMF(desktop) {
                     transition: 0.5s ease;
@@ -242,6 +259,176 @@
                     transform: scale(1.25) translate(-50%, 0%);
 
                 }
+            }
+        }
+    }
+}
+
+
+.reviews-section {
+    &.reviews-section--modified {
+        padding-block: $size-80;
+        background-color: var(--Send-color, #DAD5C1);
+
+        .reviews-section__site-container {
+            @include breakpointMF(desktop) {
+                position: relative;
+            }
+        }
+
+
+        .reviews-section__title {
+            position: static;
+            display: block;
+
+            padding-left: unset;
+
+            @include breakpointMF(desktop) {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                padding-left: $size-80;
+            }
+        }
+
+        .reviews-section__pagination {
+            position: static;
+
+            display: block;
+            width: max-content;
+            padding-top: unset;
+
+            @include breakpointMF(desktop) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-top: $size-40;
+            }
+        }
+
+        .reviews-section__body {
+            position: relative;
+            padding-block: 0;
+
+            @include breakpointMF(tablet) {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                gap: $size-32;
+                width: 100%;
+            }
+
+            @include breakpointMF(desktop) {
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                gap: 11.8rem;
+
+                padding-top: $size-24;
+            }
+        }
+
+        .reviews-section__carousel {
+            display: none;
+
+            @include breakpointMF(tablet) {
+                display: block;
+                aspect-ratio: 1;
+            }
+
+            @include breakpointMF(desktop) {
+                position: relative;
+
+                width: 32.2rem;
+                height: 60rem;
+                aspect-ratio: unset;
+            }
+        }
+
+        .reviews-section__right {
+            @include breakpointMF(tablet) {
+                flex: 0 1 calc(100% - 21.5rem);
+                width: calc(100% - 21.5rem - #{$size-32});
+            }
+
+            @include breakpointMF(desktop) {
+                position: relative;
+
+                flex: 0 0 43.2rem;
+                width: 43.2rem;
+            }
+        }
+
+        .reviews-section__left {
+            @include breakpointMF(tablet) {
+                flex: 0 1 21.5rem;
+                width: 21.5rem;
+            }
+
+            @include breakpointMF(desktop) {
+                overflow: hidden;
+
+                display: flex;
+                justify-content: flex-end;
+                flex: 1 1 100%;
+
+                margin-left: -100%;
+                padding-left: 100%;
+            }
+        }
+
+        .reviews-section__controls {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row-reverse;
+            gap: $size-8;
+
+            .reviews-section__next-btn {
+                position: static;
+                display: grid;
+
+                flex: 1 1 calc(100% / 2 - #{$size-4});
+            }
+        }
+
+        .text-slide {
+            background-color: var(--Send-color, #DAD5C1);
+            color: var(--Asphalt-color, #252525);
+            padding: 0;
+
+            .text-slide__name {
+                padding: $size-4 $size-8;
+
+                color: var(--Send-color, #DAD5C1);
+                background-color: var(--Asphalt-color, #252525);
+
+                @include base20bold;
+            }
+
+            .text-slide__role {
+                background-color: var(--Asphalt-color, #252525);
+                color: var(--Send-color, #DAD5C1);
+            }
+
+            .text-slide__body {
+                margin-block: $size-24 $size-40;
+
+                @include breakpointMF(tablet) {
+                    margin-block: $size-16 $size-48;
+                }
+
+                &._element-collapsed {
+                    @include maxSizeText(18);
+                }
+            }
+
+            .text-slide__basement {
+                display: none;
+            }
+
+            .text-slide__expand {
+                display: grid;
             }
         }
     }

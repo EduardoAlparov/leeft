@@ -1,0 +1,239 @@
+.competence-modal {
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    place-items: stretch;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+    padding: $size-24 $size-24 0;
+
+    background-color: rgba(20, 20, 20, 0.90);
+    backdrop-filter: blur(5px);
+
+    @include breakpointMF(desktop) {
+        padding: $size-32 $size-32 0;
+    }
+
+    &.active {
+        display: grid;
+
+        .competence-modal__inner {
+            animation: slideFromBottom 0.2s ease-out 0s 1 forwards;
+        }
+    }
+
+    &__site-container {
+        height: 100%;
+        overflow: hidden;
+        padding-block: unset;
+    }
+
+    &__outer {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        padding-top: $size-24;
+        padding-inline: $size-16;
+        background-color: var(--Black-color, #1F1F1F);
+
+        @include breakpointMF(desktop) {
+            padding-top: $size-64;
+        }
+    }
+
+    &__inner {
+        width: 100%;
+        max-height: 100%;
+        overflow: auto;
+
+        padding-inline: $size-16;
+
+        color: var(--Send-color, #DAD5C1);
+
+        @include breakpointMF(desktop) {
+            padding-inline: $size-64;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--Asphalt-color, #252525);
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        &.typical__inner-wrapper {
+            position: static;
+            padding-top: unset;
+        }
+    }
+
+    &__nameplate {
+        margin-top: $size-56;
+    }
+}
+
+.competence-modal {
+    &.competence-modal--coral {
+        .competence-modal__inner {
+            color: var(--Coral-color, #FFAB7A);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Coral-color, #FFAB7A);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Coral-color, #FFAB7A);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Coral-color, #FFAB7A);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--green {
+        .competence-modal__inner {
+            color: var(--Green-color, #CCFF7A);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Green-color, #CCFF7A);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Green-color, #CCFF7A);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Green-color, #CCFF7A);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--purple {
+        .competence-modal__inner {
+            color: var(--Purple-color, #B5B4D2);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Purple-color, #B5B4D2);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Purple-color, #B5B4D2);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Purple-color, #B5B4D2);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--grey {
+        .competence-modal__inner {
+            color: var(--Send-color, #DAD5C1);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Send-color, #DAD5C1);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Send-color, #DAD5C1);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Send-color, #DAD5C1);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--yellow {
+        .competence-modal__inner {
+            color: var(--Limon-color, #FCFF7A);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Limon-color, #FCFF7A);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Limon-color, #FCFF7A);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Limon-color, #FCFF7A);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--blue {
+        .competence-modal__inner {
+            color: var(--Blue-color, #7AC1FF);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Blue-color, #7AC1FF);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Blue-color, #7AC1FF);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Blue-color, #7AC1FF);
+            }
+        }
+    }
+}
+
+.competence-modal {
+    &.competence-modal--sage {
+        .competence-modal__inner {
+            color: var(--Sage-color, #B9D2B4);
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--Sage-color, #B9D2B4);
+            }
+        }
+
+        .competence-modal__nameplate {
+            background-color: var(--Sage-color, #B9D2B4);
+        }
+
+        .competence-modal__close {
+            .icon {
+                stroke: var(--Sage-color, #B9D2B4);
+            }
+        }
+    }
+}

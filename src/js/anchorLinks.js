@@ -26,7 +26,7 @@ export default function anchorLinks() {
                 }
             });
         } else {
-            console.error('No element to scroll');
+            return;
         }
     };
     document.addEventListener('click', event => {

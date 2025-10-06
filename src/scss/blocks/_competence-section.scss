@@ -36,6 +36,10 @@
         @include breakpointMF(tablet) {
             margin-inline: unset;
         }
+
+        @include breakpointMF(desktop) {
+            padding-block: 10rem;
+        }
     }
 
     &__inner {
@@ -163,19 +167,20 @@
 
         @include breakpointMF(tablet) {
             display: grid;
-            grid-auto-flow: column;
+            grid-auto-flow: dense;
             grid-template-columns: repeat(12, calc((100% / 12)));
             gap: 0;
+            row-gap: $size-40;
         }
 
         @include breakpointMF(desktop) {
+            row-gap: $size-80;
             padding-inline: calc(100% / 7 / 2) calc(100% / 7 / 2);
         }
     }
 
     &__item {
         position: relative;
-        z-index: 300;
 
         height: 6.4rem;
 
@@ -189,12 +194,103 @@
     }
 
     &__item {
-        &:nth-child(1) {
+        &:has(.multi-link--coral) {
             grid-column: span 4;
 
             @include breakpointMF(desktop) {
                 grid-column: span 3;
             }
         }
+
+        &:has(.multi-link--green) {
+            grid-column: 6 / 11;
+
+            @include breakpointMF(desktop) {
+                grid-column: 9 / 12;
+                grid-row-start: 1;
+            }
+        }
+
+        &:has(.multi-link--purple) {
+            grid-column: 2 / 7;
+
+            @include breakpointMF(desktop) {
+                grid-column: 3 / 7;
+            }
+        }
+
+        &:has(.multi-link--grey) {
+            grid-column: 8 / 13;
+
+            @include breakpointMF(desktop) {
+                grid-column: 8 / 12;
+            }
+        }
+
+        &:has(.multi-link--yellow) {
+            grid-column: span 4;
+
+            @include breakpointMF(desktop) {
+                grid-column: 6 / 10;
+            }
+        }
+
+        &:has(.multi-link--blue) {
+            grid-column: 6 / 11;
+
+            @include breakpointMF(desktop) {
+                grid-column: 5 / 8;
+                grid-row-start: 1;
+            }
+        }
+
+        &:has(.multi-link--sage) {
+            grid-column: 2 / 7;
+
+            @include breakpointMF(desktop) {
+                grid-column: 1 / 5;
+            }
+        }
+    }
+
+    &__popup {
+        &.competence-popup {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+
+            display: none;
+
+            &.active {
+                display: flex;
+
+                .competence-popup__body {
+                    animation: slideFromBottom 0.2s ease-out 0s 1 forwards;
+                }
+            }
+        }
+    }
+
+    &__modals {
+        display: contents;
+    }
+
+    &__modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0%);
     }
 }

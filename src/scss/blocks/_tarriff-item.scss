@@ -2,11 +2,31 @@
     &.tarriff-item--sendy {
         color: var(--Asphalt-color, #252525);
         background-color: var(--Send-color, #DAD5C1);
+
+        .tarriff-item__button {
+            &.button {
+                @include hoverActive {
+                    color: var(--Send-color, #DAD5C1);
+                    border-color: var(--Asphalt-color, #252525);
+                    background-color: var(--Asphalt-color, #252525);
+                }
+            }
+        }
     }
 
     &.tarriff-item--limon {
         color: var(--Asphalt-color, #252525);
         background-color: var(--Limon-color, #FCFF7A);
+
+        .tarriff-item__button {
+            &.button {
+                @include hoverActive {
+                    color: var(--Send-color, #DAD5C1);
+                    border-color: var(--Asphalt-color, #252525);
+                    background-color: var(--Asphalt-color, #252525);
+                }
+            }
+        }
     }
 
     &.tarriff-item--black {
@@ -24,6 +44,12 @@
                 color: var(--Send-color, #DAD5C1);
                 background-color: transparent;
                 border-color: var(--Send-color, #DAD5C1);
+
+                @include hoverActive {
+                    color: var(--Asphalt-color, #252525);
+                    border-color: var(--Send-color, #DAD5C1);
+                    background-color: var(--Send-color, #DAD5C1);
+                }
             }
         }
     }
@@ -150,7 +176,5 @@
             background-position: center;
             content: "";
         }
-
-
     }
 }

@@ -1,0 +1,128 @@
+.conditions-section {
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
+
+    overflow: hidden;
+
+    @include breakpointMF(tablet) {
+        padding-block: $size-80;
+    }
+
+    @include breakpointMF(desktop) {
+        padding-block: $size-68 calc(#{$size-8} * 14.5);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $size-48;
+
+        @include S32;
+
+        @include breakpointMF(desktop) {
+            align-items: flex-end;
+            margin-bottom: unset;
+            transform: translateY(100%);
+        }
+    }
+
+    &__site-container {
+        padding-block: $size-80;
+    }
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        gap: $size-16;
+
+        width: min-content;
+        padding-block: $size-16;
+        padding-right: $size-64;
+
+        @include breakpointMF(tablet) {
+            gap: $size-24;
+
+            width: max-content;
+            padding-block: $size-32;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+
+            // width: 100%;
+            margin-left: -100%;
+            padding-left: 100%;
+
+            background-color: #fff;
+            content: "";
+        }
+
+        &:not(:last-child) {
+            margin-bottom: -1px;
+        }
+
+        &.conditions-section__item--purple {
+            &::before {
+                background-color: var(--Purple-color, #B5B4D2);
+            }
+        }
+
+        &.conditions-section__item--green {
+            &::before {
+                background-color: var(--Green-color, #CCFF7A);
+            }
+        }
+
+        &.conditions-section__item--blue {
+            &::before {
+                background-color: var(--Blue-color, #7AC1FF);
+            }
+        }
+    }
+
+    &__icon {
+        position: relative;
+        z-index: 300;
+
+        display: block;
+        width: 4.8rem;
+        height: 4.8rem;
+
+        &.icon-work,
+        &.icon-connect {
+            stroke-width: 2.4px;
+            stroke: var(--Asphalt-color, #252525);
+        }
+
+        @include breakpointMF(desktop) {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 300;
+
+        max-width: 30ch;
+
+        color: var(--Asphalt-color, #252525);
+        @include base20;
+
+        @include breakpointMF(tablet) {
+            max-width: usnet;
+            @include S32;
+        }
+
+        @include breakpointMF(desktop) {
+            @include S48;
+        }
+    }
+}

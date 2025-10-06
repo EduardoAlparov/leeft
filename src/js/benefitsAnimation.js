@@ -3,11 +3,14 @@ import gsap from 'gsap';
 export default () => {
     const canHover = window.matchMedia("(hover: hover)").matches;
     const targetBoxs = document.querySelectorAll('.js-benefits-box');
+    const rotationAmplitude = 12;
 
     const randomInteger = (min, max) => {
         let rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);
     }
+
+    const tl = gsap.timeline();
 
     if(!canHover) return;
 
@@ -34,7 +37,22 @@ export default () => {
             container.append(tag);
 
             setTimeout(() => {
-                tag.classList.add('animate')
+                // tag.classList.add('animate')
+                gsap.to(tag, {
+                    opacity: 1,
+                    duration: .15
+                });
+                gsap.to(tag, {
+                    force3D: !0,
+                    scale: 1,
+                    rotation: Math.random() * rotationAmplitude - rotationAmplitude / 2,
+                    duration: .25
+                });
+                gsap.to(tag, {
+                    force3D: !0,
+                    scale: 1.1,
+                    duration: 1
+                });
             }, 100);
 
 
@@ -43,7 +61,14 @@ export default () => {
             }, 200);
 
             setTimeout(() => {
-                tag.classList.add('hidden');
+                gsap.to(tag, {
+                    force3D: !0,
+                    scale: .8,
+                    rotation: Math.random() * rotationAmplitude - rotationAmplitude / 2,
+                    opacity: 0,
+                    duration: .3,
+                    ease: "power2.in"
+                });
             }, 2000);
 
             setTimeout(() => {

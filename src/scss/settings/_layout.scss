@@ -27,7 +27,7 @@ html {
 
     @include breakpointMF(large-desktop) {
         font-size: 10px;
-        font-size: clamp(6px, 0.6vw, 25px);
+        font-size: clamp(6px, 0.48vw, 20px);
     }
 
     @include noHighlight();

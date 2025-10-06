@@ -37,10 +37,216 @@
                             </div>
                         </div>
                     </a>
+
+                    <div id="{{this.id}}" class="competence-section__popup competence-popup js-modal">
+                        <div class="competence-popup__body">
+                            <button class="competence-popup__close js-close-modal">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+
+                            <a href="#{{this.popupId}}" class="competence-popup__nameplate">
+                                {{this.title}}
+                            </a>
+
+                            {{#if this.popupTexts}}
+                            <div class="competence-popup__texts">
+                                {{#each this.popupTexts}}
+                                <p>
+                                    {{this}}
+                                </p>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
                 </li>
                 {{/each}}
             </ul>
             {{/if}}
         </div>
     </div>
+
+    {{#if competences}}
+    <div class="competence-section__modals">
+        {{#each competences}}
+        <div id="{{this.popupId}}" class="competence-section__modal competence-modal {{this.modalClass}} js-modal">
+            <div class="competence-modal__site-container">
+
+                <div class="competence-modal__outer">
+                    <button class="competence-modal__close competence-popup__close js-close-modal">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+
+                    <div class="competence-modal__inner typical__inner-wrapper">
+
+                        <div class="typical__header">
+                            <div class="competence-modal__nameplate competence-popup__nameplate">
+                                {{this.title}}
+                            </div>
+                        </div>
+
+                        <div class="typical__body">
+                            <article>
+                                <h3>
+                                    Название заголовка
+                                </h3>
+
+                                <p>
+                                    Рыбный текст заполняет макет и демонстрирует, как будет выглядеть реальное
+                                    содержание
+                                    страницы.
+                                    Мы используем эти предложения, чтобы проверить переносы строк, интервалы и обтекание
+                                    изображений. Представьте, что здесь описываются цели проекта, ключевые задачи, этапы
+                                    разработки
+                                    и достигнутые результаты. Далее может идти краткая аналитика: рост конверсии,
+                                    повышение
+                                    скорости
+                                    загрузки, улучшение пользовательского опыта и расширение функционала
+                                </p>
+
+                                <p>
+                                    При необходимости добавляется подробный рассказ о технологиях, интеграциях и
+                                    поддержке:
+                                    1С-Битрикс, Bitrix24, CRM-воронки, автоматизация процессов, API-связки и модульная
+                                    архитектура.
+                                    Текст должен оставаться нейтральным, чтобы не отвлекать внимание от дизайна, но
+                                    достаточно
+                                    длинным, чтобы проявить все возможные сценарии отображения: обрезку по высоте,
+                                    адаптивный
+                                    перенос на мобильных устройствах и работу многоуровневого авто-лейаута. Внесите
+                                    реальные
+                                    данные,
+                                    когда макет будет согласован.
+                                </p>
+                            </article>
+
+                            <div>
+                                <figure>
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                        <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                    </picture>
+
+                                    <figcaption>Подпись к картинке</figcaption>
+                                </figure>
+
+                                <article>
+                                    <h3>
+                                        Название заголовка
+                                    </h3>
+
+                                    <p>
+                                        Рыбный текст заполняет макет и демонстрирует, как будет выглядеть реальное
+                                        содержание
+                                        страницы. Мы используем эти предложения, чтобы проверить переносы строк,
+                                        интервалы и
+                                        обтекание изображений. Представьте, что здесь описываются цели проекта, ключевые
+                                        задачи,
+                                        этапы разработки и достигнутые результаты. Далее может идти краткая аналитика:
+                                        рост
+                                        конверсии, повышение скорости загрузки, улучшение пользовательского опыта и
+                                        расширение
+                                        функционала
+                                    </p>
+
+                                    <p>
+                                        При необходимости добавляется подробный рассказ о технологиях, интеграциях и
+                                        поддержке:
+                                        1С-Битрикс, Bitrix24, CRM-воронки, автоматизация процессов, API-связки и
+                                        модульная
+                                        архитектура. Текст должен оставаться нейтральным, чтобы не отвлекать внимание от
+                                        дизайна, но
+                                        достаточно длинным, чтобы проявить все возможные сценарии отображения: обрезку
+                                        по
+                                        высоте,
+                                        адаптивный перенос на мобильных устройствах и работу многоуровневого
+                                        авто-лейаута.
+                                        Внесите
+                                        реальные данные, когда макет будет согласован.
+                                    </p>
+
+                                    <p>
+                                        При необходимости добавляется подробный рассказ о технологиях, интеграциях и
+                                        поддержке:
+                                        1С-Битрикс, Bitrix24, CRM-воронки, автоматизация процессов, API-связки и
+                                        модульная
+                                        архитектура. Текст должен оставаться нейтральным, чтобы не отвлекать внимание от
+                                        дизайна, но
+                                        достаточно длинным, чтобы проявить все возможные сценарии отображения: обрезку
+                                        по
+                                        высоте,
+                                        адаптивный перенос на мобильных устройствах и работу многоуровневого
+                                        авто-лейаута.
+                                        Внесите
+                                        реальные данные, когда макет будет согласован.
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Дополнительный текст, если необходим
+                                        </strong>
+                                    </p>
+                                </article>
+                            </div>
+
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="#" data-src="./img/formats/placeholder.png" data-caption={{this.title}}
+                                            data-fancybox={{this.fancybox}}>
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                                <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-src="./img/formats/placeholder.png" data-caption={{this.title}}
+                                            data-fancybox={{this.fancybox}}>
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                                <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-src="./img/formats/placeholder.png" data-caption={{this.title}}
+                                            data-fancybox={{this.fancybox}}>
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                                <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-src="./img/formats/placeholder.png" data-caption={{this.title}}
+                                            data-fancybox={{this.fancybox}}>
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                                <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-src="./img/formats/placeholder.png" data-caption={{this.title}}
+                                            data-fancybox={{this.fancybox}}>
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/formats/placeholder.webp" />
+                                                <img class="lazy" src="./img/formats/placeholder.png" alt="">
+                                            </picture>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
 </section>

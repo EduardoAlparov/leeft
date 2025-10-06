@@ -27,7 +27,7 @@ export default () => {
         }
 
         const imageSwiper = new Swiper(imagesSwiperBox, {
-            modules: [Navigation, Pagination, Controller, Autoplay],
+            modules: [Navigation, Controller, Autoplay],
 
             speed: 700,
             slidesPerView: 1,
@@ -39,15 +39,10 @@ export default () => {
             controller: {
                 control: [ thumbsSwiper]
             },
-
-            pagination: {
-                el: section.querySelector('.reviews-section__pagination'),
-                type: 'fraction'
-            }
         });
 
         const textSwiper = new Swiper(textSwiperBox, {
-            modules: [Navigation, Controller, EffectFade],
+            modules: [Navigation, Pagination, Controller, EffectFade],
             speed: 700,
             slidesPerView: 1,
             spaceBetween: 8,
@@ -62,8 +57,14 @@ export default () => {
             },
 
             navigation: {
-                nextEl: section.querySelector('.reviews-section__next-btn')
+                nextEl: section.querySelector('.reviews-next-btn'),
+                prevEl: section.querySelector('.reviews-prev-btn')
             },
+
+            pagination: {
+                el: section.querySelector('.reviews-section__pagination'),
+                type: 'fraction'
+            }
         });
     })
 }
