@@ -12,7 +12,10 @@ import tabs from './tabs';
 import {cursorControl} from './cursor';
 import setHeaderPadding from './setHeaderPadding';
 import video from './video';
+
+import navbarToggle from './navbarToggle';
 import serviceLinkImage from './serviceLinkImage';
+
 import reviewsSectionSwipers from './reviewsSectionSwipers';
 import midnight from './midnight';
 
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cursorControl();
     setHeaderPadding();
+
+    navbarToggle();
     serviceLinkImage();
     reviewsSectionSwipers();
     midnight();

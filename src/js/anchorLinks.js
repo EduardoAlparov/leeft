@@ -7,6 +7,7 @@ export default function anchorLinks() {
     const pageHeader = document.querySelector('.page-header');
     const offset = pageHeader ? pageHeader.offsetHeight : 80;
     const DURATION = 1.4;
+
     const scrollByHash = hash => {
         const elementToScroll = document.querySelector(hash);
         if (elementToScroll && !elementToScroll.matches('.js-modal')) {
@@ -29,6 +30,7 @@ export default function anchorLinks() {
             return;
         }
     };
+
     document.addEventListener('click', event => {
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');

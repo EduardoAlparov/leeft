@@ -1,0 +1,77 @@
+{{#extend "primary"}}
+{{#content "main"}}
+
+<section class="section hero-section" data-midnight="light" id="first-section-abchor">
+    <div class="hero-section__inner-wrapper">
+        <div class="hero-section__site-container">
+            <h1 class="section__title visually-hidden">
+                Разработка
+            </h1>
+
+            <div class="hero-section__body">
+                <div class="hero-section__heading">
+                    <div class="hero-section__title home__title home__title--row">
+                        Разработка
+                        <span class="home__small-mobile-word">сайтов</span>
+                        <div class="home__desktop-word-wrapper">
+                            <div class="home__desktop-word">(</div>
+                            <ul class="home__words-list home__words-slogan">
+                                <li>От готовых</li>
+                                <li>шаблонов</li>
+                                <li>до индивидуальных</li>
+                                <li>решений!</li>
+                            </ul>
+                            <div class="home__desktop-word">)</div>
+                            <div class="home__tablet-word">сайтов</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {{#if heroList}}
+                <ul class="hero-section__list">
+                    {{#each heroList}}
+                    <li class="hero-section__item hero-item">
+                        <div class="hero-item__icon">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#{{this.icon}}"></use>
+                            </svg>
+                        </div>
+
+                        <div class="hero-item__column">
+                            <h6>
+                                {{this.desc}}
+                            </h6>
+                            <p>
+                                {{this.text}}
+                            </p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+                <a href="#" class="hero-section__link button button--white">
+                    Оставить заявку
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{>table-section}}
+
+{{>stages-section}}
+
+{{>cases-section}}
+
+{{>benefits-section}}
+{{>clients-section}}
+
+{{>reviews-section}}
+
+{{>feedback-section}}
+{{>faq-section}}
+
+{{/content}}
+{{/extend}}

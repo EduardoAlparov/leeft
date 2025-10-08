@@ -6,6 +6,9 @@
     height: 3.4rem;
     padding-inline: $size-12;
 
+    color: var(--Asphalt-color, #252525);
+    text-transform: lowercase;
+
     background-color: transparent;
     border: 0.5px solid transparent;
 
@@ -14,7 +17,6 @@
     transition-timing-function: ease;
     cursor: pointer;
     white-space: nowrap;
-    text-transform: lowercase;
 
     @include base16;
 
@@ -28,6 +30,7 @@
     }
 
     &.feedback-section__type {
+        color: var(--Send-color, #DAD5C1);
         border-color: var(--Send-color, #DAD5C1);
     }
 

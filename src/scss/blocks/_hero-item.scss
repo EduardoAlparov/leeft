@@ -31,6 +31,10 @@
         &>p {
             @include adds14;
             text-align: center;
+
+            @include breakpointMF(desktop) {
+                max-width: 35ch;
+            }
         }
     }
 }

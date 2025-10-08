@@ -27,5 +27,7 @@ npm run build
 
 # - общие:
 ## Страница - [Главная](https://eduardoalparov.github.io/leeft/)
+## Страница - [Кейсы](https://eduardoalparov.github.io/leeft/cases.html)
 ## Страница - [Кейс внутренняя страница](https://eduardoalparov.github.io/leeft/typical.html)
+## Страница - [Разработка сайтов (внутренняя)](https://eduardoalparov.github.io/leeft/development.html)
 ## Страница - [Битрикс24 (внутренняя)](https://eduardoalparov.github.io/leeft/bitrix.html)

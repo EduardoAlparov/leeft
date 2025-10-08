@@ -12,6 +12,31 @@
         flex-direction: column;
         gap: $size-40;
 
+        &.cases-section__heading--column {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            gap: $size-32;
+
+            @include breakpointMF(tablet) {
+                gap: $size-64;
+            }
+
+            .cases-section__title {
+                @include H64;
+
+                @include breakpointMF(tablet) {
+                    @include H72;
+                }
+
+                @include breakpointMF(desktop) {
+                    margin-bottom: unset;
+                    @include H112;
+                }
+            }
+        }
+
         @include breakpointMF(tablet) {
             gap: $size-48;
         }
@@ -21,6 +46,16 @@
             flex-wrap: wrap;
             align-items: flex-end;
             gap: $size-64 9.6rem;
+        }
+    }
+
+    &__subtitle {
+        margin-top: calc(-1 * #{$size-24});
+        margin-bottom: $size-24;
+
+        @include breakpointMF(tablet) {
+            margin-top: unset;
+            margin-bottom: unset;
         }
     }
 
@@ -39,20 +74,45 @@
         }
     }
 
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+
+        @include adds14;
+
+        &>* {
+            display: inline-flex;
+            align-items: center;
+            height: 2.6rem;
+
+            color: var(--Send-color, #DAD5C1);
+            background-color: var(--Asphalt-color, #252525);
+        }
+
+        &>p {
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+        }
+    }
+
     &__navbars {
         display: flex;
         align-items: center;
         gap: $size-16;
 
-        max-width: 100%;
         overflow: auto;
+        margin-inline: calc(-1 * var(--content-padding));
+        padding-inline: var(--content-padding);
+
+        scroll-behavior: smooth;
+        @include noScrollbar();
     }
 
     &__navbar {
-
         &.nameplate {
             position: relative;
-            display: inline-flex;
 
             @include base20;
         }
@@ -83,6 +143,15 @@
 
         @include breakpointMF(desktop) {
             display: none;
+        }
+
+        &.button {
+            @include hoverActive {
+                border-width: 1px;
+                color: var(--Asphalt-color, #252525);
+                background-color: transparent;
+                border-color: var(--Asphalt-color, #252525);
+            }
         }
     }
 

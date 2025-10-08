@@ -74,6 +74,15 @@
             }
 
 
+            .home__small-mobile-word {
+                flex: 1 1 100%;
+
+                @include breakpointMF(tablet) {
+                    flex: unset;
+                }
+            }
+
+
             .home__mobile-word {
                 flex: 1 1 100%;
 
@@ -102,13 +111,38 @@
                     display: flex;
                     flex: unset;
                 }
+
+                &:has(.home__tablet-word) {
+                    display: inline-flex;
+                    // align-items: baseline;
+                    gap: 1.6rem;
+                }
             }
+        }
+    }
+
+    &__small-mobile-word {
+        @include breakpointMF(tablet) {
+            display: none;
         }
     }
 
     &__mobile-word {
         @include breakpointMF(desktop) {
             display: none;
+        }
+    }
+
+    &__tablet-word {
+        display: none;
+
+        @include breakpointMF(tablet) {
+            display: inline-block;
+            padding-top: 1.2rem;
+        }
+
+        @include breakpointMF(desktop) {
+            padding-top: unset;
         }
     }
 

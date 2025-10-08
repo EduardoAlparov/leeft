@@ -77,4 +77,13 @@
         @include adds14;
         font-weight: 700;
     }
+
+    &__button {
+        &.button {
+            @include hoverActive {
+                color: var(--Send-color, #DAD5C1);
+                background-color: var(--Asphalt-color, #252525);
+            }
+        }
+    }
 }
