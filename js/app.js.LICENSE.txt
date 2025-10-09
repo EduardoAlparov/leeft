@@ -19,6 +19,30 @@
 */
 
 /*!
+ * Isotope v3.0.6
+ *
+ * Licensed GPLv3 for open source use
+ * or Isotope Commercial License for commercial use
+ *
+ * https://isotope.metafizzy.co
+ * Copyright 2010-2018 Metafizzy
+ */
+
+/*!
+ * Masonry layout mode
+ * sub-classes Masonry
+ * https://masonry.desandro.com
+ */
+
+/*!
+ * Masonry v4.2.2
+ * Cascading grid layout library
+ * https://masonry.desandro.com
+ * MIT License
+ * by David DeSandro
+ */
+
+/*!
  * Midnight.js 1.1.1
  * jQuery plugin to switch between multiple fixed header designs on the fly, so it looks in line with the content below it.
  * http://aerolab.github.io/midnight.js/
@@ -40,6 +64,12 @@
 */
 
 /*!
+ * Outlayer v2.1.1
+ * the brains and guts of a layout library
+ * MIT license
+ */
+
+/*!
  * ScrollTrigger 3.10.4
  * https://greensock.com
  *
@@ -55,6 +85,12 @@
  * Copyright (c) 2010 - 2021 Robin Herbots
  * Licensed under the MIT license
  * Version: 5.0.6
+ */
+
+/*!
+ * getSize v2.0.3
+ * measure size of elements
+ * MIT license
  */
 
 /*!
