@@ -2,6 +2,9 @@ import gsap from 'gsap';
 
 export default () => {
     const canHover = window.matchMedia("(hover: hover)").matches;
+
+    if(!canHover) return;
+
     const targetBoxs = document.querySelectorAll('.js-benefits-box');
     const rotationAmplitude = 12;
 
@@ -12,10 +15,12 @@ export default () => {
 
     const tl = gsap.timeline();
 
-    if(!canHover) return;
+
 
     targetBoxs.forEach( (targetBox) => {
         const nameplates = targetBox.querySelectorAll('[data-benefit]');
+        if(!nameplates[0]) return;
+
         const container = nameplates[0].parentElement;
         const clones = [];
         let canCreate = true;

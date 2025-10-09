@@ -1,0 +1,258 @@
+{
+    "title": "Техническая поддержка и развитие",
+    "heroList": [
+        {
+            "icon": "hero-test",
+            "desc": "Тест-задача без предоплаты",
+            "text": "Даем реальный мини-заказ. Показываем качество и точность сроков!"
+        },
+        {
+            "icon": "hero-clock",
+            "desc": "Никаких «сгорающих» часов",
+            "text": "Оплачиваете только фактически выполненную работу"
+        },
+        {
+            "icon": "hero-start",
+            "desc": "Стартуем сегодня",
+            "text": "Срочные баги — реакция 15 мин! Новым клиентам берём ТЗ в день обращения "
+        }
+    ],
+    "table": {
+        "class": "table-section--light",
+        "title": "Технологии и CMS",
+        "header": [
+            "(Платформа)",
+            "(Что делаем)",
+            "(Типовые задачи)"
+        ],
+        "list": [
+            {
+                "one": "1С-Битрикс",
+                "two": "Поддержка, апдейты ядра, доработка модулей",
+                "three": "Оптимизация каталога, интеграция 1С, внедрение кеширования"
+            },
+            {
+                "one": "WordPress",
+                "two": "Обновления, безопасность, кастом-плагины",
+                "three": "Исправление ошибок, верстка блоков Gutenberg, SEO-настройки"
+            },
+            {
+                "one": "Битрикс24",
+                "two": "CRM-автоматизация, Webhooks",
+                "three": "Наладка воронок, синхронизация с сайтом"
+            }
+        ]
+    },
+    "tableList": [
+        {
+            "one": "Развитие и улучшение",
+            "two": [
+                "Создание и размещение новых разделов",
+                "Разработка и внедрение скриптов и модулей",
+                "Экспорт и импорт товаров из маркетплейсов",
+                "Любая задача, даже в космос на 1С-Битрикс!"
+            ],
+            "three": [
+                "Редизайн отдельных страниц и всего сайта",
+                "Доработка структуры сайта",
+                "Установка и настройка модулей доставки",
+                "Настройка аналитики и разработка стратегии развития"
+            ]
+        },
+        {
+            "one": "Маркетинговая поддержка",
+            "two": [
+                "Создание рекламных баннеров.",
+                "SEO-оптимизация сайта.",
+                "Заполнение характеристик товаров",
+                "Внедрение и настройка программ лояльности"
+            ],
+            "three": [
+                "Написание и размещение контента",
+                "Наполнение товарного каталога",
+                "Разработка лендингов",
+                "Сквозная аналитика"
+            ]
+        },
+        {
+            "one": "Интеграции и&#160;безопасность",
+            "two": [
+                "Создание рекламных баннеров.",
+                "SEO-оптимизация сайта.",
+                "Заполнение характеристик товаров",
+                "Внедрение и настройка программ лояльности"
+            ],
+            "three": [
+                "Написание и размещение контента",
+                "Наполнение товарного каталога",
+                "Разработка лендингов",
+                "Сквозная аналитика"
+            ]
+        }
+    ],
+    "stages": {
+        "title": "Как начать работать?",
+        "list": [
+            {
+                "class": "stage-item--sage-color",
+                "number": "01",
+                "name": "",
+                "slogan": "Бесплатная оценка",
+                "steps": [
+                    {
+                        "type": "normal",
+                        "text": "Присылаете доступ"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Мы возвращаем чек-лист и план"
+                    }
+                ]
+            },
+            {
+                "class": "stage-item--black-color",
+                "number": "02",
+                "name": "",
+                "slogan": "Тестовая задача",
+                "steps": [
+                    {
+                        "type": "normal",
+                        "text": "2 часа работы бесплатно"
+                    },
+                    {
+                        "type": "normal",
+                        "text": "Видите наш подход вживую"
+                    }
+                ]
+            }
+        ]
+    },
+    "cases": [
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        }
+    ],
+    "benefits": [
+        {
+            "class": "nameplate--yellow",
+            "word": "Техподдержка 24/7"
+        },
+        {
+            "class": "nameplate--green",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Фиксированные сроки"
+        },
+        {
+            "class": "nameplate--purple",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--send",
+            "word": "SEO-готовность"
+        },
+        {
+            "class": "nameplate--coral",
+            "word": "Прозрачная смета"
+        },
+        {
+            "class": "nameplate--blue",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--dark",
+            "word": "Классная команда"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Гибкая модель"
+        }
+    ]
+}

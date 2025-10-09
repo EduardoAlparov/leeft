@@ -59,4 +59,9 @@
         background-color: var(--Asphalt-color, #252525);
         border-color: var(--Send-color, #DAD5C1);
     }
+
+    &.input-box--for-black {
+        background-color: var(--Black-color, #1F1F1F);
+        border-color: var(--Send-color, #DAD5C1);
+    }
 }

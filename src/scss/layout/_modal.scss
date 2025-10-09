@@ -1,0 +1,79 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    overflow: hidden;
+    background: rgba(#252525, 0.5);
+    -webkit-overflow-scrolling: touch;
+
+    .no-touch & {
+        @include customScrollbar();
+    }
+
+    &:not(.active) {
+        right: calc(-1 * var(--sb-width, 0));
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    &__inner-wrapper {
+        flex-grow: 1;
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
+    }
+
+    &__site-container {
+        padding-block: 13.5rem 11.6rem;
+    }
+
+    &__body {
+        position: relative;
+        padding: $size-64 $size-16 10.4rem;
+
+        color: var(--Send-color, #DAD5C1);
+        background-color: var(--Black-color, #1F1F1F);
+        border: 2px solid var(--Send-color, #DAD5C1);
+
+        @include breakpointMF(tablet) {
+            padding: 11.6rem $size-40;
+        }
+
+        @include breakpointMF(desktop) {
+            padding: $size-96 $size-64;
+        }
+
+
+        .feedback-section__column {
+            margin-top: $size-48;
+
+            @include breakpointMF(tablet) {
+                margin-top: $size-64;
+            }
+
+            @include breakpointMF(desktop) {
+                margin-top: $size-64;
+            }
+        }
+
+        .feedback-section__title {
+            @include S48;
+        }
+
+        .feedback-section__column {
+            @include breakpointMF(desktop) {
+                gap: $size-40 10.8rem;
+            }
+        }
+    }
+}

@@ -17,6 +17,11 @@
         background-color: var(--Send-color, #DAD5C1);
     }
 
+    &.table-section--sage {
+        color: var(--Asphalt-color, #252525);
+        background-color: var(--Sage-color, #B9D2B4);
+    }
+
     &__site-container {
         padding-block: $size-80;
 
@@ -80,6 +85,26 @@
 
         @include breakpointMF(desktop) {
             gap: $size-48;
+        }
+
+        &.table-section__list--bigger-gap {
+            gap: $size-56;
+
+            @include breakpointMF(tablet) {
+                gap: $size-56;
+            }
+
+            @include breakpointMF(desktop) {
+                gap: $size-64;
+            }
+
+            .table-section__item {
+                padding-bottom: $size-56;
+
+                @include breakpointMF(desktop) {
+                    padding-bottom: $size-64;
+                }
+            }
         }
     }
 
@@ -147,6 +172,10 @@
                 display: none;
             }
         }
+
+        &--hidden {
+            opacity: 0;
+        }
     }
 
     &__value {
@@ -155,5 +184,43 @@
         @include breakpointMF(desktop) {
             max-width: 35ch;
         }
+
+        &.table-section__value--column {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: $size-16;
+
+            @include breakpointMF(tablet) {
+                gap: $size-24;
+            }
+
+            @include breakpointMF(desktop) {
+                gap: $size-16;
+            }
+        }
+    }
+
+    &__nameplate {
+        &.nameplate {
+            background: var(--Asphalt-color, #252525);
+            color: var(--Sage-color, #B9D2B4);
+            pointer-events: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-8;
+
+        padding-block: $size-56 $size-44;
+        border-top: 1px solid var(--Darksend-color, #807D73);
+
+        @include breakpointMF(desktop) {
+            padding-top: $size-64;
+        }
+
     }
 }

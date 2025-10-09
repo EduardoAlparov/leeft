@@ -9,3 +9,4 @@ export function convertRemToPixels(rem) {
 
 export const IS_MOBILE = window.matchMedia('(max-width: 640px)').matches;
 export const IS_TABLET = window.matchMedia('(max-width: 1200px)').matches;
+export const IS_DESKTOP = window.matchMedia('(min-width: 1200px)').matches;

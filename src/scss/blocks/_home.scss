@@ -73,6 +73,11 @@
                 @include H96;
             }
 
+            &.home__title--start {
+                @include breakpointMF(tablet) {
+                    justify-content: flex-start;
+                }
+            }
 
             .home__small-mobile-word {
                 flex: 1 1 100%;
@@ -81,7 +86,6 @@
                     flex: unset;
                 }
             }
-
 
             .home__mobile-word {
                 flex: 1 1 100%;
@@ -98,6 +102,19 @@
 
                 @include breakpointMF(desktop) {
                     display: none;
+                }
+
+                &.home__mobile-word--padding-top {
+                    display: none;
+
+                    @include breakpointMF(tablet) {
+                        display: inline-block;
+                        padding-top: 1.2rem;
+                    }
+
+                    @include breakpointMF(desktop) {
+                        display: none;
+                    }
                 }
             }
 
@@ -130,6 +147,13 @@
     &__mobile-word {
         @include breakpointMF(desktop) {
             display: none;
+        }
+
+        &.home__mobile-word--padding-top {
+            @include breakpointMF(tablet) {
+                display: inline-block;
+                padding-top: 1.2rem;
+            }
         }
     }
 

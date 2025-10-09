@@ -51,7 +51,7 @@
                 </ul>
                 {{/if}}
 
-                <a href="#" class="hero-section__link button button--white">
+                <a href="#callback-modal" class="hero-section__link button button--white">
                     Получить демо
                 </a>
             </div>
@@ -82,17 +82,17 @@
 
 {{>tarriffs-section}}
 
-<section class="section conditions-section">
+<section class="section conditions-section js-cond-animation-trigger">
     <div class="conditions-section__site-container">
         <h2 class="section__title visually-hidden">
-            (Условия работы)
+            Условия работы
         </h2>
-        <div class="conditions-section__title">
+        <div class="conditions-section__title js-cond-animation-title">
             (Условия работы)
         </div>
 
-        <ul class="conditions-section__list">
-            <li class="conditions-section__item conditions-section__item--purple">
+        <ul class="conditions-section__list js-cond-animation-wrapper">
+            <li class="conditions-section__item conditions-section__item--purple js-cond-animation-item">
                 <svg aria-hidden="true" class="conditions-section__icon icon-work">
                     <use xlink:href="#cond-work"></use>
                 </svg>
@@ -100,7 +100,7 @@
                     Работа&nbsp;по&nbsp;договору
                 </p>
             </li>
-            <li class="conditions-section__item conditions-section__item--green">
+            <li class="conditions-section__item conditions-section__item--green js-cond-animation-item">
                 <svg aria-hidden="true" class="conditions-section__icon icon-task">
                     <use xlink:href="#cond-task"></use>
                 </svg>
@@ -108,7 +108,7 @@
                     Берем нестандартные&nbsp;задачи
                 </p>
             </li>
-            <li class="conditions-section__item conditions-section__item--blue">
+            <li class="conditions-section__item conditions-section__item--blue js-cond-animation-item">
                 <svg aria-hidden="true" class="conditions-section__icon icon-connect">
                     <use xlink:href="#cond-connect"></use>
                 </svg>

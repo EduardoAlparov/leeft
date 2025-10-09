@@ -22,6 +22,8 @@ import midnight from './midnight';
 import menu from './menu';
 import benefitsAnimation from './benefitsAnimation';
 import cliensSwiper from './cliensSwiper';
+import conditionsAnimation from './conditionsAnimation';
+import casesLayout from './casesLayout';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -51,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
     menu();
     benefitsAnimation();
     cliensSwiper();
+    conditionsAnimation();
+    casesLayout();
 });
 
 document.addEventListener('lazyloaded', () => {

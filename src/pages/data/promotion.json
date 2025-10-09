@@ -1,0 +1,139 @@
+{
+    "title": "SEO продвижение (внутренняя)",
+    "heroList": [
+        {
+            "icon": "hero-loupe",
+            "desc": "Экспресс-аудит 24 ч",
+            "text": "Уже завтра получаете чек-лист ошибок и рост-потенциал"
+        },
+        {
+            "icon": "hero-kpi",
+            "desc": "KPI в договоре",
+            "text": "Фиксируем трафик. Нет роста — дорабатываем бесплатно"
+        },
+        {
+            "icon": "hero-sec",
+            "desc": "Старт за сутки",
+            "text": "Запускаем семантику и тех-SEO в день обращения,отчёты каждую неделю"
+        }
+    ],
+    "table": {
+        "class": "table-section--dark",
+        "title": "Наш подход",
+        "header": [
+            "(Этап)",
+            "(Что делаем)",
+            "(Что получаете)"
+        ],
+        "list": [
+            {
+                "one": "Анализ",
+                "two": "Конкуренты, структура сайта, технические ошибки",
+                "three": "PDF-аудит + приоритеты исправлений"
+            },
+            {
+                "one": "Оптимизация",
+                "two": "Тех-SEO, скорость, mobile-friendly, микроразметка",
+                "three": "Чистый, быстрый и «понятный» для поисковиков сайт"
+            },
+            {
+                "one": "Семантика",
+                "two": "Сбор и кластеризация ключевых слов",
+                "three": "Полное ядро для роста трафика"
+            },
+            {
+                "one": "Прогноз и отчёты",
+                "two": "План работ 3-6 мес, ежемесячный отчёт",
+                "three": "Прозрачность и понятные метрики"
+            }
+        ]
+    },
+    "cases": [
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp"
+        },
+        {
+            "counter": "01",
+            "type": "поддержка и развитие",
+            "name": "Мир Фар",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case.jpg",
+            "imageW": "./img/formats/case.webp"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp"
+        }
+    ],
+    "benefits": [
+        {
+            "class": "nameplate--yellow",
+            "word": "Техподдержка 24/7"
+        },
+        {
+            "class": "nameplate--green",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Фиксированные сроки"
+        },
+        {
+            "class": "nameplate--purple",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--send",
+            "word": "SEO-готовность"
+        },
+        {
+            "class": "nameplate--coral",
+            "word": "Прозрачная смета"
+        },
+        {
+            "class": "nameplate--blue",
+            "word": "Что-то еще"
+        },
+        {
+            "class": "nameplate--dark",
+            "word": "Классная команда"
+        },
+        {
+            "class": "nameplate--sage",
+            "word": "Гибкая модель"
+        }
+    ]
+}

@@ -49,6 +49,10 @@ export const cursorControl = () => {
 		})
 	}
 
+    // document.addEventListener('wheel', e => {
+    //     cursor.classList.add('hidden');
+    // })
+
 	body.addEventListener('mousemove', e => {
 		mouseCoords(e)
 		cursor.classList.remove('hidden')
@@ -57,5 +61,4 @@ export const cursorControl = () => {
 	body.addEventListener('mouseout', e => {
 		cursor.classList.add('hidden')
 	})
-
 }

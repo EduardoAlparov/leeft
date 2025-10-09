@@ -88,6 +88,10 @@
 
         display: block;
         cursor: pointer;
+
+        &.faq-item__label--outer {
+            pointer-events: none;
+        }
     }
 
     &__input {
@@ -117,6 +121,22 @@
 
                 .faq-item__inner {
                     animation: slideFromTop 0.3s ease-out 0s 1 forwards;
+                }
+            }
+
+            &~.faq-item__label--inner {
+                pointer-events: none;
+            }
+
+            &~.faq-item__label--outer {
+                pointer-events: all;
+            }
+
+            &:not(:checked) {
+                &+.faq-item__body {
+                    .faq-item__inner {
+                        animation: slideFromTop 0.3s ease-out 0s 1 backwards;
+                    }
                 }
             }
         }

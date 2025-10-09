@@ -1,0 +1,122 @@
+<div id="callback-modal" class="modal js-modal">
+    <div class="modal__inner-wrapper">
+        <div class="modal__site-container">
+            <div class="modal__body">
+                <form action="" class="feedback-section__form" data-need-validation>
+                    <h2 class="feedback-section__title">
+                        Давайте обсудим&nbsp;Ваш проект!
+                    </h2>
+
+                    <button class="feedback-section__close js-close-modal">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+
+                    <div class="feedback-section__column">
+                        <div class="feedback-section__row feedback-section__row--left">
+                            <div class="feedback-section__input-box input-box input-box--for-black">
+                                <input type="text" name="callback-name" id="callback-name-id" required
+                                    placeholder="Ваше имя" data-parsley-required="">
+                                <label for="callback-name-id" class="input-box__label">Ваше имя</label>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section__row feedback-section__row--left">
+                            <div class="feedback-section__input-box input-box input-box--for-black">
+                                <input type="tel" name="callback-phone" id="callback-phone-id" required
+                                    placeholder="Номер телефона" data-parsley-phone="">
+                                <label for="callback-phone-id" class="input-box__label">Номер телефона</label>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section__row feedback-section__row--left">
+                            <div class="feedback-section__input-box input-box input-box--for-black">
+                                <input type="text" name="callback-company" id="callback-company-id" required
+                                    placeholder="Компания" data-parsley-required="">
+                                <label for="callback-company-id" class="input-box__label">Компания</label>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section__row feedback-section__row--right">
+                            <div class="feedback-section__input-box input-box input-box--for-black">
+                                <textarea rows="1" name="callback-comment" id="callback-comment-id"
+                                    placeholder="Какие стоят задачи?"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section__row feedback-section__row--right">
+                            <div class="feedback-section__types">
+                                <span class="feedback-section__types-title">
+                                    Тип работ:
+                                </span>
+                                <ul class="feedback-section__types-list">
+                                    <li>
+                                        <label class="feedback-section__type nameplate">
+                                            <input type="checkbox" name="nameplate-type" hidden id="callback-type-01"
+                                                value="dev">
+                                            разработка
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="feedback-section__type nameplate">
+                                            <input type="checkbox" name="nameplate-type" hidden id="callback-type-02"
+                                                value="dev-2">
+                                            развитие
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="feedback-section__type nameplate">
+                                            <input type="checkbox" name="nameplate-type" hidden id="callback-type-03"
+                                                value="support">
+                                            тех.поддержка
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="feedback-section__type nameplate">
+                                            <input type="checkbox" name="nameplate-type" hidden id="callback-type-04"
+                                                value="seo">
+                                            SEO
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="feedback-section__type nameplate">
+                                            <input type="checkbox" name="nameplate-type" hidden id="callback-type-05"
+                                                value="bitrix">
+                                            Битрикс24
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section__row feedback-section__row--right feedback-section__controls">
+                            <button type="submit" class="feedback-section__submit button button--white">
+                                Оставить заявку
+                            </button>
+
+                            <div class="feedback-section__agreement">
+                                <label class="feedback-section__agreement-checkbox checkbox">
+                                    <input type="checkbox" name="feedback-agreement" id="agreement-id" hidden required>
+                                    <svg aria-hidden="true" class="icon icon-border">
+                                        <use xlink:href="#border"></use>
+                                    </svg>
+                                    <svg aria-hidden="true" class="icon icon-thick">
+                                        <use xlink:href="#thick"></use>
+                                    </svg>
+                                </label>
+                                <p class="feedback-section__agreement-text">
+                                    Даю свое согласие на&nbsp;
+                                    <a href="#" target="_blank">обработку персональных данных</a>
+                                </p>
+                            </div>
+                            <div class="feedback-section__captcha">
+                                <img class="lazy" src="./img/captcha.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
