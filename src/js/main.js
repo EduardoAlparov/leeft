@@ -24,6 +24,7 @@ import benefitsAnimation from './benefitsAnimation';
 import cliensSwiper from './cliensSwiper';
 import conditionsAnimation from './conditionsAnimation';
 import casesLayout from './casesLayout';
+import map from './map';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cliensSwiper();
     conditionsAnimation();
     casesLayout();
+    map();
 });
 
 document.addEventListener('lazyloaded', () => {

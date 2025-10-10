@@ -61,4 +61,88 @@
             margin-top: unset;
         }
     }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: $size-80;
+        column-gap: $size-16;
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include breakpointMF(desktop) {
+            column-gap: 11.6rem;
+        }
+    }
+
+    &__contacts-item {
+        flex: 1 1 100%;
+
+        &>ul {
+            display: flex;
+            flex-direction: column;
+            gap: $size-24;
+
+            @include breakpointMF(desktop) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        &--big {
+            flex: 1 1 calc(100% / 2 - (#{$size-16} / 2));
+        }
+
+        &--small {
+            flex: 1 1 calc(100% / 2 - (#{$size-16} / 2));
+
+            @include breakpointMF(desktop) {
+                flex: 0 0 32.2rem;
+            }
+        }
+    }
+
+    &__contacts-label {
+        margin-bottom: $size-40;
+        @include adds14;
+        font-weight: 700;
+    }
+
+    &__contacts-links {
+        display: flex;
+        flex-direction: column;
+        gap: $size-24;
+
+        @include breakpointMF(desktop) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex: 0 1 calc(50% - (#{$size-24} / 2));
+        }
+
+        &--last {
+            @include breakpointMF(desktop) {
+                margin-inline: auto;
+            }
+        }
+    }
+
+    &__contacts-text {
+        @include base20;
+    }
+
+    &__contacts-link {
+        display: block;
+        color: inherit;
+        @include S32;
+
+        @include breakpointMF(tablet) {}
+
+        @include breakpointMF(desktop) {
+            @include S48;
+            flex: 1 1 calc(100% / 2 (#{$size-24} / 2));
+        }
+    }
 }

@@ -1,7 +1,8 @@
 import gsap from 'gsap';
+import { CAN_HOVER } from './utils'
 
 export default () => {
-    const canHover = window.matchMedia("(hover: hover)").matches;
+    const canHover = CAN_HOVER;
 
     if(!canHover) return;
 

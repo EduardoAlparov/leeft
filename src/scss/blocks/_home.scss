@@ -52,6 +52,15 @@
             }
         }
 
+        &.home__title--baseline {
+            @include breakpointMF(tablet) {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                column-gap: $size-16;
+            }
+        }
+
         &.home__title--row {
             display: inline-flex;
             flex-wrap: wrap;
