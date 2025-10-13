@@ -1,7 +1,7 @@
 {{#extend "primary"}}
 {{#content "main"}}
 
-<section class="section hero-section" data-midnight="light" id="first-section-abchor">
+<section class="section hero-section js-intro-trigger" data-midnight="light" id="first-section-abchor">
     <div class="hero-section__inner-wrapper">
         <div class="hero-section__site-container">
             <h1 class="section__title visually-hidden">
@@ -31,7 +31,7 @@
                 {{#if heroList}}
                 <ul class="hero-section__list">
                     {{#each heroList}}
-                    <li class="hero-section__item hero-item">
+                    <li class="hero-section__item hero-item js-hero-item">
                         <div class="hero-item__icon">
                             <svg aria-hidden="true" class="icon">
                                 <use xlink:href="#{{this.icon}}"></use>
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-<section class="section blue-section">
+<section class="section blue-section js-blue-trigger">
     <div class="blue-section__site-container">
         <div class="blue-section__body">
             <div class="blue-section__title">
@@ -72,6 +72,7 @@
             </p>
         </div>
     </div>
+    <div class="blue-section__cover js-cover"></div>
 </section>
 
 {{>table-section}}
@@ -82,8 +83,8 @@
 
 {{>tarriffs-section}}
 
-<section class="section conditions-section js-cond-animation-trigger">
-    <div class="conditions-section__site-container">
+<section class="section conditions-section js-cond-animation-pin">
+    <div class="conditions-section__site-container js-cond-animation-trigger">
         <h2 class="section__title visually-hidden">
             Условия работы
         </h2>

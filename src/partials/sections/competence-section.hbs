@@ -16,10 +16,10 @@
             </ul>
 
             {{#if competences}}
-            <ul class="competence-section__list">
+            <ul class="competence-section__list js-competences-trigger">
                 {{#each competences}}
                 <li class="competence-section__item">
-                    <a href="#{{this.id}}" class="competence-section__link multi-link {{this.class}}">
+                    <a href="#{{this.id}}" class="competence-section__link multi-link multi-link--hover {{this.class}}">
                         <div class="multi-link__arrow"></div>
                         <div class="multi-link__body">
                             <div class="multi-link__icon">

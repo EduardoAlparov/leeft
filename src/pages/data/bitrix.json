@@ -156,6 +156,7 @@
         {
             "class": "tarriff-item--sendy",
             "icon": "tarriff-one",
+            "iconClass": "icon-fill",
             "name": "Старт",
             "desc": "запуск CRM за 7 дней",
             "price": "49 900",
@@ -171,6 +172,7 @@
         {
             "class": "tarriff-item--limon",
             "icon": "tarriff-two",
+            "iconClass": "icon-stroke",
             "name": "Стандарт",
             "desc": "расширенная автоматизация за 15 дней",
             "price": "99 900",
@@ -187,6 +189,7 @@
         {
             "class": "tarriff-item--black",
             "icon": "tarriff-three",
+            "iconClass": "icon-stroke",
             "name": "Бизнес",
             "desc": "комплексное внедрение за 30 дней",
             "price": "159 900",

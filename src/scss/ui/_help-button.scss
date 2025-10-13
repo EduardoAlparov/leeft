@@ -1,0 +1,36 @@
+.help-button {
+    position: fixed;
+    bottom: $size-32;
+    right: $size-32;
+    z-index: 1000;
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+
+    width: 7.6rem;
+    height: 7.6rem;
+
+    background-color: var(--Sage-color, #B9D2B4);
+    border-radius: 100%;
+
+    .icon {
+        display: block;
+        width: 3.8rem;
+        height: 3.8rem;
+        flex-shrink: 0;
+
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+
+        fill: var(--Asphalt-color, #252525);
+    }
+
+    @include hoverActive {
+        .icon {
+            transform: scale(1.05);
+        }
+    }
+}

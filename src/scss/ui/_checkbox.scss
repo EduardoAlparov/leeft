@@ -2,11 +2,16 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
     cursor: pointer;
 
     .icon {
-        width: 2.4rem;
-        height: 2.4rem;
+        display: block;
+        width: 2.3rem;
+        height: 2.3rem;
 
         grid-column: 1 / 2;
         grid-row: 1 / 2;

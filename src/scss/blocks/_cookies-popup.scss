@@ -1,0 +1,116 @@
+.cookies-popup {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+
+    display: none;
+
+    background-color: var(--Sage-color, #B9D2B4);
+
+    @include breakpointMF(tablet) {
+        bottom: $size-8;
+    }
+
+    @include breakpointMF(desktop) {
+        background-color: transparent;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: $size-32;
+        padding: $size-32 0;
+
+        @include breakpointMF(desktop) {
+            align-items: center;
+            flex-direction: row;
+            gap: 11.4rem;
+
+            padding: $size-32 $size-24;
+
+            background-color: var(--Sage-color, #B9D2B4);
+        }
+    }
+
+    &__prime {
+        display: flex;
+        align-items: flex-start;
+        gap: $size-12;
+    }
+
+    &__icon {
+        display: block;
+        width: 2.7rem;
+        height: 2.7rem;
+        flex-shrink: 0;
+    }
+
+    &__desc {
+        &>h6 {
+            @include base20bold;
+            margin-bottom: $size-4;
+        }
+
+        &>p {
+            @include adds14;
+
+            @include breakpointMF(desktop) {
+                max-width: 100ch;
+            }
+
+            &>a {
+                display: inline;
+
+                color: inherit;
+                font-weight: bold;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
+            }
+        }
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: $size-16;
+        flex-shrink: 0;
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            gap: $size-8;
+        }
+    }
+
+    &__button {
+        flex: 1 1 100%;
+
+        @include breakpointMF(desktop) {
+            flex: 0 0 20.4rem;
+        }
+
+        &.button {
+            height: 5.4rem;
+            padding: 1.8rem;
+            @include adds14;
+
+            @include hoverActive {
+                color: var(--Asphalt-color, #252525);
+                border-color: var(--Send-color, #DAD5C1);
+                background-color: var(--Send-color, #DAD5C1);
+            }
+        }
+    }
+}

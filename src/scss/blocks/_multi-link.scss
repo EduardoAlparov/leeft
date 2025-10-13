@@ -20,7 +20,7 @@
         max-height: 100%;
         transform: translateY(-50%);
 
-        background-image: url('/img/formats/diagonal-arrow-black.png');
+        background-image: url('../../img/formats/diagonal-arrow-black.png');
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -45,7 +45,7 @@
         color: var(--Black-color, #1F1F1F);
         background-color: #fff;
         border: 1px solid transparent;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
         transition-property: color, border, background, transform;
     }
@@ -69,7 +69,7 @@
             stroke: var(--Black-color, #1F1F1F);
             stroke-width: 2px;
 
-            transition: stroke 0.3s ease-in-out;
+            transition: stroke 0.4s ease-in-out;
         }
     }
 
@@ -94,7 +94,14 @@
 
     @include breakpointMF(desktop) {
         @include hoverActive {
+            .multi-link__body {
+                transform: translateX(6.8rem);
+            }
+        }
+    }
 
+    &.multi-link--hover {
+        @include breakpointMF(desktop) {
             .multi-link__body {
                 transform: translateX(6.8rem);
             }

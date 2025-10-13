@@ -16,8 +16,6 @@ export default () => {
 
             if(!dot) return;
 
-            // dot.style
-
             link.classList.add('service-link--hover');
 
             link.addEventListener('mousemove', e => {

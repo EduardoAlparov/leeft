@@ -105,7 +105,13 @@
         width: $size-16;
         height: $size-16;
         stroke: var(--Send-color, #DAD5C1);
-        stroke-width: 2px;
+
+
+        .icon {
+            &.icon-stroke {
+                stroke-width: 2px;
+            }
+        }
     }
 
     &__image-dot {
@@ -165,7 +171,7 @@
 
             .service-link__image {
                 @include breakpointMF(desktop) {
-                    animation-name: fadeOut;
+                    animation-name: fadeOutSimple;
                     animation-duration: var(--transition-time, 0.5s);
                     animation-timing-function: var(--transition-func, ease-out);
                     animation-fill-mode: forwards;
@@ -176,7 +182,7 @@
 }
 
 
-@keyframes fadeOut {
+@keyframes fadeOutSimple {
     from {
         opacity: 0;
     }

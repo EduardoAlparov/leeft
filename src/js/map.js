@@ -41,6 +41,8 @@ export default () => {
             map.behaviors.enable('MultiTouch');
         }
 
+        map.behaviors.disable('scrollZoom');
+
         map.geoObjects.add(placemark);
     });
 }

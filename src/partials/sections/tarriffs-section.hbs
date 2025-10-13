@@ -1,4 +1,4 @@
-<section class="tarriffs-section stages-section section">
+<section class="section tarriffs-section stages-section">
 
     <div class="stages-section__site-container">
         <h2 class="stages-section__title">
@@ -6,13 +6,13 @@
         </h2>
 
         {{#if tarriffs}}
-            <div class="stages-section__body">
-                <div class="stages-section__list">
-                    {{#each tarriffs}}
-                        {{>tarriff-item tarriffClass="stages-section__item"}}
-                    {{/each}}
-                </div>
+        <div class="stages-section__body js-tarriffs-trigger">
+            <div class="stages-section__list">
+                {{#each tarriffs}}
+                {{>tarriff-item tarriffClass="stages-section__item js-tarriffs-item"}}
+                {{/each}}
             </div>
+        </div>
         {{/if}}
     </div>
 

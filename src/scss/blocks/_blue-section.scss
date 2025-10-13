@@ -1,12 +1,16 @@
 .blue-section {
+    position: relative;
     padding-block: $size-20;
-    background-color: #005893;
+    background-color: var(--Black-color, #1F1F1F);
 
     @include breakpointMF(tablet) {
         padding-block: calc(#{$size-4} * 25);
     }
 
     &__body {
+        position: relative;
+        z-index: 100;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -38,5 +42,15 @@
             max-width: 35ch;
             @include S32;
         }
+    }
+
+    &__cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        background-color: #005893;
     }
 }

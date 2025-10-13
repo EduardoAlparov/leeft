@@ -89,10 +89,10 @@
             </ul>
 
         </div>
-        <div class="cases-section__body">
+        <div class="cases-section__body js-cases-trigger">
             <ul class="cases-section__list cases-section__list--collapsed">
                 {{#each cases}}
-                <li class="cases-section__item">
+                <li class="cases-section__item js-cases-trigger">
                     {{>case-card caseClass="cases-section__case-card"}}
                 </li>
                 {{/each}}

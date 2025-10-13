@@ -3,7 +3,7 @@
         <div class="tarriff-item__top">
             <div class="tarriff-item__heading-block">
                 <div class="tarriff-item__icon">
-                    <svg aria-hidden="true" class="service-link__icon">
+                    <svg aria-hidden="true" class="service-link__icon {{this.iconClass}}">
                         <use xlink:href="#{{this.icon}}"></use>
                     </svg>
                 </div>
@@ -29,9 +29,9 @@
 
                 <ul class="tarriff-item__list">
                     {{#each this.list}}
-                        <li class="tarriff-item__item">
-                            {{this}}
-                        </li>
+                    <li class="tarriff-item__item">
+                        {{this}}
+                    </li>
                     {{/each}}
                 </ul>
             </div>
