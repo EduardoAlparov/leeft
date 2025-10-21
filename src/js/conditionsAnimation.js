@@ -19,10 +19,10 @@ export default () => {
             scrollTrigger: {
                 trigger : trigger,
                 start: "center center",
-                // fastScrollEnd: true,
+                fastScrollEnd: true,
                 scrub: 1.5,
                 pin: true,
-                anticipatePin: 1,
+                anticipatePin: 0,
                 pinSpacing: true,
                 pinReparent: true,
                 immediateRender: false,
@@ -38,12 +38,12 @@ export default () => {
 
     items.forEach( (item, index) => {
         if(index == 0) {
-            tl.fromTo(item, { xPercent: -100}, { xPercent: 0})
+            tl.fromTo(item, { xPercent: -200}, { xPercent: 0})
                 .fromTo(title, { xPercent: -80}, { xPercent: 0}, 0);
         } else if(index === (items.length - 1)) {
             tl.fromTo(item,
                 {
-                    xPercent: -100
+                    xPercent: -200
                 },
                 {
                     xPercent: 0,
@@ -53,7 +53,7 @@ export default () => {
                 }
             )
         } else {
-            tl.fromTo(item, { xPercent: -100}, { xPercent: 0});
+            tl.fromTo(item, { xPercent: -200}, { xPercent: 0});
         }
 
     });

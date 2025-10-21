@@ -24,7 +24,8 @@
             "name": "Мир Фар",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case.jpg",
-            "imageW": "./img/formats/case.webp"
+            "imageW": "./img/formats/case.webp",
+            "dataId": "dev"
         },
         {
             "counter": "02",
@@ -32,7 +33,8 @@
             "name": "Сеть семейных кафе Андерсон",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case-3.jpg",
-            "imageW": "./img/formats/case-3.webp"
+            "imageW": "./img/formats/case-3.webp",
+            "dataId": "seo"
         },
         {
             "counter": "02",
@@ -40,7 +42,8 @@
             "name": "Сеть семейных кафе Андерсон",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": false,
-            "imageW": false
+            "imageW": false,
+            "dataId": "bitrix"
         },
         {
             "counter": "03",
@@ -48,7 +51,8 @@
             "name": "Черноголовка",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case-2.jpg",
-            "imageW": "./img/formats/case-2.webp"
+            "imageW": "./img/formats/case-2.webp",
+            "dataId": "dev"
         },
         {
             "counter": "01",
@@ -56,15 +60,62 @@
             "name": "Мир Фар",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case.jpg",
-            "imageW": "./img/formats/case.webp"
+            "imageW": "./img/formats/case.webp",
+            "dataId": "support"
+        },
+        {
+            "counter": "02",
+            "type": "поддержка и развитие",
+            "name": "Сеть семейных кафе Андерсон",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-3.jpg",
+            "imageW": "./img/formats/case-3.webp",
+            "dataId": "support"
         },
         {
             "counter": "02",
             "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false,
+            "dataId": "seo"
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp",
+            "dataId": "dev"
+        },
+        {
+            "counter": "02",
+            "type": "поддержка и развитие",
             "name": "Сеть семейных кафе Андерсон",
             "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
             "imageJ": "./img/formats/case-3.jpg",
-            "imageW": "./img/formats/case-3.webp"
+            "imageW": "./img/formats/case-3.webp",
+            "dataId": "support"
+        },
+        {
+            "counter": "02",
+            "type": "SEO",
+            "name": "Сеть семейных кафе",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": false,
+            "imageW": false,
+            "dataId": "seo"
+        },
+        {
+            "counter": "03",
+            "type": "разработка",
+            "name": "Черноголовка",
+            "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, illum assumenda unde porro eius sint dicta fugiat cupiditate cumque dolores minima, voluptate perferendis cum vero adipisci magnam temporibus. Iure, placeat!",
+            "imageJ": "./img/formats/case-2.jpg",
+            "imageW": "./img/formats/case-2.webp",
+            "dataId": "dev"
         }
     ],
     "caseMainSection": false,
@@ -172,7 +223,7 @@
         {
             "class": "tarriff-item--limon",
             "icon": "tarriff-two",
-            "iconClass": "icon-stroke",
+            "iconClass": "icon-coral",
             "name": "Стандарт",
             "desc": "расширенная автоматизация за 15 дней",
             "price": "99 900",

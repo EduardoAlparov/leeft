@@ -34,12 +34,11 @@
         position: relative;
         height: 100%;
         overflow: hidden;
-        padding-top: $size-24;
         padding-inline: $size-16;
         background-color: var(--Black-color, #1F1F1F);
 
         @include breakpointMF(desktop) {
-            padding-top: $size-64;
+            padding-top: unset;
         }
     }
 
@@ -54,6 +53,11 @@
 
         @include breakpointMF(desktop) {
             padding-inline: $size-64;
+            margin-top: $size-40;
+        }
+
+        @include breakpoint(laptop) {
+            @include noScrollbar();
         }
 
         &::-webkit-scrollbar {
@@ -75,7 +79,6 @@
 
         &.typical__inner-wrapper {
             position: static;
-            padding-top: unset;
         }
     }
 
@@ -90,7 +93,11 @@
             color: var(--Coral-color, #FFAB7A);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Coral-color, #FFAB7A);
+                background-color: rgba(#FFAB7A, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#FFAB7A, 1);
             }
         }
 
@@ -112,7 +119,11 @@
             color: var(--Green-color, #CCFF7A);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Green-color, #CCFF7A);
+                background-color: rgba(#CCFF7A, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#CCFF7A, 1);
             }
         }
 
@@ -134,7 +145,11 @@
             color: var(--Purple-color, #B5B4D2);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Purple-color, #B5B4D2);
+                background-color: rgba(#B5B4D2, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#B5B4D2, 1);
             }
         }
 
@@ -156,7 +171,11 @@
             color: var(--Send-color, #DAD5C1);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Send-color, #DAD5C1);
+                background-color: rgba(#DAD5C1, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#DAD5C1, 1);
             }
         }
 
@@ -178,7 +197,11 @@
             color: var(--Limon-color, #FCFF7A);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Limon-color, #FCFF7A);
+                background-color: rgba(#FCFF7A, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#FCFF7A, 1);
             }
         }
 
@@ -200,7 +223,11 @@
             color: var(--Blue-color, #7AC1FF);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Blue-color, #7AC1FF);
+                background-color: rgba(#7AC1FF, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#7AC1FF, 1);
             }
         }
 
@@ -222,7 +249,11 @@
             color: var(--Sage-color, #B9D2B4);
 
             &::-webkit-scrollbar-track {
-                background-color: var(--Sage-color, #B9D2B4);
+                background-color: rgba(#B9D2B4, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#B9D2B4, 1);
             }
         }
 

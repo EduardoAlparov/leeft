@@ -6,7 +6,7 @@
     display: none;
 
     @include breakpointMF(desktop) {
-        display: none;
+        display: block;
     }
 
 

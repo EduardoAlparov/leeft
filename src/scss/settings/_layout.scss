@@ -34,6 +34,22 @@ html {
     }
 
     @include noHighlight();
+
+    &:has(.typical-font-size) {
+        --max-container-width: 100%;
+
+        @include breakpointMF(laptop) {
+            font-size: 10px;
+        }
+
+        @include breakpointMF(large-desktop) {
+            font-size: 10px;
+        }
+
+        @include aspectRatio(ultra) {
+            font-size: clamp(10px, 0.4vw, 20px);
+        }
+    }
 }
 
 body {

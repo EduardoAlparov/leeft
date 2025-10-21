@@ -1,5 +1,5 @@
 {{#if mainPage}}
-<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card">
+<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card" {{#if dataId}}data-id={{dataId}}{{/if}}>
     <div class="case-card__desc">
         <div class="case-card__counter">{{this.counter}}</div>
         <p class="case-card__type">
@@ -16,10 +16,10 @@
         </div>
 
         {{#if this.imageJ}}
-            <picture>
-                <source type="image/webp" srcset={{this.imageW}} />
-                <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
-            </picture>
+        <picture>
+            <source type="image/webp" srcset={{this.imageW}} />
+            <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
+        </picture>
         {{/if}}
     </div>
 
@@ -34,7 +34,8 @@
     </div>
 </a>
 {{else}}
-<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card case-card--simple">
+<a href="" class="{{#if caseClass}}{{caseClass}}{{/if}} case-card case-card--simple" {{#if
+    dataId}}data-id={{dataId}}{{/if}}>
     <div class="case-card__desc">
         <div class="case-card__counter">{{this.counter}}</div>
         <p class="case-card__type">
@@ -51,10 +52,10 @@
         </div>
 
         {{#if this.imageJ}}
-            <picture>
-                <source type="image/webp" srcset={{this.imageW}} />
-                <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
-            </picture>
+        <picture>
+            <source type="image/webp" srcset={{this.imageW}} />
+            <img class="case-card__image lazy" src={{this.imageJ}} alt="image">
+        </picture>
         {{/if}}
     </div>
 

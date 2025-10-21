@@ -132,6 +132,10 @@
 
     &__item {
         max-width: 43.2rem;
+
+        &.display-none {
+            display: none;
+        }
     }
 
     &__add-items {
@@ -195,23 +199,23 @@
             }
         }
 
-        // &.cases-section__list--collapsed {
-        //     .cases-section__item {
-        //         &:nth-child(n+10) {
-        //             @include breakpointMF(desktop) {
-        //                 display: none;
-        //             }
-        //         }
-        //     }
+        &.cases-section__list--collapsed {
+            .cases-section__item {
+                &:nth-child(n+10) {
+                    @include breakpointMF(desktop) {
+                        display: none;
+                    }
+                }
+            }
 
-        //     &+.cases-section__add-items {
-        //         display: grid;
+            &+.cases-section__add-items {
+                display: grid;
 
-        //         @include breakpointMF(desktop) {
-        //             max-width: 43.5rem;
-        //             margin-inline: auto;
-        //         }
-        //     }
-        // }
+                @include breakpointMF(desktop) {
+                    max-width: 43.5rem;
+                    margin-inline: auto;
+                }
+            }
+        }
     }
 }

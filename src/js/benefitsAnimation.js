@@ -16,8 +16,6 @@ export default () => {
 
     const tl = gsap.timeline();
 
-
-
     targetBoxs.forEach( (targetBox) => {
         const nameplates = targetBox.querySelectorAll('[data-benefit]');
         if(!nameplates[0]) return;
@@ -64,7 +62,7 @@ export default () => {
 
             setTimeout(() => {
                 canCreate = true;
-            }, 200);
+            }, 150);
 
             setTimeout(() => {
                 gsap.to(tag, {

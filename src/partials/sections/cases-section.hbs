@@ -9,27 +9,31 @@
             <ul class="cases-section__navbars js-navbars">
                 <li class="">
                     <a href="#" class="cases-section__navbar nameplate nameplate--active js-navbar-link"
-                        data-nav-counter="32">
+                        data-nav-counter="32" data-filter="all">
                         все
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6"
+                        data-filter="dev">
                         разработка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8"
+                        data-filter="support">
                         поддержка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12"
+                        data-filter="seo">
                         SEO
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7"
+                        data-filter="bitrix">
                         Битрикс24
                     </a>
                 </li>
@@ -40,7 +44,7 @@
             <ul class="cases-section__list cases-section__list--sortable cases-section__list--all">
                 {{#each cases}}
                 <li class="cases-section__item">
-                    {{>case-card caseClass="cases-section__case-card" mainPage=true}}
+                    {{>case-card caseClass="cases-section__case-card" mainPage=true dataId=this.dataId }}
                 </li>
                 {{/each}}
             </ul>
@@ -62,27 +66,31 @@
             <ul class="cases-section__navbars js-navbars">
                 <li class="">
                     <a href="#" class="cases-section__navbar nameplate nameplate--active js-navbar-link"
-                        data-nav-counter="32">
+                        data-nav-counter="32" data-filter="all">
                         все
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6"
+                        data-filter="dev">
                         разработка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8"
+                        data-filter="support">
                         поддержка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12"
+                        data-filter="seo">
                         SEO
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7"
+                        data-filter="bitrix">
                         Битрикс24
                     </a>
                 </li>
@@ -93,7 +101,7 @@
             <ul class="cases-section__list cases-section__list--collapsed">
                 {{#each cases}}
                 <li class="cases-section__item js-cases-trigger">
-                    {{>case-card caseClass="cases-section__case-card"}}
+                    {{>case-card caseClass="cases-section__case-card" dataId=this.dataId }}
                 </li>
                 {{/each}}
             </ul>

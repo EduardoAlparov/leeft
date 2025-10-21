@@ -88,6 +88,8 @@
     }
 
     &__nameplate {
+        will-change: transform;
+
         &.nameplate {
             gap: $size-8;
 
