@@ -4,8 +4,8 @@
     flex-shrink: 0;
 
     .icon {
-        width: 15.8rem;
-        height: 4rem;
+        width: calc(var(--chunk) * 158);
+        height: calc(var(--chunk) * 40);
         fill: var(--Send-color, #DAD5C1);
     }
 }

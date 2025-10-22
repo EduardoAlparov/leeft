@@ -1,26 +1,25 @@
 .cases-section {
-    padding-block: $size-80;
+    padding-block: calc(var(--chunk) * #{$size-80});
 
     @include breakpointMF(tablet) {
-        padding-block: 12.4rem 16.4rem;
+        padding-block: calc(var(--chunk) * 124) calc(var(--chunk) * 164);
     }
 
-    @include breakpointMF(desktop) {}
 
     &__heading {
         display: flex;
         flex-direction: column;
-        gap: $size-40;
+        gap: calc(var(--chunk) * #{$size-40});
 
         &.cases-section__heading--column {
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-start;
-            gap: $size-32;
+            gap: calc(var(--chunk) * #{$size-32});
 
             @include breakpointMF(tablet) {
-                gap: $size-64;
+                gap: calc(var(--chunk) * #{$size-64});
             }
 
             .cases-section__title {
@@ -38,20 +37,20 @@
         }
 
         @include breakpointMF(tablet) {
-            gap: $size-48;
+            gap: calc(var(--chunk) * #{$size-48});
         }
 
         @include breakpointMF(desktop) {
             flex-direction: row;
             flex-wrap: wrap;
             align-items: flex-end;
-            gap: $size-64 9.6rem;
+            gap: calc(var(--chunk) * #{$size-64}) calc(var(--chunk) * #{$size-96});
         }
     }
 
     &__subtitle {
-        margin-top: calc(-1 * #{$size-24});
-        margin-bottom: $size-24;
+        margin-top: calc(-1 * calc(var(--chunk) * #{$size-24}));
+        margin-bottom: calc(var(--chunk) * #{$size-24});
 
         @include breakpointMF(tablet) {
             margin-top: unset;
@@ -69,7 +68,7 @@
         }
 
         @include breakpointMF(desktop) {
-            margin-bottom: -1.2rem;
+            margin-bottom: calc(var(--chunk) * -12);
             @include H112;
         }
     }
@@ -78,29 +77,29 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1px;
+        gap: calc(var(--chunk) * 1);
 
         @include adds14;
 
         &>* {
             display: inline-flex;
             align-items: center;
-            height: 2.6rem;
+            height: calc(var(--chunk) * 26);
 
             color: var(--Send-color, #DAD5C1);
             background-color: var(--Asphalt-color, #252525);
         }
 
         &>p {
-            padding-left: 0.8rem;
-            padding-right: 0.8rem;
+            padding-left: calc(var(--chunk) * 8);
+            padding-right: calc(var(--chunk) * 8);
         }
     }
 
     &__navbars {
         display: flex;
         align-items: center;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         overflow: auto;
         margin-inline: calc(-1 * var(--content-padding));
@@ -108,6 +107,10 @@
 
         scroll-behavior: smooth;
         @include noScrollbar();
+
+        &.cases-section__navbars--full-grow {
+            flex-grow: 1 1 100%;
+        }
     }
 
     &__navbar {
@@ -123,15 +126,15 @@
     }
 
     &__body {
-        margin-top: $size-48;
+        margin-top: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(desktop) {
-            margin-top: 9.6rem;
+            margin-top: calc(var(--chunk) * #{$size-96});
         }
     }
 
     &__item {
-        max-width: 43.2rem;
+        // max-width: calc(var(--chunk) * 432);
 
         &.display-none {
             display: none;
@@ -139,10 +142,10 @@
     }
 
     &__add-items {
-        margin-top: $size-32;
+        margin-top: calc(var(--chunk) * #{$size-32});
 
         @include breakpointMF(tablet) {
-            margin-top: 10.8rem;
+            margin-top: calc(var(--chunk) * 108);
         }
 
         @include breakpointMF(desktop) {
@@ -162,28 +165,28 @@
     &__list {
         display: grid;
         grid-template-columns: 100%;
-        gap: $size-40;
+        gap: calc(var(--chunk) * #{$size-40});
 
         @include breakpointMF(tablet) {
-            grid-template-columns: repeat(2, calc(100% / 2 - #{$size-4}));
-            gap: $size-32 $size-8;
+            grid-template-columns: repeat(2, calc(100% / 2 - calc(var(--chunk) * #{$size-4})));
+            gap: calc(var(--chunk) * #{$size-32}) calc(var(--chunk) * #{$size-8});
         }
 
         @include breakpointMF(desktop) {
-            grid-template-columns: repeat(3, calc(100% / 3 - (#{$size-8} * 2 / 3)));
-            gap: $size-16 $size-8;
+            grid-template-columns: repeat(3, calc(100% / 3 - (calc(var(--chunk) * #{$size-8})* 2 / 3)));
+            gap: calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-8});
         }
 
         &.cases-section__list--sortable {
             @include breakpointMF(desktop) {
-                grid-template-columns: repeat(6, calc(100% / 6 - (#{$size-8} * 5 / 6)));
-                gap: $size-24 $size-8;
+                grid-template-columns: repeat(6, calc(100% / 6 - (calc(var(--chunk) * #{$size-8}) * 5 / 6)));
+                gap: calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-8});
             }
         }
 
         &:not(.cases-section__list--sortable) {
             .cases-section__item {
-                max-width: 50rem;
+                // max-width: calc(var(--chunk) * 500);
             }
         }
 
@@ -212,7 +215,7 @@
                 display: grid;
 
                 @include breakpointMF(desktop) {
-                    max-width: 43.5rem;
+                    max-width: calc(var(--chunk) * 435);
                     margin-inline: auto;
                 }
             }

@@ -28,11 +28,10 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-80;
+        gap: calc(var(--chunk) * #{$size-80});
 
         flex-grow: 1;
-        padding: $size-8 $size-24 $size-56;
-
+        padding: calc(var(--chunk) * #{$size-8}) calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-56});
     }
 
     &__contacts,
@@ -40,7 +39,7 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-32;
+        gap: calc(var(--chunk) * #{$size-32});
 
         flex-grow: 1;
 
@@ -59,19 +58,19 @@
 
         display: inline-flex;
         align-items: center;
-        gap: $size-8;
+        gap: calc(var(--chunk) * #{$size-8});
 
-        padding-left: $size-56;
+        padding-left: calc(var(--chunk) * #{$size-56});
 
         &::before {
             position: absolute;
             top: 50%;
-            left: -0.8rem;
+            left: calc(var(--chunk) * -8);
             transform: translateY(-50%);
 
             display: block;
-            width: 64px;
-            height: 64px;
+            width: calc(var(--chunk) * 64);
+            height: calc(var(--chunk) * 64);
 
             background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M22.4533%2021.6434L42.6059%2021.6434M42.6059%2021.6434L42.6059%2041.7959M42.6059%2021.6434L21.3927%2042.8566%22%20stroke%3D%22%23DAD5C1%22%20stroke-width%3D%223%22%2F%3E%0A%3C%2Fsvg%3E');
             background-size: contain;
@@ -84,7 +83,7 @@
     &__social {
         display: flex;
         align-items: center;
-        gap: $size-8;
+        gap: calc(var(--chunk) * #{$size-8});
 
         text-decoration-line: underline;
         text-decoration-style: solid;
@@ -94,8 +93,8 @@
         text-underline-position: from-font;
 
         .icon {
-            width: 3.2rem;
-            height: 3.2rem;
+            width: calc(var(--chunk) * 32);
+            height: calc(var(--chunk) * 32);
         }
     }
 }

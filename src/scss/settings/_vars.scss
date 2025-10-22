@@ -1,4 +1,5 @@
 :root {
+    --chunk: 0.1rem;
     --max-container-width: 152rem;
     --content-padding: 2.4rem;
 
@@ -24,52 +25,50 @@
     @include breakpointMF(desktop) {
         --content-padding: 6.4rem;
     }
+
+    @include breakpointMF(laptop) {
+        --chunk: 1px;
+        --content-padding: 64px;
+    }
+
+    @include breakpointMF(large-desktop) {
+        --max-container-width: 100%;
+    }
+
+    @include breakpointMF(full-hd) {
+        --chunk: 0.1rem;
+        --content-padding: 6.4rem;
+    }
+
+    @include aspectRatio(ultra) {
+        --chunk: 0.1rem;
+    }
 }
 
-$sizes: (
-    0: 0,
-    4: 0.4rem,
-    8: 0.8rem,
-    12: 1.2rem,
-    16: 1.6rem,
-    20: 2.0rem,
-    24: 2.4rem,
-    28: 2.8rem,
-    32: 3.2rem,
-    36: 3.6rem,
-    40: 4.0rem,
-    44: 4.4rem,
-    48: 4.8rem,
-    52: 5.2rem,
-    56: 5.6rem,
-    64: 6.4rem,
-    68: 6.8rem,
-    72: 7.2rem,
-    80: 8rem,
-    84: 8.4rem,
-    88: 8.8rem,
-    96: 9.6rem,
-);
+$size-0: 0;
+$size-4: 4;
+$size-8: 8;
+$size-12: 12;
+$size-16: 16;
+$size-20: 20;
+$size-24: 24;
+$size-28: 28;
+$size-32: 32;
+$size-36: 36;
+$size-40: 40;
+$size-44: 44;
+$size-48: 48;
+$size-52: 52;
+$size-56: 56;
+$size-64: 64;
+$size-68: 68;
+$size-72: 72;
+$size-80: 80;
+$size-84: 84;
+$size-88: 88;
+$size-96: 96;
 
-$size-0: map-get($sizes, 0);
-$size-4: map-get($sizes, 4);
-$size-8: map-get($sizes, 8);
-$size-12: map-get($sizes, 12);
-$size-16: map-get($sizes, 16);
-$size-20: map-get($sizes, 20);
-$size-24: map-get($sizes, 24);
-$size-28: map-get($sizes, 28);
-$size-32: map-get($sizes, 32);
-$size-36: map-get($sizes, 36);
-$size-40: map-get($sizes, 40);
-$size-44: map-get($sizes, 44);
-$size-48: map-get($sizes, 48);
-$size-52: map-get($sizes, 52);
-$size-56: map-get($sizes, 56);
-$size-64: map-get($sizes, 64);
-$size-68: map-get($sizes, 68);
-$size-72: map-get($sizes, 72);
-$size-80: map-get($sizes, 80);
-$size-84: map-get($sizes, 84);
-$size-88: map-get($sizes, 88);
-$size-96: map-get($sizes, 96);
+// calc(var(--chunk) * #{$size-4});
+// calc(var(--chunk) * #{$size-40});
+// calc(var(--chunk) * #{$size-80});
+// calc(var(--chunk) * 276);

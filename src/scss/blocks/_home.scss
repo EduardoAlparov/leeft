@@ -3,14 +3,19 @@
     background-color: var(--Asphalt-color, #252525);
 
     &__inner-wrapper {
-        @extend ._intro-padding-top;
-
         display: flex;
         flex-direction: column;
         align-items: stretch;
 
         min-height: 100vh;
         min-height: 100dvh;
+
+        padding-top: var(--header-height);
+        padding-bottom: calc(var(--chunk) * #{$size-96});
+
+        @include breakpointMF(tablet) {
+            padding-bottom: calc(var(--chunk) * #{$size-80});
+        }
     }
 
     &__site-container {
@@ -20,6 +25,12 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: center;
+
+        padding-block: calc(var(--chunk) * #{$size-88}) 0;
+
+        @include breakpointMF(desktop) {
+            padding-block: calc(var(--chunk) * 148) 0;
+        }
     }
 
     &__title {
@@ -57,7 +68,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
-                column-gap: $size-16;
+                column-gap: calc(var(--chunk) * #{$size-16});
             }
         }
 
@@ -118,7 +129,7 @@
 
                     @include breakpointMF(tablet) {
                         display: inline-block;
-                        padding-top: 1.2rem;
+                        padding-top: calc(var(--chunk) * 12);
                     }
 
                     @include breakpointMF(desktop) {
@@ -140,8 +151,7 @@
 
                 &:has(.home__tablet-word) {
                     display: inline-flex;
-                    // align-items: baseline;
-                    gap: 1.6rem;
+                    gap: calc(var(--chunk) * 16);
                 }
             }
         }
@@ -161,7 +171,7 @@
         &.home__mobile-word--padding-top {
             @include breakpointMF(tablet) {
                 display: inline-block;
-                padding-top: 1.2rem;
+                padding-top: calc(var(--chunk) * 12);
             }
         }
     }
@@ -171,7 +181,7 @@
 
         @include breakpointMF(tablet) {
             display: inline-block;
-            padding-top: 1.2rem;
+            padding-top: calc(var(--chunk) * 12);
         }
 
         @include breakpointMF(desktop) {
@@ -193,15 +203,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: $size-4;
+        gap: calc(var(--chunk) * #{$size-4});
 
         width: max-content;
-        margin-top: $size-24;
-        margin-inline: $size-24;
-        padding-inline: $size-4;
+        margin-top: calc(var(--chunk) * #{$size-24});
+        margin-inline: calc(var(--chunk) * #{$size-24});
+        padding-inline: calc(var(--chunk) * #{$size-4});
 
         @include breakpointMF(desktop) {
-            margin-top: $size-16;
+            margin-top: calc(var(--chunk) * #{$size-16});
             margin-inline: unset;
             padding-inline: unset;
         }
@@ -241,11 +251,11 @@
     }
 
     &__words-slogan {
-        min-width: 17.5rem;
+        min-width: calc(var(--chunk) * 175);
 
         &>li {
             width: max-content;
-            padding: $size-4 $size-8;
+            padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
             color: var(--Asphalt-color, #252525);
             text-align: center;
@@ -265,19 +275,19 @@
     }
 
     &__advantages {
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
         margin-top: unset;
         margin-inline: unset;
         padding-inline: unset;
-        padding: $size-40 $size-24;
+        padding: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * #{$size-24});
         background-color: var(--Send-color, #DAD5C1);
 
         @include breakpointMF(tablet) {
-            margin-top: calc(#{$size-40} * -2 + 0.4rem);
+            margin-top: calc(calc(var(--chunk) * #{$size-40}) * -2 + 0.4rem);
         }
 
         @include breakpointMF(desktop) {
-            margin-top: calc(#{$size-40} * -2.2);
+            margin-top: calc(calc(var(--chunk) * #{$size-40}) * -2.2);
         }
     }
 

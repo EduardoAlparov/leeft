@@ -6,7 +6,7 @@
     }
 
     @include breakpointMF(desktop) {
-        padding-block: 13.2rem 16.4rem;
+        padding-block: calc(var(--chunk) * 132) calc(var(--chunk) * 164);
     }
 
     &__container {
@@ -28,9 +28,9 @@
             position: relative;
             display: flex;
             align-items: flex-start;
-            gap: 11.8rem;
+            gap: calc(var(--chunk) * 118);
 
-            padding-top: $size-24;
+            padding-top: calc(var(--chunk) * #{$size-24});
         }
     }
 
@@ -38,8 +38,8 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        margin-bottom: $size-40;
-        gap: $size-24;
+        margin-bottom: calc(var(--chunk) * #{$size-40});
+        gap: calc(var(--chunk) * #{$size-24});
 
         @include breakpointMF(tablet) {
             align-items: center;
@@ -50,8 +50,8 @@
         @include breakpointMF(desktop) {
             position: relative;
 
-            flex: 0 0 43.2rem;
-            width: 43.2rem;
+            flex: 0 0 calc(var(--chunk) * 432);
+            width: calc(var(--chunk) * 432);
         }
     }
 
@@ -64,8 +64,8 @@
         display: none;
         place-items: center;
 
-        width: 32.2rem;
-        height: 7.7rem;
+        width: calc(var(--chunk) * 322);
+        height: calc(var(--chunk) * 77);
 
         border: 0.5px solid var(--Asphalt-color, #252525);
         cursor: pointer;
@@ -79,8 +79,8 @@
         }
 
         img {
-            width: 3.3rem;
-            height: 3.2rem;
+            width: calc(var(--chunk) * 33);
+            height: calc(var(--chunk) * 32);
         }
     }
 
@@ -103,7 +103,7 @@
         left: 0;
 
         display: none;
-        padding-left: $size-80;
+        padding-left: calc(var(--chunk) * #{$size-80});
 
         @include S48;
 
@@ -122,7 +122,7 @@
         left: 0;
 
         display: none;
-        padding-top: $size-36;
+        padding-top: calc(var(--chunk) * #{$size-36});
 
         @include base20;
 
@@ -150,8 +150,8 @@
         @include breakpointMF(desktop) {
             position: relative;
 
-            width: 32.2rem;
-            height: 60rem;
+            width: calc(var(--chunk) * 322);
+            height: calc(var(--chunk) * 600);
         }
     }
 
@@ -200,8 +200,8 @@
 
     &__thumbs-slide {
         &.swiper-slide {
-            width: 10.2rem;
-            height: 14.8rem;
+            width: calc(var(--chunk) * 102);
+            height: calc(var(--chunk) * 148);
         }
     }
 
@@ -209,10 +209,10 @@
         &.swiper {
             position: absolute;
             bottom: 0;
-            right: calc(100% - 10.2rem);
+            right: calc(100% - calc(var(--chunk) * 102));
             z-index: 100;
 
-            width: 10.2rem;
+            width: calc(var(--chunk) * 102);
             overflow: visible;
             display: none;
 
@@ -267,7 +267,7 @@
 
 .reviews-section {
     &.reviews-section--modified {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
         background-color: var(--Send-color, #DAD5C1);
 
         .reviews-section__site-container {
@@ -275,7 +275,6 @@
                 position: relative;
             }
         }
-
 
         .reviews-section__title {
             position: static;
@@ -288,7 +287,7 @@
                 top: 0;
                 left: 0;
 
-                padding-left: $size-80;
+                padding-left: calc(var(--chunk) * #{$size-80});
             }
         }
 
@@ -303,7 +302,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                padding-top: $size-40;
+                padding-top: calc(var(--chunk) * #{$size-40});
             }
         }
 
@@ -315,7 +314,7 @@
                 display: flex;
                 align-items: flex-start;
                 flex-direction: row;
-                gap: $size-32;
+                gap: calc(var(--chunk) * #{$size-32});
                 width: 100%;
             }
 
@@ -325,7 +324,7 @@
                 align-items: flex-start;
                 gap: 11.8rem;
 
-                padding-top: $size-24;
+                padding-top: calc(var(--chunk) * #{$size-24});
             }
         }
 
@@ -340,30 +339,30 @@
             @include breakpointMF(desktop) {
                 position: relative;
 
-                width: 32.2rem;
-                height: 60rem;
+                width: calc(var(--chunk) * 322);
+                height: calc(var(--chunk) * 600);
                 aspect-ratio: unset;
             }
         }
 
         .reviews-section__right {
             @include breakpointMF(tablet) {
-                flex: 0 1 calc(100% - 21.5rem);
-                width: calc(100% - 21.5rem - #{$size-32});
+                flex: 0 1 calc(100% - calc(var(--chunk) * 215));
+                width: calc(100% - calc(var(--chunk) * 215) - calc(var(--chunk) * #{$size-32}));
             }
 
             @include breakpointMF(desktop) {
                 position: relative;
 
-                flex: 0 0 43.2rem;
-                width: 43.2rem;
+                flex: 0 0 calc(var(--chunk) * 432);
+                width: calc(var(--chunk) * 432);
             }
         }
 
         .reviews-section__left {
             @include breakpointMF(tablet) {
-                flex: 0 1 21.5rem;
-                width: 21.5rem;
+                flex: 0 1 calc(var(--chunk) * 215);
+                width: calc(var(--chunk) * 215);
             }
 
             @include breakpointMF(desktop) {
@@ -382,13 +381,13 @@
             display: flex;
             align-items: stretch;
             flex-direction: row-reverse;
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
 
             .reviews-section__next-btn {
                 position: static;
                 display: grid;
 
-                flex: 1 1 calc(100% / 2 - #{$size-4});
+                flex: 1 1 calc(100% / 2 - calc(var(--chunk) * #{$size-4}));
             }
         }
 
@@ -398,7 +397,7 @@
             padding: 0;
 
             .text-slide__name {
-                padding: $size-4 $size-8;
+                padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
                 color: var(--Send-color, #DAD5C1);
                 background-color: var(--Asphalt-color, #252525);
@@ -412,10 +411,10 @@
             }
 
             .text-slide__body {
-                margin-block: $size-24 $size-40;
+                margin-block: calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-40});
 
                 @include breakpointMF(tablet) {
-                    margin-block: $size-16 $size-48;
+                    margin-block: calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-48});
                 }
 
                 &._element-collapsed {

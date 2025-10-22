@@ -2,16 +2,18 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    place-content: center;
+    place-items: center;
 
-    width: 2.4rem;
-    height: 2.4rem;
+    width: calc(var(--chunk) * 24);
+    height: calc(var(--chunk) * 24);
 
     cursor: pointer;
 
     .icon {
         display: block;
-        width: 2.3rem;
-        height: 2.3rem;
+        width: calc(var(--chunk) * 23);
+        height: calc(var(--chunk) * 23);
 
         grid-column: 1 / 2;
         grid-row: 1 / 2;

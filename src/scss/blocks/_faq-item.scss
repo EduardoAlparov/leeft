@@ -10,9 +10,9 @@
     &__button {
         display: flex;
         align-items: center;
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
 
-        padding: $size-16 $size-8 $size-16 $size-24;
+        padding: calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-8}) calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-24});
     }
 
     &__question {
@@ -33,8 +33,8 @@
         grid-template-rows: 1fr;
 
         flex-shrink: 0;
-        width: 4.8rem;
-        height: 4.8rem;
+        width: calc(var(--chunk) * 48);
+        height: calc(var(--chunk) * 48);
 
         .icon {
             grid-column: 1 / 2;
@@ -51,8 +51,8 @@
             transition-timing-function: ease;
 
             @include breakpointMF(desktop) {
-                width: 2rem;
-                height: 2rem;
+                width: calc(var(--chunk) * 20);
+                height: calc(var(--chunk) * 20);
             }
 
             &.icon-close {
@@ -67,7 +67,7 @@
     }
 
     &__inner {
-        padding: $size-16 $size-24;
+        padding: calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-24});
     }
 
     &__text {
@@ -78,7 +78,7 @@
 
     &__text {
         &:not(:last-child) {
-            margin-bottom: $size-16;
+            margin-bottom: calc(var(--chunk) * #{$size-16});
         }
     }
 

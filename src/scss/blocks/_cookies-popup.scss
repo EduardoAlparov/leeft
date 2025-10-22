@@ -10,7 +10,7 @@
     background-color: var(--Sage-color, #B9D2B4);
 
     @include breakpointMF(tablet) {
-        bottom: $size-8;
+        bottom: calc(var(--chunk) * #{$size-8});
     }
 
     @include breakpointMF(desktop) {
@@ -26,15 +26,15 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: space-between;
-        gap: $size-32;
-        padding: $size-32 0;
+        gap: calc(var(--chunk) * #{$size-32});
+        padding: calc(var(--chunk) * #{$size-32}) 0;
 
         @include breakpointMF(desktop) {
             align-items: center;
             flex-direction: row;
-            gap: 11.4rem;
+            gap: calc(var(--chunk) * 114);
 
-            padding: $size-32 $size-24;
+            padding: calc(var(--chunk) * #{$size-32}) calc(var(--chunk) * #{$size-24});
 
             background-color: var(--Sage-color, #B9D2B4);
         }
@@ -43,20 +43,20 @@
     &__prime {
         display: flex;
         align-items: flex-start;
-        gap: $size-12;
+        gap: calc(var(--chunk) * #{$size-12});
     }
 
     &__icon {
         display: block;
-        width: 2.7rem;
-        height: 2.7rem;
+        width: calc(var(--chunk) * 27);
+        height: calc(var(--chunk) * 27);
         flex-shrink: 0;
     }
 
     &__desc {
         &>h6 {
             @include base20bold;
-            margin-bottom: $size-4;
+            margin-bottom: calc(var(--chunk) * #{$size-4});
         }
 
         &>p {
@@ -85,12 +85,12 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
         flex-shrink: 0;
 
         @include breakpointMF(tablet) {
             flex-direction: row;
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
         }
     }
 
@@ -98,12 +98,12 @@
         flex: 1 1 100%;
 
         @include breakpointMF(desktop) {
-            flex: 0 0 20.4rem;
+            flex: 0 0 calc(var(--chunk) * 204);
         }
 
         &.button {
-            height: 5.4rem;
-            padding: 1.8rem;
+            height: calc(var(--chunk) * 54);
+            padding: calc(var(--chunk) * 18);
             @include adds14;
 
             @include hoverActive {

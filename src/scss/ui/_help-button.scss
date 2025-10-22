@@ -1,23 +1,23 @@
 .help-button {
     position: fixed;
-    bottom: $size-32;
-    right: $size-32;
+    bottom: calc(var(--chunk) * #{$size-32});
+    right: calc(var(--chunk) * #{$size-32});
     z-index: 1000;
 
     display: grid;
     place-items: center;
     place-content: center;
 
-    width: 7.6rem;
-    height: 7.6rem;
+    width: calc(var(--chunk) * 76);
+    height: calc(var(--chunk) * 76);
 
     background-color: var(--Sage-color, #B9D2B4);
     border-radius: 100%;
 
     .icon {
         display: block;
-        width: 3.8rem;
-        height: 3.8rem;
+        width: calc(var(--chunk) * 38);
+        height: calc(var(--chunk) * 38);
         flex-shrink: 0;
 
         transform-origin: center;

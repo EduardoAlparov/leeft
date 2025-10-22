@@ -11,16 +11,16 @@
 
 
     &__site-container {
-        padding-block: $size-48;
+        padding-block: calc(var(--chunk) * #{$size-48});
     }
 
     &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
 
-        margin-bottom: $size-48;
+        margin-bottom: calc(var(--chunk) * #{$size-48});
     }
 
     &__title {
@@ -35,7 +35,7 @@
         margin-inline: -100%;
         padding-inline: 100%;
 
-        padding-block: $size-68;
+        padding-block: calc(var(--chunk) * #{$size-68});
     }
 
     &__swiper-wrapper {

@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: $size-4;
+    gap: calc(var(--chunk) * #{$size-4});
 
     &__counter {
         display: grid;
         place-items: center;
-        padding: $size-4 $size-8;
+        padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
         color: var(--Send-color, #DAD5C1);
         background-color: var(--Asphalt-color, #252525);

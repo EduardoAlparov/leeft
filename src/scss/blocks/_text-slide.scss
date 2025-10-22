@@ -1,14 +1,14 @@
 .text-slide {
     direction: ltr;
     text-align: left;
-    padding: $size-48 $size-24;
+    padding: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-24});
 
     color: var(--Send-color, #DAD5C1);
     background-color: var(--Asphalt-color, #252525);
 
     @include breakpointMF(desktop) {
         padding: unset;
-        padding-bottom: 10.6rem;
+        padding-bottom: calc(var(--chunk) * 106);
 
         background-color: transparent;
         color: var(--Asphalt-color, #252525);
@@ -18,23 +18,23 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         @include breakpointMF(desktop) {
-            gap: $size-4;
+            gap: calc(var(--chunk) * #{$size-4});
         }
 
         &.text-slide__heading--row {
             display: flex;
             align-items: stretch;
             flex-direction: row;
-            gap: $size-16;
+            gap: calc(var(--chunk) * #{$size-16});
         }
     }
 
     &__author-image {
-        width: 6.5rem;
-        height: 6.5rem;
+        width: calc(var(--chunk) * 65);
+        height: calc(var(--chunk) * 65);
         overflow: hidden;
         flex-shrink: 0;
 
@@ -57,7 +57,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        gap: $size-4;
+        gap: calc(var(--chunk) * #{$size-4});
     }
 
     &__name {
@@ -68,7 +68,7 @@
         }
 
         @include breakpointMF(desktop) {
-            padding: $size-4 $size-8;
+            padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
             color: var(--Send-color, #DAD5C1);
             background-color: var(--Asphalt-color, #252525);
@@ -78,7 +78,7 @@
     }
 
     &__role {
-        padding: $size-4 $size-8;
+        padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
         color: var(--Asphalt-color, #252525);
         background-color: var(--Send-color, #DAD5C1);
@@ -96,12 +96,12 @@
 
 
         @include breakpointMF(tablet) {
-            margin-block: $size-48 $size-80;
+            margin-block: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-80});
         }
 
         @include breakpointMF(desktop) {
-            max-width: 32.2rem;
-            margin-block: $size-16 0;
+            max-width: calc(var(--chunk) * 322);
+            margin-block: calc(var(--chunk) * #{$size-16}) 0;
         }
 
         &._element-collapsed {
@@ -115,7 +115,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         @include adds14;
         font-weight: bold;
@@ -132,7 +132,7 @@
     &__text {
 
         &:not(:last-child) {
-            margin-bottom: $size-24;
+            margin-bottom: calc(var(--chunk) * #{$size-24});
 
             @include breakpointMF(desktop) {
                 margin-bottom: unset;
@@ -145,8 +145,8 @@
             &::after {
                 @include breakpointMF(desktop) {
                     display: inline;
-                    width: 15.1rem;
-                    height: 1.6rem;
+                    width: calc(var(--chunk) * 151);
+                    height: calc(var(--chunk) * 16);
                     content: "";
                 }
             }

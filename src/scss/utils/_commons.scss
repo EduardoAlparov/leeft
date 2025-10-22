@@ -50,7 +50,7 @@
 
 .fancybox__container {
     .fancybox__toolbar {
-        top: 7.2rem;
+        top: calc(var(--chunk) * 72);
 
         @include breakpointMF(tablet) {
             top: 0;

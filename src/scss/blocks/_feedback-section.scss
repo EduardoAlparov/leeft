@@ -3,14 +3,14 @@
     background-color: var(--Asphalt-color, #252525);
 
     &__site-container {
-        padding-block: $size-64 16.4rem;
+        padding-block: calc(var(--chunk) * #{$size-64}) calc(var(--chunk) * 164);
 
         @include breakpointMF(tablet) {
-            padding-block: 11.6rem;
+            padding-block: calc(var(--chunk) * 116);
         }
 
         @include breakpointMF(desktop) {
-            padding-block: 16.4rem $size-72;
+            padding-block: calc(var(--chunk) * 164) calc(var(--chunk) * #{$size-72});
         }
     }
 
@@ -30,25 +30,23 @@
     &__column {
         display: flex;
         flex-wrap: wrap;
-        gap: $size-40;
-        margin-top: $size-48;
+        gap: calc(var(--chunk) * #{$size-40});
+        margin-top: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(desktop) {
             display: grid;
             grid-template-columns: 1fr 50%;
             grid-auto-flow: dense;
-            gap: $size-40 11.8rem;
+            gap: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * 118);
 
             grid-template-rows: auto;
-            margin-top: $size-88;
+            margin-top: calc(var(--chunk) * #{$size-88});
         }
     }
 
     &__row {
         flex: 1 1 100%;
-        height: 7.4rem;
-
-        @include breakpointMF(desktop) {}
+        height: calc(var(--chunk) * 74);
 
         &:is(.feedback-section__controls) {
             height: unset;
@@ -80,15 +78,15 @@
     &__types {
         display: flex;
         flex-direction: column;
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
 
-        padding-block: $size-24 $size-24;
+        padding-block: calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-24});
         border-bottom: 2px solid var(--Send-color, #DAD5C1);
 
         @include breakpointMF(tablet) {
             flex-direction: row;
             align-items: flex-start;
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
         }
     }
 
@@ -97,24 +95,24 @@
         @include base20;
 
         @include breakpointMF(tablet) {
-            margin-top: $size-8;
+            margin-top: calc(var(--chunk) * #{$size-8});
         }
     }
 
     &__types-list {
         display: flex;
         flex-wrap: wrap;
-        gap: $size-16 $size-8 ;
+        gap: calc(var(--chunk) * #{$size-16}) calc(var(--chunk) * #{$size-8});
     }
 
     &__controls {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: $size-40;
+        gap: calc(var(--chunk) * #{$size-40});
 
         @include breakpointMF(desktop) {
-            gap: $size-36;
+            gap: calc(var(--chunk) * #{$size-36});
         }
     }
 
@@ -127,7 +125,7 @@
     &__agreement {
         display: flex;
         align-items: center;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         .parsley-errors-list {
             @include visuallyHidden();
@@ -161,13 +159,13 @@
     }
 
     &__captcha {
-        width: 30.2rem;
-        height: 7.6rem;
+        width: calc(var(--chunk) * 302);
+        height: calc(var(--chunk) * 76);
     }
 
     &__close {
         position: absolute;
-        top: $size-12;
+        top: calc(var(--chunk) * #{$size-12});
         right: 0;
         z-index: 100;
 
@@ -175,22 +173,22 @@
         place-items: center;
         place-content: center;
 
-        width: $size-48;
-        height: $size-48;
+        width: calc(var(--chunk) * #{$size-48});
+        height: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(tablet) {
-            top: $size-16;
-            right: $size-16;
+            top: calc(var(--chunk) * #{$size-16});
+            right: calc(var(--chunk) * #{$size-16});
         }
 
         @include breakpointMF(desktop) {
-            top: $size-24;
-            right: $size-24;
+            top: calc(var(--chunk) * #{$size-24});
+            right: calc(var(--chunk) * #{$size-24});
         }
 
         .icon {
-            width: 2rem;
-            height: 2rem;
+            width: calc(var(--chunk) * 20);
+            height: calc(var(--chunk) * 20);
 
             stroke: #FFF;
             stroke-width: 3px;

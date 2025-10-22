@@ -1,16 +1,15 @@
 .services-section {
-    padding-block: 6.4rem;
+    padding-block: calc(var(--chunk) * 64);
+    color: var(--Send-color, #DAD5C1);
+    background-color: var(--Asphalt-color, #252525);
 
     @include breakpointMF(tablet) {
-        padding-block: 11.6rem;
+        padding-block: calc(var(--chunk) * 116);
     }
 
     @include breakpointMF(desktop) {
-        padding-block: 12rem;
+        padding-block: calc(var(--chunk) * 120);
     }
-
-    color: var(--Send-color, #DAD5C1);
-    background-color: var(--Asphalt-color, #252525);
 
     &__service-link {
         border-bottom: 1px solid var(--Send-color, #DAD5C1);
@@ -18,7 +17,7 @@
 
     &__services-item {
         &:not(:last-child) {
-            margin-bottom: $size-40;
+            margin-bottom: calc(var(--chunk) * #{$size-40});
 
             @include breakpointMF(desktop) {
                 margin-bottom: unset;
@@ -33,29 +32,29 @@
     }
 
     &__title {
-        margin-bottom: $size-40;
+        margin-bottom: calc(var(--chunk) * #{$size-40});
         @include H64;
 
         @include breakpointMF(tablet) {
-            margin-bottom: $size-48;
+            margin-bottom: calc(var(--chunk) * #{$size-48});
             @include H72;
         }
 
         @include breakpointMF(tablet) {
-            margin-bottom: $size-96;
+            margin-bottom: calc(var(--chunk) * #{$size-96});
             @include H112;
         }
     }
 
     &.section--padding-top {
-        padding-block: 6.4rem 16.4rem;
+        padding-block: calc(var(--chunk) * #{$size-64}) calc(var(--chunk) * 164);
 
         @include breakpointMF(tablet) {
-            padding-block: 11.6rem 18rem;
+            padding-block: calc(var(--chunk) * 116) calc(var(--chunk) * 180);
         }
 
         @include breakpointMF(desktop) {
-            padding-block: 12rem 20rem;
+            padding-block: calc(var(--chunk) * 120) calc(var(--chunk) * 200);
         }
 
         .services-section__site-container {

@@ -1,29 +1,29 @@
 .simple-section {
+    padding-block: calc(var(--chunk) * #{$size-80});
+    min-height: calc(var(--chunk) * 428);
+
     color: var(--Asphalt-color, #252525);
     background-color: var(--Limon-color, #FCFF7A);
 
-    padding-block: $size-80;
-    min-height: 42.8rem;
-
     @include breakpointMF(tablet) {
-        min-height: 50.6rem;
+        min-height: calc(var(--chunk) * 506);
     }
 
     @include breakpointMF(desktop) {
-        min-height: 50.6rem;
+        min-height: calc(var(--chunk) * 506);
     }
 
 
     &__body {
         @include breakpointMF(tablet) {
             position: relative;
-            padding-block: 12.5rem;
+            padding-block: calc(var(--chunk) * 125);
         }
     }
 
     &__title {
         @include S32;
-        margin-top: 1.3rem;
+        margin-top: calc(var(--chunk) * 13);
         user-select: none;
 
         @include breakpointMF(tablet) {
@@ -33,8 +33,6 @@
             @include S48;
             user-select: none;
         }
-
-        @include breakpointMF(desktop) {}
 
         &>br {
             &:first-child {
@@ -57,9 +55,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
-        margin-top: $size-48;
+        margin-top: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(tablet) {
             margin-top: unset;
@@ -68,7 +66,7 @@
 
     &__item {
         position: relative;
-        padding-left: $size-28;
+        padding-left: calc(var(--chunk) * #{$size-28});
 
         @include adds14;
 
@@ -90,8 +88,9 @@
         &:last-child {
             @include breakpointMF(tablet) {
                 right: 0;
+
                 padding-left: unset;
-                padding-right: $size-28;
+                padding-right: calc(var(--chunk) * #{$size-28});
 
                 &::before {
                     left: unset;
@@ -105,12 +104,11 @@
             top: 50%;
             left: 0;
 
-            width: 2rem;
-            height: 2rem;
+            width: calc(var(--chunk) * 20);
+            height: calc(var(--chunk) * 20);
             transform: translateY(-50%);
 
             background-color: var(--Asphalt-color, #252525);
-
             content: "";
         }
     }

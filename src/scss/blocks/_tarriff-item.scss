@@ -61,12 +61,12 @@
 
         width: 100%;
         height: 100%;
-        padding: $size-40 $size-24;
+        padding: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * #{$size-24});
 
-        gap: $size-56;
+        gap: calc(var(--chunk) * #{$size-56});
 
         @include breakpointMF(tablet) {
-            gap: $size-80;
+            gap: calc(var(--chunk) * #{$size-80});
             justify-content: space-between;
         }
     }
@@ -74,9 +74,9 @@
     &__heading-block {
         display: flex;
         align-items: center;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
-        margin-bottom: $size-16;
+        margin-bottom: calc(var(--chunk) * #{$size-16});
     }
 
     &__icon {
@@ -84,8 +84,8 @@
         place-items: center;
 
         flex-shrink: 0;
-        width: 4.8rem;
-        height: 4.8rem;
+        width: calc(var(--chunk) * 48);
+        height: calc(var(--chunk) * 48);
 
         &>svg {
             width: 100%;
@@ -112,7 +112,7 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-8;
+        gap: calc(var(--chunk) * #{$size-8});
     }
 
     &__target {
@@ -140,18 +140,18 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-40;
+        gap: calc(var(--chunk) * #{$size-40});
 
         @include breakpointMF(tablet) {
-            gap: $size-64;
+            gap: calc(var(--chunk) * #{$size-64});
         }
     }
 
     &__center {
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
 
         @include breakpointMF(tablet) {
-            gap: $size-56;
+            gap: calc(var(--chunk) * #{$size-56});
         }
     }
 
@@ -161,18 +161,18 @@
     }
 
     &__list {
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
     }
 
     &__item {
         display: flex;
         align-items: flex-start;
-        gap: 0.6rem;
+        gap: calc(var(--chunk) * 6);
 
         &::before {
             display: block;
-            width: 2.4rem;
-            height: 2.4rem;
+            width: calc(var(--chunk) * 24);
+            height: calc(var(--chunk) * 24);
             flex-shrink: 0;
 
             background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M15.8491%2010.6901L16.5562%209.983L15.142%208.56878L14.4349%209.27589L15.8491%2010.6901ZM10.875%2014.25L10.1679%2014.9571L10.875%2015.6642L11.5821%2014.9571L10.875%2014.25ZM10.1276%2012.0884L9.4205%2011.3813L8.00628%2012.7955L8.71339%2013.5026L10.1276%2012.0884ZM12%203V2C6.47715%202%202%206.47715%202%2012H3H4C4%207.58172%207.58172%204%2012%204V3ZM21%2012H22C22%206.47715%2017.5228%202%2012%202V3V4C16.4183%204%2020%207.58172%2020%2012H21ZM12%2021V22C17.5228%2022%2022%2017.5228%2022%2012H21H20C20%2016.4183%2016.4183%2020%2012%2020V21ZM3%2012H2C2%2017.5228%206.47715%2022%2012%2022V21V20C7.58172%2020%204%2016.4183%204%2012H3ZM10.875%2014.25L11.5821%2014.9571L15.8491%2010.6901L15.142%209.983L14.4349%209.27589L10.1679%2013.5429L10.875%2014.25ZM9.4205%2012.7955L8.71339%2013.5026L10.1679%2014.9571L10.875%2014.25L11.5821%2013.5429L10.1276%2012.0884L9.4205%2012.7955Z%22%20fill%3D%22%23252525%22%2F%3E%0A%3C%2Fsvg%3E');

@@ -3,16 +3,16 @@
     flex-direction: column;
     align-items: center;
 
-    gap: $size-24;
+    gap: calc(var(--chunk) * #{$size-24});
 
     @include breakpointMF(desktop) {
-        gap: $size-32;
+        gap: calc(var(--chunk) * #{$size-32});
     }
 
     &__icon {
         .icon {
-            width: 8rem;
-            height: 8rem;
+            width: calc(var(--chunk) * #{$size-80});
+            height: calc(var(--chunk) * #{$size-80});
         }
     }
 
@@ -21,7 +21,7 @@
         flex-direction: column;
         align-items: center;
 
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         &>h6 {
             @include base20bold;

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-inline: $size-20;
+    padding-inline: calc(var(--chunk) * #{$size-20});
 
     background-color: rgba(20, 20, 20, 0.90);
     backdrop-filter: blur(5px);
@@ -14,12 +14,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: $size-28;
+        gap: calc(var(--chunk) * #{$size-28});
 
-        max-width: 35rem;
+        max-width: calc(var(--chunk) * 350);
         overflow: hidden;
-        height: 34.2rem;
-        padding: $size-48 $size-20;
+        height: calc(var(--chunk) * 342);
+        padding: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-20});
 
         background-color: var(--Asphalt-color, #252525);
         border: 1px solid #FFF;
@@ -28,20 +28,20 @@
 
     &__close {
         position: absolute;
-        top: $size-8;
-        right: $size-8;
+        top: calc(var(--chunk) * #{$size-8});
+        right: calc(var(--chunk) * #{$size-8});
         z-index: 100;
 
         display: grid;
         place-items: center;
         place-content: center;
 
-        width: $size-32;
-        height: $size-32;
+        width: calc(var(--chunk) * #{$size-32});
+        height: calc(var(--chunk) * #{$size-32});
 
         .icon {
-            width: 1.4rem;
-            height: 1.4rem;
+            width: calc(var(--chunk) * 14);
+            height: calc(var(--chunk) * 14);
 
             stroke: #FFF;
             stroke-width: 2px;
@@ -49,17 +49,17 @@
 
         &.competence-modal__close {
             @include breakpointMF(desktop) {
-                top: $size-24;
-                right: $size-24;
+                top: calc(var(--chunk) * #{$size-24});
+                right: calc(var(--chunk) * #{$size-24});
 
-                width: $size-48;
-                height: $size-48;
+                width: calc(var(--chunk) * #{$size-48});
+                height: calc(var(--chunk) * #{$size-48});
             }
 
             .icon {
                 @include breakpointMF(desktop) {
-                    width: 2rem;
-                    height: 2rem;
+                    width: calc(var(--chunk) * 20);
+                    height: calc(var(--chunk) * 20);
                 }
             }
         }
@@ -71,8 +71,8 @@
         place-content: center;
 
         width: min-content;
-        height: 2.8rem;
-        padding: 0 $size-8;
+        height: calc(var(--chunk) * 28);
+        padding: 0 calc(var(--chunk) * #{$size-8});
 
         @include adds14;
         line-height: 144%;
@@ -87,7 +87,7 @@
                 @include S32;
                 line-height: 100%;
                 height: auto;
-                padding: $size-4 $size-8;
+                padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
             }
 
             @include breakpointMF(desktop) {
@@ -123,7 +123,7 @@
             @include adds12;
 
             &:not(:last-child) {
-                margin-bottom: $size-16;
+                margin-bottom: calc(var(--chunk) * #{$size-16});
             }
         }
     }

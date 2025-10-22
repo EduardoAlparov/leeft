@@ -7,13 +7,13 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 
-    padding: $size-24 $size-24 0;
+    padding: calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-24}) 0;
 
     background-color: rgba(20, 20, 20, 0.90);
     backdrop-filter: blur(5px);
 
     @include breakpointMF(desktop) {
-        padding: $size-32 $size-32 0;
+        padding: calc(var(--chunk) * #{$size-32}) calc(var(--chunk) * #{$size-32}) 0;
     }
 
     &.active {
@@ -34,7 +34,7 @@
         position: relative;
         height: 100%;
         overflow: hidden;
-        padding-inline: $size-16;
+        padding-inline: calc(var(--chunk) * #{$size-16});
         background-color: var(--Black-color, #1F1F1F);
 
         @include breakpointMF(desktop) {
@@ -47,13 +47,13 @@
         max-height: 100%;
         overflow: auto;
 
-        padding-inline: $size-16;
+        padding-inline: calc(var(--chunk) * #{$size-16});
 
         color: var(--Send-color, #DAD5C1);
 
         @include breakpointMF(desktop) {
-            padding-inline: $size-64;
-            margin-top: $size-40;
+            padding-inline: calc(var(--chunk) * #{$size-64});
+            margin-top: calc(var(--chunk) * #{$size-40});
         }
 
         @include breakpoint(laptop) {
@@ -83,7 +83,7 @@
     }
 
     &__nameplate {
-        margin-top: $size-56;
+        margin-top: calc(var(--chunk) * #{$size-56});
     }
 }
 

@@ -3,33 +3,33 @@
     background-color: var(--Asphalt-color, #252525);
 
     @include breakpointMF(tablet) {
-        padding-block: $size-28;
+        padding-block: calc(var(--chunk) * #{$size-28});
     }
 
     &__site-container {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
     }
 
     &__title {
         @include S48;
-        margin-bottom: $size-40;
+        margin-bottom: calc(var(--chunk) * #{$size-40});
 
         @include breakpointMF(tablet) {
             @include H72;
-            margin-bottom: $size-72;
+            margin-bottom: calc(var(--chunk) * #{$size-72});
         }
 
         @include breakpointMF(desktop) {
-            margin-bottom: $size-64;
+            margin-bottom: calc(var(--chunk) * #{$size-64});
         }
     }
 
     &__body {
         position: relative;
 
-        min-height: 10rem;
+        min-height: calc(var(--chunk) * 100);
         margin-inline: calc(-1 * var(--content-padding, 2.4rem));
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
 
         background-color: var(--Black-color, #1F1F1F);
 
@@ -38,7 +38,7 @@
         }
 
         @include breakpointMF(desktop) {
-            padding-block: 10rem;
+            padding-block: calc(var(--chunk) * 100);
         }
     }
 
@@ -48,9 +48,9 @@
         z-index: 100;
 
         display: grid;
-        grid-template-columns: repeat(6, calc((100% - #{$size-40}) / 6)) $size-40;
+        grid-template-columns: repeat(6, calc((100% - calc(var(--chunk) * #{$size-40})) / 6)) calc(var(--chunk) * #{$size-40});
 
-        padding-left: $size-40;
+        padding-left: calc(var(--chunk) * #{$size-40});
 
         counter-reset: competence-list-counter;
 
@@ -65,7 +65,7 @@
 
             &:first-child {
                 &::after {
-                    left: $size-40;
+                    left: calc(var(--chunk) * #{$size-40});
 
                     @include breakpointMF(desktop) {
                         left: 50%;
@@ -74,7 +74,7 @@
 
                 &::before {
                     @include breakpointMF(tablet) {
-                        right: $size-40;
+                        right: calc(var(--chunk) * #{$size-40});
                         left: unset;
                         transform: translateX(50%);
                     }
@@ -89,7 +89,7 @@
 
             &:last-child {
                 &::after {
-                    right: $size-40;
+                    right: calc(var(--chunk) * #{$size-40});
                     left: unset;
 
                     @include breakpointMF(desktop) {
@@ -116,7 +116,7 @@
                 @include adds12;
 
                 display: block;
-                padding: $size-24 $size-8;
+                padding: calc(var(--chunk) * #{$size-24}) calc(var(--chunk) * #{$size-8});
                 color: var(--Darksend-color, #807D73);
                 content: counter(competence-list-counter);
 
@@ -147,7 +147,7 @@
         }
 
         @include breakpointMF(tablet) {
-            grid-template-columns: calc(#{$size-40} + calc(((100% - (#{$size-40} * 2))) / 12)) repeat(5, calc((100% - (#{$size-40} * 2)) / 6)) calc(#{$size-40} + calc(((100% - (#{$size-40} * 2))) / 12));
+            grid-template-columns: calc(calc(var(--chunk) * #{$size-40}) + calc(((100% - (calc(var(--chunk) * #{$size-40})* 2))) / 12)) repeat(5, calc((100% - (calc(var(--chunk) * #{$size-40}) * 2)) / 6)) calc(calc(var(--chunk) * #{$size-40}) + calc(((100% - (calc(var(--chunk) * #{$size-40}) * 2))) / 12));
 
             padding-left: unset;
         }
@@ -161,20 +161,20 @@
         display: flex;
         align-items: stretch;
         flex-direction: column;
-        gap: $size-24;
+        gap: calc(var(--chunk) * #{$size-24});
 
-        padding-inline: $size-40;
+        padding-inline: calc(var(--chunk) * #{$size-40});
 
         @include breakpointMF(tablet) {
             display: grid;
             grid-auto-flow: dense;
             grid-template-columns: repeat(12, calc((100% / 12)));
             gap: 0;
-            row-gap: $size-40;
+            row-gap: calc(var(--chunk) * #{$size-40});
         }
 
         @include breakpointMF(desktop) {
-            row-gap: $size-80;
+            row-gap: calc(var(--chunk) * #{$size-80});
             padding-inline: calc(100% / 7 / 2) calc(100% / 7 / 2);
         }
     }
@@ -182,14 +182,14 @@
     &__item {
         position: relative;
 
-        height: 6.4rem;
+        height: calc(var(--chunk) * 64);
 
         @include breakpointMF(tablet) {
-            height: 6.8rem;
+            height: calc(var(--chunk) * 68);
         }
 
         @include breakpointMF(desktop) {
-            height: 6.4rem;
+            height: calc(var(--chunk) * 64);
         }
     }
 

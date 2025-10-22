@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: $size-8;
+    gap: calc(var(--chunk) * #{$size-8});
 
     &>li {
 
@@ -22,6 +22,7 @@
 
         color: var(--Asphalt-color, #252525);
         white-space: nowrap;
+
         @include adds14;
 
         &::before {

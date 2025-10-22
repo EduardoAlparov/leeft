@@ -23,49 +23,181 @@
 // Headings:
 @mixin H112 {
     @include font(11.2rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(112px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(11.2rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(11.2rem, normal, 400, 0, 100%);
+    }
 }
 
 @mixin H96 {
     @include font(9.6rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(96px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(9.6rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(9.6rem, normal, 400, 0, 100%);
+    }
 }
 
 @mixin H72 {
     @include font(7.2rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(72px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(7.2rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(7.2rem, normal, 400, 0, 100%);
+    }
 }
 
 @mixin H64 {
     @include font(6.4rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(64px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(6.4rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(6.4rem, normal, 400, 0, 100%);
+    }
 }
 
 // Subheadings:
 @mixin S48 {
     @include font(4.8rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(48px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(4.8rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(4.8rem, normal, 400, 0, 100%);
+    }
 }
 
 @mixin S32 {
     @include font(3.2rem, normal, 400, 0, 100%);
+
+    @include breakpointMF(laptop) {
+        @include font(32px, normal, 400, 0, 100%);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(3.2rem, normal, 400, 0, 100%);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(3.2rem, normal, 400, 0, 100%);
+    }
 }
 
 // Basics:
 @mixin base20 {
     @include font(2rem, normal, 400, 0, 1.2);
+
+    @include breakpointMF(laptop) {
+        @include font(20px, normal, 400, 0, 1.2);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(2rem, normal, 400, 0, 1.2);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(2rem, normal, 400, 0, 1.2);
+    }
 }
 
 @mixin base20bold {
     @include font(2rem, normal, 700, 0, 1.2);
+
+    @include breakpointMF(laptop) {
+        @include font(20px, normal, 700, 0, 1.2);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(2rem, normal, 700, 0, 1.2);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(2rem, normal, 700, 0, 1.2);
+    }
 }
 
 @mixin base16 {
     @include font(1.6rem, normal, 400, 0, 1.44);
+
+    @include breakpointMF(laptop) {
+        @include font(16px, normal, 400, 0, 1.44);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(1.6rem, normal, 400, 0, 1.44);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(1.6rem, normal, 400, 0, 1.44);
+    }
 }
 
 // Additionals:
 @mixin adds14 {
     @include font(1.4rem, normal, 400, 0, 1.32);
+
+    @include breakpointMF(laptop) {
+        @include font(14px, normal, 400, 0, 1.32);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(1.4rem, normal, 400, 0, 1.32);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(1.4rem, normal, 400, 0, 1.32);
+    }
 }
 
 @mixin adds12 {
     @include font(1.2rem, normal, 400, 0, 1.32);
+
+    @include breakpointMF(laptop) {
+        @include font(12px, normal, 400, 0, 1.32);
+    }
+
+    @include breakpointMF(full-hd) {
+        @include font(1.2rem, normal, 400, 0, 1.32);
+    }
+
+    @include aspectRatio(ultra) {
+        @include font(1.2rem, normal, 400, 0, 1.32);
+    }
 }
 
 @mixin visuallyHidden() {
@@ -291,6 +423,12 @@
 }
 
 @mixin breakpointMF($class) {
+    @if $class ==full-hd {
+        @media only screen and (min-width: 1920px) {
+            @content;
+        }
+    }
+
     @if $class ==large-desktop {
         @media only screen and (min-width: 1441px) {
             @content;

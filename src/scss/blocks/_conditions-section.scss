@@ -5,17 +5,17 @@
     overflow: hidden;
 
     @include breakpointMF(tablet) {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
     }
 
     @include breakpointMF(desktop) {
-        padding-block: $size-68 calc(#{$size-8} * 14.5);
+        padding-block: calc(var(--chunk) * #{$size-68}) calc(var(--chunk) * 145);
     }
 
     &__title {
         display: flex;
         flex-direction: column;
-        margin-bottom: $size-48;
+        margin-bottom: calc(var(--chunk) * #{$size-48});
 
         @include S32;
 
@@ -27,7 +27,7 @@
     }
 
     &__site-container {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
     }
 
     &__item {
@@ -35,17 +35,17 @@
 
         display: flex;
         align-items: center;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         width: min-content;
-        padding-block: $size-16;
-        padding-right: $size-64;
+        padding-block: calc(var(--chunk) * #{$size-16});
+        padding-right: calc(var(--chunk) * #{$size-64});
 
         @include breakpointMF(tablet) {
-            gap: $size-24;
+            gap: calc(var(--chunk) * #{$size-24});
 
             width: max-content;
-            padding-block: $size-32;
+            padding-block: calc(var(--chunk) * #{$size-32});
         }
 
         &::before {
@@ -56,7 +56,6 @@
             bottom: 0;
             z-index: 100;
 
-            // width: 100%;
             margin-left: -100%;
             padding-left: 100%;
 
@@ -92,8 +91,8 @@
         z-index: 300;
 
         display: block;
-        width: 4.8rem;
-        height: 4.8rem;
+        width: calc(var(--chunk) * 48);
+        height: calc(var(--chunk) * 48);
 
         &.icon-work,
         &.icon-connect {
@@ -102,8 +101,8 @@
         }
 
         @include breakpointMF(desktop) {
-            width: 8rem;
-            height: 8rem;
+            width: calc(var(--chunk) * 8);
+            height: calc(var(--chunk) * 8);
         }
     }
 

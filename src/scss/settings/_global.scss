@@ -63,7 +63,7 @@ textarea {
     display: block;
     width: 100%;
     overflow: auto;
-    height: 20rem;
+    height: calc(var(--chunk) * 200);
     @include customScrollbar();
 }
 

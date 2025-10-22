@@ -34,35 +34,35 @@
     }
 
     &__site-container {
-        padding-block: 13.5rem 11.6rem;
+        padding-block: calc(var(--chunk) * 135) calc(var(--chunk) * 116);
     }
 
     &__body {
         position: relative;
-        padding: $size-64 $size-16 10.4rem;
+        padding: calc(var(--chunk) * #{$size-64}) calc(var(--chunk) * #{$size-16}) 10.4rem;
 
         color: var(--Send-color, #DAD5C1);
         background-color: var(--Black-color, #1F1F1F);
         border: 2px solid var(--Send-color, #DAD5C1);
 
         @include breakpointMF(tablet) {
-            padding: 11.6rem $size-40;
+            padding: calc(var(--chunk) * 116) calc(var(--chunk) * #{$size-40});
         }
 
         @include breakpointMF(desktop) {
-            padding: $size-96 $size-64;
+            padding: calc(var(--chunk) * #{$size-96}) calc(var(--chunk) * #{$size-64});
         }
 
 
         .feedback-section__column {
-            margin-top: $size-48;
+            margin-top: calc(var(--chunk) * #{$size-48});
 
             @include breakpointMF(tablet) {
-                margin-top: $size-64;
+                margin-top: calc(var(--chunk) * #{$size-64});
             }
 
             @include breakpointMF(desktop) {
-                margin-top: $size-64;
+                margin-top: calc(var(--chunk) * #{$size-64});
             }
         }
 
@@ -72,7 +72,7 @@
 
         .feedback-section__column {
             @include breakpointMF(desktop) {
-                gap: $size-40 10.8rem;
+                gap: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * 108);
             }
         }
     }

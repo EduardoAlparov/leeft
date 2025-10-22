@@ -1,8 +1,8 @@
 .button {
     display: grid;
     place-items: center;
-    height: 7.4rem;
-    padding: $size-24;
+    height: calc(var(--chunk) * 74);
+    padding: calc(var(--chunk) * #{$size-24});
 
     @include base20;
     white-space: nowrap;

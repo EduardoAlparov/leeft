@@ -14,9 +14,9 @@
 
         @include breakpointMF(desktop) {
             flex-direction: row;
-            gap: $size-52;
+            gap: calc(var(--chunk) * #{$size-52});
 
-            min-height: 80rem;
+            min-height: calc(var(--chunk) * 800);
         }
     }
 
@@ -27,17 +27,17 @@
 
             align-items: stretch;
             padding: 0;
-            padding-block: $size-48 $size-24;
+            padding-block: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-24});
 
             color: var(--Send-color, #DAD5C1);
             background-color: var(--Asphalt-color, #252525);
 
             @include breakpointMF(tablet) {
-                padding-block: $size-64;
+                padding-block: calc(var(--chunk) * #{$size-64});
             }
 
             @include breakpointMF(desktop) {
-                padding-block: $size-64 $size-24;
+                padding-block: calc(var(--chunk) * #{$size-64}) calc(var(--chunk) * #{$size-24});
             }
 
             .text-slide__name {
@@ -50,24 +50,26 @@
             }
 
             .text-slide__role {
-                padding: $size-4 $size-8;
-                @include adds14;
+                padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
+
                 color: var(--Asphalt-color, #252525);
                 background-color: var(--Send-color, #DAD5C1);
+
+                @include adds14;
             }
 
             .text-slide__body {
                 max-width: unset;
-                margin-block: $size-44 $size-64;
+                margin-block: calc(var(--chunk) * #{$size-44}) calc(var(--chunk) * #{$size-64});
 
                 @include breakpointMF(tablet) {
-                    margin-block: $size-48 $size-80;
+                    margin-block: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-80});
                 }
             }
 
             .text-slide__text {
                 &:not(:last-child) {
-                    margin-bottom: $size-24;
+                    margin-bottom: calc(var(--chunk) * #{$size-24})
                 }
             }
 
@@ -77,7 +79,7 @@
             }
 
             @include breakpointMF(desktop) {
-                flex: 0 0 66rem;
+                flex: 0 0 calc(var(--chunk) * 660);
             }
         }
     }
@@ -85,9 +87,7 @@
     &__image {
         aspect-ratio: 1;
         overflow: hidden;
-
         margin-inline: calc(-1 * var(--content-padding, 2.4rem));
-        // padding-inline: var(--content-padding, 2.4rem);
 
         @include breakpointMF(tablet) {
             aspect-ratio: 1.64 / 1;
@@ -98,9 +98,9 @@
             top: 0;
             bottom: 0;
             right: 0;
-            left: calc(50% + 14rem);
-            aspect-ratio: unset;
+            left: calc(50% + calc(var(--chunk) * 140));
 
+            aspect-ratio: unset;
             margin-inline: unset;
         }
     }

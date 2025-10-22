@@ -58,9 +58,10 @@ export default () => {
                     } else {
                         item.classList.add("display-none");
                     }
+                })
 
-
-                    if(filteredItems.length < 1) {
+                if(filteredItems.length < 1) {
+                    items.forEach((item) => {
                         list.classList.add('cases-section__list--collapsed');
                         item.classList.remove('display-none');
 
@@ -79,8 +80,8 @@ export default () => {
                                 rotateY: 0
                             }
                         )
-                    }
-                })
+                    })
+                }
             }
         })
     })

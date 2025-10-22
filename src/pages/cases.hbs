@@ -19,30 +19,34 @@
                 </p>
             </div>
 
-            <ul class="cases-section__navbars js-navbars">
+            <ul class="cases-section__navbars cases-section__navbars--full-grow js-navbars">
                 <li class="">
                     <a href="#" class="cases-section__navbar nameplate nameplate--active js-navbar-link"
-                        data-nav-counter="32">
+                        data-nav-counter="32" data-filter="all">
                         все
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="6"
+                        data-filter="dev">
                         разработка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="8"
+                        data-filter="support">
                         поддержка
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="12"
+                        data-filter="seo">
                         SEO
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7">
+                    <a href="#" class="cases-section__navbar nameplate js-navbar-link" data-nav-counter="7"
+                        data-filter="bitrix">
                         Битрикс24
                     </a>
                 </li>
@@ -52,7 +56,7 @@
             <ul class="cases-section__list cases-section__list--collapsed">
                 {{#each cases}}
                 <li class="cases-section__item">
-                    {{>case-card caseClass="cases-section__case-card"}}
+                    {{>case-card caseClass="cases-section__case-card" dataId=this.dataId}}
                 </li>
                 {{/each}}
             </ul>

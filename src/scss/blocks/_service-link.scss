@@ -4,11 +4,11 @@
 
     display: block;
     color: inherit;
-    padding-bottom: $size-40;
+    padding-bottom: calc(var(--chunk) * #{$size-40});
     cursor: default;
 
     @include breakpointMF(desktop) {
-        padding-block: $size-64;
+        padding-block: calc(var(--chunk) * #{$size-64});
     }
 
     &__body {
@@ -18,12 +18,12 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-20;
+        gap: calc(var(--chunk) * #{$size-20});
 
         @include breakpointMF(desktop) {
             flex-direction: row;
             justify-content: space-between;
-            gap: $size-80;
+            gap: calc(var(--chunk) * #{$size-80});
         }
     }
 
@@ -38,7 +38,7 @@
 
     &__desc {
         @include breakpointMF(desktop) {
-            width: 44rem;
+            width: calc(var(--chunk) * 440);
             margin-left: auto;
         }
     }
@@ -64,8 +64,8 @@
 
     &__arrow {
         display: none;
-        width: 7.4rem;
-        height: 7.4rem;
+        width: calc(var(--chunk) * 74);
+        height: calc(var(--chunk) * 74);
 
         stroke: var(--Send-color, #DAD5C1);
         stroke-width: 4.75px;
@@ -91,7 +91,7 @@
     &__link {
         display: flex;
         align-items: flex-start;
-        gap: $size-12;
+        gap: calc(var(--chunk) * #{$size-12});
 
         @include adds12;
         line-height: 137%;
@@ -102,8 +102,8 @@
     }
 
     &__icon {
-        width: $size-16;
-        height: $size-16;
+        width: calc(var(--chunk) * #{$size-16});
+        height: calc(var(--chunk) * #{$size-16});
         stroke: var(--Send-color, #DAD5C1);
 
 
@@ -128,7 +128,7 @@
     }
 
     &__image {
-        width: 21.6rem;
+        width: calc(var(--chunk) * 216);
         aspect-ratio: 0.7 / 1;
         transform: translate(-25%, -25%);
 
@@ -147,13 +147,13 @@
         }
 
         .service-link__arrow {
-            transform: translateX(2.2rem);
+            transform: translateX(calc(var(--chunk) * 22));
             opacity: 1;
         }
 
         .service-link__text {
             @include breakpointMF(desktop) {
-                padding: $size-4 $size-8;
+                padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
 
                 color: var(--Asphalt-color, #252525);
                 background-color: var(--Send-color, #DAD5C1);
@@ -180,7 +180,6 @@
         }
     }
 }
-
 
 @keyframes fadeOutSimple {
     from {

@@ -13,7 +13,7 @@
 
     &>textarea,
     &>input {
-        padding-block: 3rem $size-24;
+        padding-block: calc(var(--chunk) * 30) calc(var(--chunk) * #{$size-24});
         color: inherit;
         @include base20;
 
@@ -41,7 +41,7 @@
     &__label {
         position: absolute;
         left: 0;
-        top: $size-8;
+        top: calc(var(--chunk) * #{$size-8});
 
         opacity: 0;
         visibility: hidden;

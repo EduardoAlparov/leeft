@@ -3,26 +3,26 @@
     background-color: var(--Asphalt-color, #252525);
 
     @include breakpointMF(tablet) {
-        padding-block: $size-36 $size-28;
+        padding-block: calc(var(--chunk) * #{$size-36}) calc(var(--chunk) * #{$size-28});
     }
 
     &__site-container {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
     }
 
     &__title {
-        margin-bottom: $size-48;
+        margin-bottom: calc(var(--chunk) * #{$size-48});
 
         @include S48;
 
         @include breakpointMF(tablet) {
-            margin-bottom: $size-56;
+            margin-bottom: calc(var(--chunk) * #{$size-56});
 
             @include H72;
         }
 
         @include breakpointMF(desktop) {
-            margin-bottom: $size-80;
+            margin-bottom: calc(var(--chunk) * #{$size-80});
         }
     }
 
@@ -30,14 +30,14 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         @include breakpointMF(desktop) {
             display: grid;
             grid-auto-flow: column;
             align-items: flex-start;
             grid-template-columns: repeat(2, 0.5fr);
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
         }
     }
 
@@ -45,13 +45,13 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        gap: $size-16;
+        gap: calc(var(--chunk) * #{$size-16});
 
         @include breakpointMF(desktop) {
             display: grid;
             grid-auto-flow: dense;
             grid-template-columns: 1fr;
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
         }
     }
 

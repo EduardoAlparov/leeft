@@ -6,11 +6,11 @@
         background-color: var(--Asphalt-color, #252525);
 
         @include breakpointMF(tablet) {
-            padding-block: $size-44 0;
+            padding-block: calc(var(--chunk) * #{$size-44}) 0;
         }
 
         @include breakpointMF(desktop) {
-            padding-block: $size-84;
+            padding-block: calc(var(--chunk) * #{$size-84});
         }
     }
 
@@ -25,10 +25,10 @@
     }
 
     &__site-container {
-        padding-block: $size-80;
+        padding-block: calc(var(--chunk) * #{$size-80});
 
         @include breakpointMF(tablet) {
-            padding-block: $size-80 $size-40;
+            padding-block: calc(var(--chunk) * #{$size-80}) calc(var(--chunk) * #{$size-40});
         }
     }
 
@@ -41,28 +41,28 @@
     }
 
     &__body {
-        margin-top: $size-48;
+        margin-top: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(tablet) {
-            margin-top: $size-56;
+            margin-top: calc(var(--chunk) * #{$size-56});
         }
 
         @include breakpointMF(desktop) {
-            margin-top: $size-80;
+            margin-top: calc(var(--chunk) * #{$size-80});
         }
     }
 
     &__row {
         display: flex;
         flex-wrap: wrap;
-        gap: $size-48;
+        gap: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(tablet) {
-            gap: $size-40 $size-8;
+            gap: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * #{$size-8});
         }
 
         @include breakpointMF(desktop) {
-            gap: $size-8;
+            gap: calc(var(--chunk) * #{$size-8});
         }
 
         &.table-section__header {
@@ -70,7 +70,7 @@
 
             @include breakpointMF(desktop) {
                 display: flex;
-                margin-bottom: $size-48;
+                margin-bottom: calc(var(--chunk) * #{$size-48});
             }
         }
     }
@@ -79,42 +79,42 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: $size-48;
+        gap: calc(var(--chunk) * #{$size-48});
 
         @include breakpointMF(tablet) {
-            gap: $size-56;
+            gap: calc(var(--chunk) * #{$size-56});
         }
 
         @include breakpointMF(desktop) {
-            gap: $size-48;
+            gap: calc(var(--chunk) * #{$size-48});
         }
 
         &.table-section__list--bigger-gap {
-            gap: $size-56;
+            gap: calc(var(--chunk) * #{$size-56});
 
             @include breakpointMF(tablet) {
-                gap: $size-56;
+                gap: calc(var(--chunk) * #{$size-56});
             }
 
             @include breakpointMF(desktop) {
-                gap: $size-64;
+                gap: calc(var(--chunk) * #{$size-64});
             }
 
             .table-section__item {
-                padding-bottom: $size-56;
+                padding-bottom: calc(var(--chunk) * #{$size-56});
 
                 @include breakpointMF(desktop) {
-                    padding-bottom: $size-64;
+                    padding-bottom: calc(var(--chunk) * #{$size-64});
                 }
             }
         }
     }
 
     &__item {
-        padding-bottom: $size-56;
+        padding-bottom:calc(var(--chunk) * #{$size-56});
 
         @include breakpointMF(desktop) {
-            padding-bottom: $size-48;
+            padding-bottom: calc(var(--chunk) * #{$size-48});
         }
 
         &:not(:last-child) {
@@ -124,7 +124,7 @@
 
     &__big {
         flex: 1 1 100%;
-        margin-bottom: calc(#{$size-8} * -1);
+        margin-bottom: calc(calc(var(--chunk) * #{$size-8}) * -1);
 
         @include S32;
 
@@ -133,7 +133,7 @@
         }
 
         @include breakpointMF(desktop) {
-            flex: 1 1 calc(100% / 2 - (#{$size-4}));
+            flex: 1 1 calc(100% / 2 - calc(var(--chunk) * #{$size-4}));
         }
     }
 
@@ -141,11 +141,11 @@
         flex: 1 1 100%;
 
         @include breakpointMF(tablet) {
-            flex: 1 1 calc(100% / 2 - (#{$size-8} / 2));
+            flex: 1 1 calc(100% / 2 - (calc(var(--chunk) * #{$size-8})/ 2));
         }
 
         @include breakpointMF(desktop) {
-            flex: 1 0 calc(100% / 4 - (#{$size-8}));
+            flex: 1 0 calc(100% / 4 - calc(var(--chunk) * #{$size-8}));
         }
     }
 
@@ -164,10 +164,10 @@
         font-weight: 700;
 
         &--mobile {
-            margin-bottom: $size-16;
+            margin-bottom: calc(var(--chunk) * #{$size-16});
 
             @include breakpointMF(tablet) {
-                margin-bottom: $size-24;
+                margin-bottom: calc(var(--chunk) * #{$size-24});
             }
 
             @include breakpointMF(desktop) {
@@ -191,14 +191,14 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
-            gap: $size-16;
+            gap: calc(var(--chunk) * #{$size-16});
 
             @include breakpointMF(tablet) {
-                gap: $size-24;
+                gap: calc(var(--chunk) * #{$size-24});
             }
 
             @include breakpointMF(desktop) {
-                gap: $size-16;
+                gap: calc(var(--chunk) * #{$size-16});
             }
         }
     }
@@ -215,13 +215,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: $size-8;
+        gap: calc(var(--chunk) * #{$size-8});
 
-        padding-block: $size-56 $size-44;
+        padding-block: calc(var(--chunk) * #{$size-56}) calc(var(--chunk) * #{$size-44});
         border-top: 1px solid var(--Darksend-color, #807D73);
 
         @include breakpointMF(desktop) {
-            padding-top: $size-64;
+            padding-top: calc(var(--chunk) * #{$size-64});
         }
 
     }

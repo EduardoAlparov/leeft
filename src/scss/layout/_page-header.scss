@@ -21,10 +21,10 @@
         align-items: center;
         justify-content: space-between;
 
-        padding-block: $size-12;
+        padding-block: calc(var(--chunk) * #{$size-12});
 
         @include breakpointMF(tablet) {
-            padding-block: $size-16;
+            padding-block: calc(var(--chunk) * #{$size-16});
         }
     }
 
@@ -45,10 +45,10 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
 
-        width: 4.8rem;
-        height: 4.8rem;
+        width: calc(var(--chunk) * 48);
+        height: calc(var(--chunk) * 48);
         margin-left: auto;
-        margin-right: -0.6rem;
+        margin-right: calc(var(--chunk) * -6);
 
         .icon {
             grid-row: 1 / 2;
@@ -59,19 +59,19 @@
         }
 
         .icon-burger {
-            width: 3.6rem;
-            height: 2.8rem;
+            width: calc(var(--chunk) * 36);
+            height: calc(var(--chunk) * 28);
 
             stroke: var(--Send-color, #DAD5C1);
-            stroke-width: 0.4rem;
+            stroke-width: 4px;
         }
 
         .icon-close {
-            width: 2rem;
-            height: 2rem;
+            width: calc(var(--chunk) * 20);
+            height: calc(var(--chunk) * 20);
 
             stroke: var(--Send-color, #DAD5C1);
-            stroke-width: 0.3rem;
+            stroke-width: 3px;
             opacity: 0;
         }
     }
