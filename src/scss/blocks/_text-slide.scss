@@ -141,7 +141,6 @@
 
         &:last-child {
 
-
             &::after {
                 @include breakpointMF(desktop) {
                     display: inline;
