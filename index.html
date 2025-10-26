@@ -815,7 +815,7 @@
 <section class="reviews reviews--light section js-reviews-carousel">
     <div class="reviews__site-container reviews__site-container--padding">
         <div class="reviews__body reviews__body--padding">
-            <div class="reviews__grid">
+            <div class="reviews__grid reviews__grid--simple-mobile ">
                 <div class="reviews__heading reviews__heading--flex">
                     <div class="reviews__pagination">1 / 8</div>
                     <h2 class="reviews__title">
@@ -830,8 +830,8 @@
                                 <div class="reviews__author">
                                     <div class="reviews__author-image">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/formats/slide.webp" />
-                                            <img class="lazy" src="./img/formats/slide.jpg" alt="">
+                                            <source type="image/webp" srcset="./img/formats/slide-1.webp" />
+                                            <img class="lazy" src="./img/formats/slide-1.jpg" alt="">
                                         </picture>
                                     </div>
 
@@ -1003,7 +1003,7 @@
                         </ul>
                     </div>
 
-                    <div class="reviews__controls">
+                    <div class="reviews__controls reviews__controls--single">
                         <button class="reviews__next-btn reviews-next-btn">
                             <img class="lazy" src="./img/formats/arrow.png" alt="">
                         </button>
@@ -1018,38 +1018,86 @@
                         <ul class="reviews__gallery-swiper-wrapper swiper-wrapper">
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide.webp" />
-                                    <img class="lazy" src="./img/formats/slide.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-1.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-1.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-1t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-1t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-1m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-1m.jpg" alt="">
                                 </picture>
                             </li>
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide-2.webp" />
-                                    <img class="lazy" src="./img/formats/slide-2.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-2.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-2.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-2t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-2t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-2m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-2m.jpg" alt="">
                                 </picture>
                             </li>
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide-3.webp" />
-                                    <img class="lazy" src="./img/formats/slide-3.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-3.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-3.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-3t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-3t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-3m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-3m.jpg" alt="">
                                 </picture>
                             </li>
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide-4.webp" />
-                                    <img class="lazy" src="./img/formats/slide-4.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-4.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-4.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-4t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-4t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-4m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-4m.jpg" alt="">
                                 </picture>
                             </li>
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide-5.webp" />
-                                    <img class="lazy" src="./img/formats/slide-5.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-5.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-5.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-5t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-5t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-5m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-5m.jpg" alt="">
                                 </picture>
                             </li>
                             <li class="reviews__gallery-swiper-slide swiper-slide image-slide">
                                 <picture>
-                                    <source type="image/webp" srcset="./img/formats/slide-6.webp" />
-                                    <img class="lazy" src="./img/formats/slide-6.jpg" alt="">
+                                    <source media="(min-width: 1201px)" type="image/webp"
+                                        srcset="./img/formats/slide-6.webp" />
+                                    <source media="(min-width: 1201px)"
+                                        srcset="./img/formats/slide-6.jpg" />
+                                    <source media="(min-width: 743px)" type="image/webp"
+                                        srcset="./img/formats/slide-6t.webp" />
+                                    <source media="(min-width: 743px)"
+                                        srcset="./img/formats/slide-6t.jpg" />
+                                    <source type="image/webp" srcset="./img/formats/slide-6m.webp" /><img
+                                        class="lazy" src="./img/formats/slide-6m.jpg" alt="">
                                 </picture>
                             </li>
                         </ul>
@@ -1060,7 +1108,7 @@
     </div>
 </section>
 
-<section class="feedback-section section">
+<section class="feedback-section section" data-midnight="light">
     <div class="feedback-section__site-container">
         <form action="" class="feedback-section__form" data-need-validation>
             <h2 class="feedback-section__title">
@@ -1209,7 +1257,7 @@
 </button>
 
         </main>
-        <footer class="page-footer" data-section="yellow" data-midnight="light">
+        <footer class="page-footer" data-section="yellow">
             <div class="page-footer__site-container">
                 <div class="page-footer__grid">
                     <div class="page-footer__cell page-footer__nav">
