@@ -50,10 +50,14 @@
                 "bl-thumbs bl-main";
 
             grid-template-columns: 1fr 32%;
-            gap: 0 calc(var(--chunk) * 118);
+            gap: 0 calc(var(--chunk) * 80);
 
             margin-left: -100%;
             padding-left: 100%;
+        }
+
+        @include breakpointMF(large-desktop) {
+            gap: 0 calc(var(--chunk) * 118);
         }
     }
 
@@ -116,11 +120,15 @@
             flex-direction: row-reverse;
             align-items: flex-end;
             justify-content: space-between;
-            gap: calc(var(--chunk) * #{$size-80});
+            gap: calc(var(--chunk) * #{$size-40});
 
             @include breakpointMF(desktop) {
                 flex-direction: row;
                 justify-content: flex-start;
+            }
+
+            @include breakpointMF(large-desktop) {
+                gap: calc(var(--chunk) * #{$size-80});
             }
         }
     }
@@ -323,6 +331,8 @@
         border: 0.5px solid var(--Asphalt-color, #252525);
         cursor: pointer;
 
+        transition: background 0.3s ease;
+
         &.reviews__next-btn--prev {
             transform: rotate(180deg);
         }
@@ -334,6 +344,16 @@
         img {
             width: calc(var(--chunk) * 33);
             height: calc(var(--chunk) * 32);
+
+            transition: filter 0.3s ease;
+        }
+
+        @include hover {
+            background-color: var(--Asphalt-color, #252525);
+
+            img {
+                filter: invert(1);
+            }
         }
     }
 
@@ -353,12 +373,19 @@
             max-width: calc(var(--chunk) * 322);
         }
 
-
         .reviews__next-btn {
             position: static;
             display: grid;
 
             flex: 1 1 calc(100% / 2 - calc(var(--chunk) * #{$size-4}));
+        }
+
+        &.reviews__controls--single {
+            .reviews__next-btn--prev {
+                @include breakpointMF(desktop) {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -426,5 +453,149 @@
             }
         }
 
+    }
+}
+
+
+.reviews {
+    &:has(.reviews__grid--simple-mobile) {
+
+        .reviews__site-container--padding {
+            @include breakpoint(laptop) {
+                padding-block: unset;
+            }
+        }
+
+        .reviews__body {
+
+            @include breakpoint(laptop) {
+                padding: unset;
+            }
+        }
+    }
+
+
+    &__grid {
+        &.reviews__grid--simple-mobile {
+            @include breakpoint(laptop) {
+                grid-template-areas:
+                    "bl-gallery"
+                    "bl-main";
+                grid-template-columns: 100%;
+                gap: 0;
+
+                margin-inline: calc(var(--content-padding) * -1);
+            }
+
+            .reviews__heading {
+
+                @include breakpoint(laptop) {
+                    display: none;
+                }
+            }
+
+            .reviews__gallery {
+
+                @include breakpoint(laptop) {
+                    width: 100%;
+                    aspect-ratio: 1.65 / 1;
+                    pointer-events: none;
+                }
+
+                @include breakpoint(small-tablet) {
+                    aspect-ratio: 1;
+                    display: block;
+                }
+            }
+
+            .reviews__main {
+
+                @include breakpoint(laptop) {
+                    padding: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-24});
+
+                    color: var(--Send-color, #DAD5C1);
+                    background-color: var(--Asphalt-color, #252525);
+                }
+            }
+
+            .reviews__author-image {
+                display: none;
+            }
+
+            .reviews__text-name {
+
+                @include breakpoint(laptop) {
+                    padding: 0;
+                    background-color: transparent;
+                    white-space: unset;
+                    @include S48;
+                }
+
+            }
+
+            .reviews__text-role {
+
+                @include breakpoint(laptop) {
+                    padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
+
+                    color: var(--Asphalt-color, #252525);
+                    background-color: var(--Send-color, #DAD5C1);
+
+                    @include adds14;
+                }
+            }
+
+            .reviews__controls {
+                @include breakpoint(laptop) {
+                    display: none;
+                }
+            }
+
+            .reviews__basement--hidden {
+
+                @include breakpoint(laptop) {
+                    all: unset;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: calc(var(--chunk) * #{$size-16});
+
+                    @include adds14;
+                    font-weight: bold;
+                }
+            }
+
+            .reviews__text {
+
+                @include breakpoint(laptop) {
+                    padding-block: calc(var(--chunk) * #{$size-48}) calc(var(--chunk) * #{$size-80});
+                    @include maxSizeText(200);
+                }
+
+                @include breakpoint(small-tablet) {
+                    padding-block: calc(var(--chunk) * #{$size-40}) calc(var(--chunk) * #{$size-64});
+                }
+            }
+
+            .reviews__text-swiper-slide {
+                @include breakpoint(laptop) {
+                    gap: 0;
+                }
+            }
+
+            .reviews__gallery-swiper-slide {
+                img {
+
+                    @include breakpoint(laptop) {
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+
+                        min-height: unset;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
     }
 }

@@ -5,7 +5,6 @@ import { IS_TABLET } from './utils';
 import { IS_MOBILE } from './utils';
 import { IS_DESKTOP } from './utils';
 
-
 export default () => {
     const sections = document.querySelectorAll('.js-reviews-section');
     const els = document.querySelectorAll('.js-reviews-carousel');
@@ -87,17 +86,12 @@ export default () => {
             modules: [Navigation, Controller, EffectFade],
 
             speed: 700,
-            slidesPerView:  IS_DESKTOP ? 3.1 : 1,
+            slidesPerView:  IS_DESKTOP ? 3 : 1,
             spaceBetween: 8,
             loop: IS_DESKTOP,
             loopAdditionalSlides: 20,
-            allowTouchMove: false,
-
-
-            // freeMode: {
-            //     enabled: IS_DESKTOP,
-            //     sticky: true,
-            //   },
+            loopPreventsSliding: true,
+            allowTouchMove: true,
         });
 
         const textSwiper = new Swiper(textSwiperBox, {
@@ -106,8 +100,9 @@ export default () => {
             slidesPerView: 1,
             spaceBetween: 8,
             loop: IS_DESKTOP,
-            loopAdditionalSlides: 10,
-            allowTouchMove: IS_MOBILE ? true : false,
+            loopAdditionalSlides: 20,
+            loopPreventsSliding: true,
+            allowTouchMove: !IS_DESKTOP,
 
             effect: IS_MOBILE ? 'slide' : 'fade',
             fadeEffect: {

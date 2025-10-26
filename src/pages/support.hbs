@@ -62,7 +62,61 @@
     </div>
 </section>
 
-{{>table-section}}
+<section class="table-section section {{table.class}}">
+    <div class="table-section__site-container">
+        <h2 class="table-section__title">
+            {{table.title}}
+        </h2>
+
+        <div class="table-section__body">
+            <div class="table-section__header table-section__row">
+                <p class="table-section__big">
+                    <span class="table-section__label">
+                        {{table.header.[0]}}
+                    </span>
+                </p>
+                <p class="table-section__small">
+                    <span class="table-section__label">
+                        {{table.header.[1]}}
+                    </span>
+                </p>
+                <p class="table-section__small">
+                    <span class="table-section__label">
+                        {{table.header.[2]}}
+                    </span>
+                </p>
+            </div>
+
+            <ul class="table-section__list">
+                {{#each table.list}}
+                <li class="table-section__item table-section__row js-table-triger">
+                    <div class="table-section__big">
+                        <div class="table-section__name">
+                            {{this.one}}
+                        </div>
+                    </div>
+                    <div class="table-section__small">
+                        <span class="table-section__label table-section__label--mobile">
+                            {{../table.header.[1]}}
+                        </span>
+                        <div class="table-section__value">
+                            {{this.two}}
+                        </div>
+                    </div>
+                    <div class="table-section__small">
+                        <span class="table-section__label table-section__label--mobile">
+                            {{../table.header.[2]}}
+                        </span>
+                        <div class="table-section__value">
+                            {{this.three}}
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>
 
 <section class="table-section section table-section--sage" data-midnight="light">
     <div class="table-section__site-container">
@@ -144,7 +198,7 @@
 {{>benefits-section}}
 {{>clients-section}}
 
-{{>reviews-section}}
+{{>reviews}}
 
 {{>feedback-section}}
 {{>faq-section}}
