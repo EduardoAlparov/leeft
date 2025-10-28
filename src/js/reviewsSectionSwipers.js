@@ -91,7 +91,7 @@ export default () => {
             loop: IS_DESKTOP,
             loopAdditionalSlides: 20,
             loopPreventsSliding: true,
-            allowTouchMove: true,
+            allowTouchMove: false,
         });
 
         const textSwiper = new Swiper(textSwiperBox, {

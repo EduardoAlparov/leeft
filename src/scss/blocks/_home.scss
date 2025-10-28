@@ -63,6 +63,17 @@
             }
         }
 
+        &.home__title--max-w {
+            @include breakpointMF(tablet) {
+                max-width: 20ch;
+                margin-inline: auto;
+            }
+
+            @include breakpointMF(desktop) {
+                max-width: unset;
+            }
+        }
+
         &.home__title--baseline {
             @include breakpointMF(tablet) {
                 display: flex;
@@ -265,6 +276,10 @@
 
             @include adds14;
             user-select: none;
+
+            @include breakpointMF(desktop) {
+                @include base16;
+            }
         }
     }
 
@@ -301,7 +316,7 @@
 
     &__margin-desktop-word {
         @include breakpointMF(desktop) {
-            padding-left: 43%;
+            padding-left: 45%;
         }
     }
 }

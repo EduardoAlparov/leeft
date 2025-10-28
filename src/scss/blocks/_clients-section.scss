@@ -11,6 +11,7 @@
 
 
     &__site-container {
+        pointer-events: none;
         padding-block: calc(var(--chunk) * #{$size-48});
     }
 

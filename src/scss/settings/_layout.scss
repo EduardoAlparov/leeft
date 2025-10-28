@@ -57,3 +57,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.section {
+    &.double-section {
+        position: relative;
+        overflow: hidden;
+    }
+}

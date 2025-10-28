@@ -6,8 +6,8 @@ export default () => {
 
     if(!canHover) return;
 
-    const targetBoxs = document.querySelectorAll('.js-benefits-box');
-    const rotationAmplitude = 12;
+    const targetBoxs = document.querySelectorAll('.js-hover-box');
+    const rotationAmplitude = 10;
 
     const randomInteger = (min, max) => {
         let rand = min + Math.random() * (max + 1 - min);
@@ -41,7 +41,6 @@ export default () => {
             container.append(tag);
 
             setTimeout(() => {
-                // tag.classList.add('animate')
                 gsap.to(tag, {
                     opacity: 1,
                     duration: .15
@@ -62,7 +61,7 @@ export default () => {
 
             setTimeout(() => {
                 canCreate = true;
-            }, 150);
+            }, 180);
 
             setTimeout(() => {
                 gsap.to(tag, {

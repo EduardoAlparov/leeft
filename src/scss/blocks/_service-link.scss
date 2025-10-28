@@ -8,7 +8,7 @@
     cursor: default;
 
     @include breakpointMF(desktop) {
-        padding-block: calc(var(--chunk) * #{$size-64});
+        padding-block: 0;
     }
 
     &__body {
@@ -21,9 +21,11 @@
         gap: calc(var(--chunk) * #{$size-20});
 
         @include breakpointMF(desktop) {
+            align-items: center;
             flex-direction: row;
             justify-content: space-between;
             gap: calc(var(--chunk) * #{$size-80});
+            min-height: calc(var(--chunk) * 192);
         }
     }
 
@@ -37,13 +39,6 @@
     }
 
     &__desc {
-        @include breakpointMF(desktop) {
-            width: calc(var(--chunk) * 440);
-            margin-left: auto;
-        }
-    }
-
-    &__text {
         @include adds12;
 
         @include breakpointMF(tablet) {
@@ -51,14 +46,33 @@
         }
 
         @include breakpointMF(desktop) {
-            display: inline;
-            @include base16;
-            line-height: 1.54;
+            width: calc(var(--chunk) * 440);
+            margin-left: auto;
+        }
+    }
 
-            transition-property: background, color, line-height, padding;
-            transition-duration: var(--transition-time, 0.5s);
+    &__text {
+        @include breakpointMF(desktop) {
+            display: inline;
+
+            @include base16;
+
+            transition-duration: var(--transition-time, 0.2s);
             transition-timing-function: var(--transition-func, ease-out);
             will-change: background, color, line-height, padding;
+        }
+
+        &>span {
+            @include breakpointMF(desktop) {
+                display: block;
+                width: max-content;
+                line-height: 1.44;
+
+                transition-property: background, color, padding, margin;
+                transition-duration: var(--transition-time, 0.2s);
+                transition-timing-function: var(--transition-func, ease-out);
+                will-change: background, color, line-height, padding;
+            }
         }
     }
 
@@ -71,7 +85,7 @@
         stroke-width: 4.75px;
 
         transition-property: opacity, transform;
-        transition-duration: var(--transition-time, 0.5s);
+        transition-duration: var(--transition-time, 0.2s);
         transition-timing-function: var(--transition-func, ease-out);
 
         img {
@@ -143,20 +157,34 @@
 
     @include hoverActive() {
         .service-link__name {
-            @include hover-weight-grow(0.2px, 0.4s);
+            @include breakpointMF(desktop) {
+                @include hover-weight-grow(0.2px, 0.2s);
+            }
         }
 
         .service-link__arrow {
-            transform: translateX(calc(var(--chunk) * 22));
-            opacity: 1;
+            @include breakpointMF(desktop) {
+                transform: translateX(calc(var(--chunk) * 22));
+                opacity: 1;
+            }
         }
 
         .service-link__text {
-            @include breakpointMF(desktop) {
-                padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
+            @include breakpointMF(desktop) {}
 
-                color: var(--Asphalt-color, #252525);
-                background-color: var(--Send-color, #DAD5C1);
+            &>span {
+                &:not(:last-child) {
+                    @include breakpointMF(desktop) {
+                        margin-bottom: calc(var(--chunk) * #{$size-4});
+                    }
+                }
+
+                @include breakpointMF(desktop) {
+                    padding: calc(var(--chunk) * #{$size-4}) calc(var(--chunk) * #{$size-8});
+
+                    color: var(--Asphalt-color, #252525);
+                    background-color: var(--Send-color, #DAD5C1);
+                }
             }
         }
     }
