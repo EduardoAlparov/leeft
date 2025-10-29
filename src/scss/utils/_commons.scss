@@ -29,7 +29,11 @@
 }
 
 ._intro-padding-top {
-    padding-top: var(--header-height);
+    padding-top: calc(var(--chunk) * 72);
+
+    @include breakpointMF(tablet) {
+        padding-top: var(--header-height);
+    }
 }
 
 .midnightHeader.default {
