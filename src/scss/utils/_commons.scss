@@ -58,6 +58,12 @@
     }
 }
 
+.modal-open {
+    .fancybox__container {
+        z-index: 2050;
+    }
+}
+
 .pin-spacer {
     background-color: var(--Asphalt-color, #252525);
 }

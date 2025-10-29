@@ -100,9 +100,15 @@
     &:not(.case-card--simple) {
         &:not(:has(.case-card__image)) {
             .case-card__picture {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-                opacity: 0;
+                opacity: 1;
+                background-color: rgba($color: #807D73, $alpha: 0.2);
+
+                @include breakpointMF(desktop) {
+                    background-color: transparent;
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                    opacity: 0;
+                }
             }
 
             .case-card__info {

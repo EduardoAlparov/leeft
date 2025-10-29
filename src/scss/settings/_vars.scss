@@ -2,6 +2,7 @@
     --chunk: 0.1rem;
     --max-container-width: 152rem;
     --content-padding: 2.4rem;
+    --header-height: 7.2rem;
 
     /* typography: */
     --font-family: "Evolventa", serif;
@@ -24,11 +25,13 @@
 
     @include breakpointMF(desktop) {
         --content-padding: 6.4rem;
+        --header-height: 7.2rem;
     }
 
     @include breakpointMF(laptop) {
         --chunk: 1px;
         --content-padding: 64px;
+        --header-height: 72px;
     }
 
     @include breakpointMF(large-desktop) {
@@ -38,6 +41,7 @@
     @include breakpointMF(full-hd) {
         --chunk: 0.1rem;
         --content-padding: 6.4rem;
+        --header-height: 7.2rem;
     }
 
     @include aspectRatio(ultra) {

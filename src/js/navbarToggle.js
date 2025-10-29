@@ -7,6 +7,18 @@ export default () => {
     const items = section.querySelectorAll('.cases-section__item');
     const list = items[0].closest('.cases-section__list');
 
+    items.forEach((item) => {
+        const all =  document.querySelector('[data-filter="all"]');
+        const id = item.querySelector('.cases-section__case-card').dataset.id;
+        const navEl = document.querySelector(`[data-filter="${id}"]`);
+
+        all.dataset.navCounter = +all.dataset.navCounter + 1;
+
+        if(navEl) {
+            navEl.dataset.navCounter = (+navEl.dataset.navCounter) + 1;
+        }
+    })
+
 
     navbars.forEach((navbar) => {
         navbar.addEventListener('click', (e) => {
@@ -28,7 +40,6 @@ export default () => {
             if(btn.dataset.filter) {
                 const dataFilter = btn.dataset.filter;
                 const filteredItems = [];
-
 
                 items.forEach((item) => {
                     item.classList.remove('display-none');

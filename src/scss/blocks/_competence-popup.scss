@@ -48,6 +48,12 @@
         }
 
         &.competence-modal__close {
+            top: calc(var(--chunk) * #{$size-16});
+            right: calc(var(--chunk) * #{$size-16});
+
+            width: calc(var(--chunk) * #{$size-48});
+            height: calc(var(--chunk) * #{$size-48});
+
             @include breakpointMF(desktop) {
                 top: calc(var(--chunk) * #{$size-24});
                 right: calc(var(--chunk) * #{$size-24});
@@ -57,6 +63,9 @@
             }
 
             .icon {
+                width: calc(var(--chunk) * 20);
+                height: calc(var(--chunk) * 20);
+
                 @include breakpointMF(desktop) {
                     width: calc(var(--chunk) * 20);
                     height: calc(var(--chunk) * 20);
