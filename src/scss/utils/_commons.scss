@@ -38,16 +38,54 @@
 
 .midnightHeader.default {
     background-color: var(--Asphalt-color, #252525);
-    color: var(--Asphalt-color, #252525);
+    color: var(--Send-color, #DAD5C1);
+
+    .page-header__logo {
+        .icon {
+            fill: var(--Send-color, #DAD5C1);
+        }
+    }
+
+    .page-header__burger {
+        .icon {
+            stroke: var(--Send-color, #DAD5C1);
+        }
+    }
+
+    .page-header__menu {
+        .menu__link {
+            color: var(--Send-color, #DAD5C1);
+
+            &::before {
+                background-color: var(--Send-color, #DAD5C1);
+            }
+        }
+    }
 }
 
 .midnightHeader.light {
     background-color: var(--Send-color, #DAD5C1);
     color: var(--Asphalt-color, #252525);
 
+    .page-header__logo {
+        .icon {
+            fill: var(--Asphalt-color, #252525);
+        }
+    }
+
     .page-header__burger {
         .icon {
             stroke: var(--Asphalt-color, #252525);
+        }
+    }
+
+    .page-header__menu {
+        .menu__link {
+            color: var(--Asphalt-color, #252525);
+
+            &::before {
+                background-color: var(--Asphalt-color, #252525);
+            }
         }
     }
 }

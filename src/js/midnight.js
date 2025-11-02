@@ -1,11 +1,6 @@
 import './midnight.jquery.min';
 
 export default () => {
-    function isMobileWidth() {
-        return ($(window).innerWidth() < 743);
-    }
+    $('.page-header__inner').midnight();
 
-    if(isMobileWidth()) {
-        $('.page-header__inner').midnight();
-    }
 }
